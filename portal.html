@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#142747">
   <meta name="description"
-        content="IEC Teacher Portal lesson library. Access IEC Lesson Plans and PowerPoint presentations.">
+        content="IEC Teacher Portal Lesson Library: IEC TESOL-oriented lesson plans and classroom PowerPoint presentations.">
+
   <title>Lesson Library | IEC Teacher Portal</title>
+
   <link rel="stylesheet" href="assets/css/styles.css">
+
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 
@@ -16,7 +18,7 @@
     .portal-main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 52px 24px 90px;
+      padding: 55px 24px 90px;
       min-height: 75vh;
     }
 
@@ -25,26 +27,27 @@
     }
 
     .portal-heading h1 {
-      color: var(--navy);
-      font-size: clamp(30px, 4vw, 44px);
-      margin: 8px 0;
+      color: #142747;
+      font-size: clamp(32px, 4vw, 46px);
       letter-spacing: -1px;
+      margin: 12px 0;
     }
 
     .portal-heading p {
-      color: var(--muted);
-      max-width: 700px;
+      color: #65748a;
+      max-width: 740px;
+      line-height: 1.75;
     }
 
     .portal-filters {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 18px;
-      background: white;
+      background: #fff;
       padding: 26px;
-      border: 1px solid var(--border);
+      border: 1px solid #e2e8f0;
       border-radius: 18px;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 16px rgba(15,30,55,.05);
       margin-bottom: 32px;
     }
 
@@ -53,7 +56,7 @@
       margin-bottom: 8px;
       font-size: 13px;
       font-weight: 750;
-      color: var(--navy);
+      color: #142747;
     }
 
     .filter-field input,
@@ -64,12 +67,12 @@
       border: 1px solid #cbd5e1;
       border-radius: 10px;
       background: #fff;
-      color: var(--text);
+      color: #24334a;
     }
 
     .filter-field input:focus,
     .filter-field select:focus {
-      outline: 2px solid var(--maroon);
+      outline: 2px solid #812d45;
       outline-offset: 1px;
     }
 
@@ -84,12 +87,12 @@
 
     .library-header h2 {
       margin: 0;
-      color: var(--navy);
+      color: #142747;
       font-size: 23px;
     }
 
     .result-count {
-      color: var(--muted);
+      color: #65748a;
       font-size: 13px;
     }
 
@@ -102,24 +105,24 @@
     .lesson-card {
       display: flex;
       flex-direction: column;
-      background: white;
-      border: 1px solid var(--border);
+      background: #fff;
+      border: 1px solid #e2e8f0;
       border-radius: 17px;
       padding: 25px;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 16px rgba(15,30,55,.05);
       transition: transform .2s, box-shadow .2s;
     }
 
     .lesson-card:hover {
       transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 12px 35px rgba(15,30,55,.09);
     }
 
     .lesson-tag {
       align-self: flex-start;
       display: inline-block;
-      background: var(--maroon-soft);
-      color: var(--maroon);
+      background: #f8edf1;
+      color: #812d45;
       border-radius: 30px;
       padding: 5px 12px;
       font-size: 11px;
@@ -128,12 +131,12 @@
 
     .lesson-card h3 {
       margin: 17px 0 8px;
-      color: var(--navy);
+      color: #142747;
       font-size: 20px;
     }
 
     .lesson-description {
-      color: var(--muted);
+      color: #65748a;
       font-size: 14px;
       margin: 0 0 20px;
     }
@@ -152,7 +155,7 @@
       gap: 10px;
       padding: 13px 15px;
       border-radius: 10px;
-      background: var(--navy);
+      background: #142747;
       color: white;
       font-size: 13px;
       font-weight: 750;
@@ -160,15 +163,15 @@
     }
 
     .resource-link:hover {
-      background: var(--navy-light);
+      background: #213d66;
     }
 
     .resource-link.ppt {
-      background: var(--maroon);
+      background: #812d45;
     }
 
     .resource-link.ppt:hover {
-      background: var(--maroon-light);
+      background: #a74864;
     }
 
     .resource-link.disabled {
@@ -180,16 +183,16 @@
     .empty-state {
       grid-column: 1 / -1;
       padding: 60px 24px;
-      background: white;
+      background: #fff;
       border: 1px dashed #cbd5e1;
       border-radius: 16px;
       text-align: center;
-      color: var(--muted);
+      color: #65748a;
     }
 
     .portal-note {
       margin-top: 32px;
-      color: var(--muted);
+      color: #65748a;
       font-size: 13px;
       text-align: center;
     }
@@ -230,8 +233,11 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="header-container">
+
       <a href="index.html" class="brand"
          aria-label="IEC Portal Home">
         <span class="brand-icon">IEC</span>
@@ -241,52 +247,75 @@
         </span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle"
+      <button class="menu-toggle"
+              id="menuToggle"
               type="button"
               aria-label="Toggle navigation"
               aria-expanded="false"
               aria-controls="mainNav">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav class="main-nav" id="mainNav"
            aria-label="Main navigation">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link active" href="portal.html">
+
+        <a class="nav-link" href="index.html">
+          Home
+        </a>
+
+        <a class="nav-link active"
+           href="portal.html"
+           aria-current="page">
           Lesson Library
         </a>
+
         <a class="nav-login" href="index.html">
           Back to Home
+          <span aria-hidden="true">→</span>
         </a>
+
       </nav>
+
     </div>
   </header>
 
+  <!-- LESSON LIBRARY -->
   <main class="portal-main">
+
     <div class="portal-heading">
+
       <span class="section-eyebrow">
         IEC TEACHER RESOURCES
       </span>
+
       <h1>Lesson Resource Library</h1>
+
       <p>
-        Find your IEC Lesson Plan and corresponding
-        PowerPoint presentation. Search by program,
-        unit, or lesson title.
+        Browse IEC TESOL-oriented Lesson Plans and
+        corresponding PowerPoint presentations.
+        Search by program, unit, or lesson title.
+        No login required.
       </p>
+
     </div>
 
+    <!-- FILTERS -->
     <section class="portal-filters"
              aria-label="Lesson search and filters">
 
       <div class="filter-field search-field">
         <label for="search">Search Lessons</label>
-        <input id="search" type="search"
+        <input id="search"
+               type="search"
                placeholder="Search lessons..."
                autocomplete="off">
       </div>
 
       <div class="filter-field">
         <label for="program">Program</label>
+
         <select id="program">
           <option value="all">All Programs</option>
           <option value="Starters">Pre-A1 Starters</option>
@@ -301,17 +330,24 @@
 
       <div class="filter-field">
         <label for="unit">Unit</label>
+
         <select id="unit">
           <option value="all">All Units</option>
         </select>
       </div>
+
     </section>
 
+    <!-- LESSON CARDS -->
     <section aria-labelledby="lessons-heading">
+
       <div class="library-header">
         <h2 id="lessons-heading">Available Lessons</h2>
-        <span class="result-count" id="result-count"
-              aria-live="polite"></span>
+
+        <span class="result-count"
+              id="result-count"
+              aria-live="polite">
+        </span>
       </div>
 
       <div class="lesson-grid" id="lesson-grid">
@@ -319,22 +355,84 @@
           Loading lesson catalog...
         </div>
       </div>
+
     </section>
 
     <p class="portal-note">
-      Resources are added progressively as lessons
-      are developed and approved.
+      Resources are added as IEC Lesson Plans and
+      presentations are developed and approved.
+      GitHub Pages is public: upload only resources
+      approved for public distribution.
     </p>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-bottom">
+
       <p>
-        © <span id="currentYear"></span>
+        © <span id="currentYear">2026</span>
         IEC Teacher Portal
       </p>
+
       <p>Less Preparation. More Teaching.</p>
+
     </div>
   </footer>
+
+  <!-- MOBILE NAVIGATION -->
+  <script>
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const toggle =
+        document.getElementById("menuToggle");
+
+      const nav =
+        document.getElementById("mainNav");
+
+      if (toggle && nav) {
+
+        toggle.addEventListener("click", () => {
+
+          const isOpen =
+            nav.classList.toggle("nav-open");
+
+          toggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+        });
+
+        nav.querySelectorAll("a").forEach(link => {
+
+          link.addEventListener("click", () => {
+
+            nav.classList.remove("nav-open");
+
+            toggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          });
+
+        });
+
+      }
+
+      const year =
+        document.getElementById("currentYear");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+    });
+  </script>
+
 </body>
 </html>
