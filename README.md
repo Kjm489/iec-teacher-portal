@@ -1,7 +1,6 @@
-
 # IEC Teacher Portal
 
-### Centralized Lesson Plans & PowerPoint Resources
+### TESOL-Oriented Lesson Planning & PowerPoint Resources
 
 ![Version](https://img.shields.io/badge/version-1.0.0-812D45)
 ![HTML5](https://img.shields.io/badge/HTML5-supported-142747)
@@ -13,15 +12,16 @@
 
 ## Overview
 
-**IEC Teacher Portal** is a web-based instructional resource library designed to support teachers at IEC International Education City, Quang Ngai, Vietnam.
+**IEC Teacher Portal** is a centralized instructional resource library developed to support teachers at IEC International Education City, Quang Ngai, Vietnam.
 
-The portal provides a centralized location for accessing standardized ASU-format lesson plans and classroom-ready PowerPoint presentations.
+The portal provides access to two primary instructional resources:
 
-Its primary purpose is to reduce teacher preparation time, improve access to instructional resources, and promote consistent, high-quality classroom instruction.
+1. **IEC Lesson Plans**, prepared using the IEC-provided TESOL-oriented lesson plan template.
+2. **PowerPoint Presentations**, designed to support effective classroom instruction.
 
-The platform is designed with a clean, modern interface using HTML5, CSS3, and JavaScript.
+The platform promotes consistency in lesson planning, reduces unnecessary preparation time, and encourages the practical application of TESOL methodology.
 
-**Current release:** Version 1.0.0 — Development Prototype
+**Current Release:** Version 1.0.0 — Development Prototype
 
 ---
 
@@ -29,87 +29,115 @@ The platform is designed with a clean, modern interface using HTML5, CSS3, and J
 
 **Less Preparation. More Teaching.**
 
-IEC Teacher Portal aims to provide teachers with the instructional resources necessary to deliver engaging, structured, and effective lessons.
+IEC Teacher Portal aims to support effective, student-centered teaching through standardized planning and accessible instructional resources.
 
-The portal emphasizes:
+Its instructional priorities include:
 
-- Consistent instructional delivery
-- Reduced lesson preparation time
-- Clear learning objectives
-- Effective instructional scaffolding
-- Student-centered learning
-- Classroom interaction
-- Formative assessment
-- Continuous instructional improvement
+- Clear, measurable learning objectives
+- TESOL-oriented lesson planning
+- Instructional scaffolding
+- Teacher modeling and demonstration
+- Instruction Checking Questions (ICQs)
+- Concept Checking Questions (CCQs)
+- Guided and independent practice
+- Differentiated instruction
+- Student engagement and participation
+- Formative assessment and feedback
+- Reflective teaching practice
 
 ---
 
-## Core Resources
+## Core Instructional Resources
 
-The portal focuses exclusively on two instructional resources.
+The portal focuses exclusively on two types of teaching resources.
 
-### 1. ASU-Format Lesson Plans
+### 1. IEC Lesson Plan
 
-Each lesson includes a standardized lesson plan based on the ASU lesson-planning format adopted for the project.
+All teachers are expected to use the **IEC-provided TESOL-Oriented Lesson Plan Template** when preparing lesson plans for the portal.
 
-Lesson plans may include:
+The template provides a consistent structure for planning, delivering, and evaluating lessons.
 
-- Lesson information and duration
+Lesson planning should address the following instructional elements, as applicable to the approved IEC template:
+
+**Lesson Information**
+- Program and level
+- Unit and lesson number
+- Lesson title
+- Lesson duration
 - Learning objectives
 - Expected learning outcomes
-- Required materials
-- Warm-up and engagement
+- Required instructional materials
+
+**Lesson Introduction**
+- Warm-up or icebreaker
+- Activation of prior knowledge
+- Introduction of lesson objectives
+- Student engagement activities
+
+**Instructional Delivery**
 - Teacher modeling
-- Instructional scaffolding
+- Scaffolding strategies
+- Vocabulary and language support
+- Concept Checking Questions (CCQs)
+- Instruction Checking Questions (ICQs)
 - Guided practice
 - Independent practice
-- Differentiation
+
+**Differentiation**
+- Support for students requiring additional assistance
+- Extension activities for advanced learners
+- Adjustments for varying language proficiency levels
+
+**Assessment**
+- Ongoing comprehension checks
 - Formative assessment
-- Lesson closure
-- Teacher reflection
+- Student performance evidence
+- Learning objective verification
+- Exit tickets or lesson closure activities
 
-The final structure will follow the approved ASU template.
+**Teacher Reflection**
+- Achievement of learning objectives
+- Student participation and engagement
+- Instructional challenges
+- Adjustments for future lessons
 
-Supported document formats:
+The approved IEC template determines the exact required fields and sequence. Teachers should not replace it with independently developed lesson plan formats without authorization.
 
-- PDF
-- Microsoft Word (DOCX)
+**Supported formats:** Microsoft Word (DOCX) and PDF.
 
 ### 2. PowerPoint Presentations
 
-Each lesson is accompanied by a classroom-ready PowerPoint presentation.
+Each lesson should be supported by a corresponding classroom-ready PowerPoint presentation.
 
-Presentations are designed to guide teachers through the instructional sequence.
-
-Integrated teaching techniques include:
+Presentations should align with the IEC Lesson Plan and support its instructional sequence.
 
 **Scaffolding**
 - Visual prompts
 - Vocabulary support
-- Teacher modeling
 - Sentence frames
-- Guided examples
+- Teacher modeling
+- Worked examples
 - Gradual release of responsibility
 
 **Instruction Checking Questions (ICQs)**
-- Clear task instructions
-- Understanding checks before activities
+- Verification of activity instructions
+- Clear task expectations
 - Pair-work and group-work guidance
-- Task completion expectations
+- Time and completion requirements
 
 **Concept Checking Questions (CCQs)**
 - Vocabulary comprehension
-- Grammar concept checks
-- Meaning verification
+- Grammar meaning checks
 - Contextual understanding
+- Verification of key concepts
 
 **Student Engagement**
-- Icebreakers
-- Warm-up activities
+- Icebreakers and warm-ups
 - Interactive questions
+- Pair and group activities
 - Guided discussions
 - Collaborative learning
-- Independent activities
+- Independent practice
 
 **Assessment**
 - Knowledge checks
@@ -117,17 +145,13 @@ Integrated teaching techniques include:
 - Exit tickets
 - Learning objective verification
 
-Presentations are designed to reduce the need for teachers to create instructional slides independently.
+**Presentation format:** Microsoft PowerPoint (PPTX).
 
-Primary presentation format:
-
-- Microsoft PowerPoint (PPTX)
+PowerPoint presentations support professional classroom instruction and do not replace the teacher's lesson planning responsibilities.
 
 ---
 
-## Supported Programs
-
-The portal is designed to accommodate the following instructional programs.
+## Supported Instructional Programs
 
 ### Cambridge English
 
@@ -150,21 +174,38 @@ The portal is designed to accommodate the following instructional programs.
 - Primary Grades 1–5
 - Secondary Grades 6–9
 
-Program categories will be populated as lesson resources are developed, reviewed, and approved.
+Resources will be added progressively as lessons are developed, reviewed, and approved.
 
-The portal does not distribute textbooks or publisher-owned instructional materials without authorization.
+---
+
+## Teacher Responsibilities
+
+Teachers using the IEC Teacher Portal are expected to:
+
+1. Follow the IEC-provided TESOL-Oriented Lesson Plan Template.
+2. Identify clear and measurable learning objectives.
+3. Prepare lessons appropriate to the assigned program and student proficiency level.
+4. Apply scaffolding and teacher modeling where needed.
+5. Use ICQs to verify that students understand task instructions.
+6. Use CCQs to verify understanding of vocabulary, grammar, and concepts.
+7. Include meaningful student participation and practice.
+8. Assess progress toward lesson objectives.
+9. Ensure PowerPoint presentations align with lesson plans.
+10. Reflect on instructional effectiveness and identify improvements.
+
+The portal is intended to support consistent professional practice while allowing teachers to adapt instructional strategies to student needs.
 
 ---
 
 ## Website Features
 
-### Teacher Resource Dashboard
+### Lesson Resource Dashboard
 
-A centralized dashboard allows teachers to locate available lesson resources.
+Teachers can browse the lesson library without creating an account or signing in.
 
 ### Search and Filtering
 
-Teachers can search and filter resources by:
+Resources can be located by:
 
 - Program
 - Level
@@ -174,29 +215,22 @@ Teachers can search and filter resources by:
 
 ### Lesson Resource Cards
 
-Each lesson contains two primary resources:
+Each lesson contains two resource categories:
 
-1. ASU Lesson Plan
-2. PowerPoint Presentation
+1. **IEC Lesson Plan**
+2. **PowerPoint Presentation**
 
 ### Resource Availability
 
-Lessons without uploaded materials display an unavailable or coming-soon status.
+Lessons without uploaded resources display a *Coming Soon* status.
 
 ### Responsive Interface
 
-The website is designed for:
-
-- Desktop computers
-- Laptops
-- Tablets
-- Mobile devices
+The portal is designed for desktop computers, laptops, tablets, and mobile devices.
 
 ### IEC Visual Identity
 
-The portal uses a consistent visual design.
-
-Primary colors:
+The website uses the following primary colors:
 
 - Navy Blue: `#142747`
 - Maroon: `#812D45`
@@ -213,12 +247,12 @@ Primary colors:
 | Interactivity | JavaScript ES6 |
 | Resource Catalog | JavaScript Data Objects |
 | Version Control | GitHub |
-| Prototype Hosting | GitHub Pages |
+| Hosting | GitHub Pages |
 | Deployment | GitHub Actions |
-| Production Authentication | Planned |
-| Protected File Storage | Planned |
+| Login | Not required |
+| Backend Database | Not included |
 
-The initial version uses a lightweight static architecture without a database or backend server.
+The initial version uses a lightweight static architecture.
 
 ---
 
@@ -226,28 +260,24 @@ The initial version uses a lightweight static architecture without a database or
 
 ```text
 iec-teacher-portal/
-│
 ├── README.md
 ├── index.html
-├── login.html
 ├── portal.html
-│
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
-│   │
 │   └── js/
 │       ├── data.js
 │       └── app.js
-│
 ├── resources/
 │   ├── lesson-plans/
 │   └── presentations/
-│
 └── .github/
     └── workflows/
         └── deploy.yml
 ```
+
+The resource directories will be populated as approved instructional materials become available.
 
 ---
 
@@ -260,31 +290,97 @@ Each lesson is identified by:
 - Lesson number
 - Lesson title
 - Lesson duration
-- Lesson plan file
-- PowerPoint file
+- IEC Lesson Plan
+- PowerPoint Presentation
 
-Example:
+**Example**
 
-**Program:** A1 Movers
+Program: A1 Movers  
+Unit: 3  
+Lesson: 2  
+Lesson Title: Describing People
 
-**Unit:** 3
-
-**Lesson:** 2
-
-**Lesson Title:** Describing People
-
-**Resources:**
-- ASU Lesson Plan
+**Resources**
+- IEC Lesson Plan
 - PowerPoint Presentation
 
 Example filenames:
 
 ```text
-movers-u03-l02.pdf
-movers-u03-l02.pptx
+resources/lesson-plans/movers-u03-l02.pdf
+resources/presentations/movers-u03-l02.pptx
 ```
 
-Lesson titles and numbering must be verified against the approved instructional sequence before publication.
+Example lesson titles and numbering are illustrative until verified against the approved instructional sequence.
+
+---
+
+## Instructional Methodology
+
+The IEC Teacher Portal supports TESOL-oriented classroom instruction.
+
+### Model → Guide → Practice → Assess
+
+**Model**
+
+The teacher demonstrates the target language, concept, or skill using clear examples.
+
+**Guide**
+
+The teacher provides structured support, scaffolding, and guided practice.
+
+**Practice**
+
+Students apply the target language or skill through meaningful activities, initially with support and then with increasing independence.
+
+**Assess**
+
+The teacher checks understanding, evaluates progress toward learning objectives, and provides feedback.
+
+### ICQs and CCQs
+
+**ICQs** check whether students understand what they must do during an activity.
+
+Example:
+
+Teacher instruction: "Work with your partner and write three sentences."
+
+Possible ICQs:
+- Are you working alone or with a partner?
+- How many sentences will you write?
+
+**CCQs** check whether students understand the meaning of language or concepts.
+
+Example:
+
+Target language: "She has lived in Vietnam for five years."
+
+Possible CCQs:
+- Did she start living in Vietnam in the past?
+- Does she still live in Vietnam now?
+
+Teachers should select questions appropriate to the target level and lesson objectives.
+
+---
+
+## Resource Quality Standards
+
+Before publication, instructional resources should be reviewed for:
+
+- Use of the IEC TESOL-Oriented Lesson Plan Template
+- Alignment with the assigned curriculum
+- Clear learning objectives
+- Appropriate language proficiency level
+- Accurate instructional content
+- Effective scaffolding
+- Appropriate ICQs and CCQs
+- Opportunities for guided and independent practice
+- Differentiation where needed
+- Formative assessment
+- Alignment between the lesson plan and PowerPoint presentation
+- Clear instructions and professional presentation
+
+Publication should follow IEC's applicable academic review and approval procedures.
 
 ---
 
@@ -293,7 +389,7 @@ Lesson titles and numbering must be verified against the approved instructional 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/iec-teacher-portal.git
+git clone https://github.com/Kjm489/iec-teacher-portal.git
 ```
 
 Enter the project directory:
@@ -320,120 +416,87 @@ No Node.js installation or build process is required for the initial static vers
 
 ## GitHub Pages Deployment
 
-The project supports automatic deployment using GitHub Actions.
+The portal supports automatic deployment using GitHub Actions.
 
-Deployment steps:
+1. Upload the website files to the repository.
+2. Open repository Settings.
+3. Select Pages.
+4. Under Build and deployment, choose GitHub Actions.
+5. Commit changes to the `main` branch.
+6. Verify successful deployment in the Actions tab.
 
-1. Create the GitHub repository.
-2. Upload the project files.
-3. Open repository Settings.
-4. Select Pages.
-5. Under Build and deployment, choose GitHub Actions.
-6. Push changes to the main branch.
-7. Allow the deployment workflow to complete.
+**Website address:**
 
-Example website address:
+https://kjm489.github.io/iec-teacher-portal/
 
-```text
-https://YOUR-USERNAME.github.io/iec-teacher-portal/
-```
-
-Replace `YOUR-USERNAME` with the repository owner's GitHub username or organization.
-
-A custom domain may be configured in a future release.
+The address becomes available after successful GitHub Pages deployment.
 
 ---
 
-## Security and Access
+## Security and Resource Access
 
-### Development Version
+### Public Prototype
 
-The GitHub Pages prototype is publicly accessible.
+IEC Teacher Portal v1.0 does not require teacher login.
 
-The prototype login page does not provide real authentication.
+Because GitHub Pages is a public hosting service, the website and uploaded resource files are publicly accessible.
 
-No confidential IEC materials, student records, private teacher information, credentials, or restricted instructional files should be published in the GitHub Pages deployment.
+The repository must not contain:
 
-### Production Version
+- Confidential student records
+- Private teacher information
+- Passwords or access credentials
+- Restricted institutional documents
+- Unlicensed publisher materials
+- Other confidential or protected information
 
-The intended production portal will provide:
+Only materials approved for public distribution should be uploaded.
 
-- Authenticated teacher accounts
-- Authorized resource access
-- Protected document downloads
-- Secure file storage
-- HTTPS
-- Administrative resource management
-
-Authentication must be enforced by a trusted backend or identity provider.
-
-Client-side JavaScript restrictions alone are not sufficient to secure private resources.
-
----
-
-## Resource Standards
-
-Each published lesson should meet the following requirements:
-
-- Use the approved ASU lesson-plan format.
-- Include clear learning objectives.
-- Align the lesson plan and presentation.
-- Include appropriate instructional scaffolding.
-- Include ICQs where task instructions require checking.
-- Include CCQs where meaning or concepts require checking.
-- Provide opportunities for guided practice.
-- Include student participation.
-- Include appropriate formative assessment.
-- Be reviewed before publication.
-
-Lesson resources should be appropriate for the target student level and instructional context.
+If IEC later requires teacher-restricted access, the portal will need appropriate authentication and protected file hosting.
 
 ---
 
 ## Development Roadmap
 
-### Version 1.0 — Foundation
+### Version 1.0 — Portal Foundation
 
-- [ ] Responsive website homepage
-- [ ] Teacher resource dashboard
+- [ ] Responsive homepage
+- [ ] Lesson resource dashboard
 - [ ] Program filtering
 - [ ] Unit filtering
 - [ ] Lesson search
-- [ ] ASU lesson-plan links
+- [ ] IEC Lesson Plan links
 - [ ] PowerPoint resource links
 - [ ] Resource availability indicators
 - [ ] GitHub Pages deployment
 
-### Version 1.1 — Resource Expansion
+### Version 1.1 — Instructional Resource Expansion
 
-- [ ] Add approved lesson plans
+- [ ] Add approved IEC Lesson Plans
 - [ ] Add corresponding PowerPoint presentations
-- [ ] Expand supported program categories
+- [ ] Expand supported program levels
 - [ ] Improve resource navigation
-- [ ] Add lesson resource version labels
+- [ ] Introduce resource version labels
 
-### Version 2.0 — Secure Teacher Portal
+### Future Development
 
-- [ ] Teacher authentication
-- [ ] Protected file storage
-- [ ] Role-based access
-- [ ] Administrative resource publishing
-- [ ] Resource revision history
-- [ ] Resource approval workflow
+Potential improvements may include resource revision tracking, academic approval workflows, and protected teacher access if required by IEC.
 
-Future features are proposals and are not included in the initial static prototype.
+These features are proposals and are not included in Version 1.0.
 
 ---
 
 ## Educational Philosophy
 
-The portal supports an instructional approach built around:
+The portal promotes consistent, student-centered, TESOL-oriented instruction.
 
-**Model → Guide → Practice → Assess**
+Effective lessons should combine clear learning objectives, structured teaching, appropriate scaffolding, active student participation, and meaningful assessment.
 
-Teachers should provide clear examples, scaffold learning appropriately, verify understanding, encourage active student participation, and assess achievement of lesson objectives.
+The IEC Lesson Plan provides the instructional structure.
 
-Instructional presentations are intended to support professional teaching practice rather than replace teacher judgment or responsiveness to student needs.
+The PowerPoint presentation supports classroom delivery.
+
+Together, these resources are intended to help teachers deliver engaging, purposeful, and effective lessons.
 
 ---
 
@@ -441,7 +504,7 @@ Instructional presentations are intended to support professional teaching practi
 
 Original portal source code and instructional resources may be subject to separate ownership and licensing arrangements.
 
-Third-party textbook content, illustrations, publisher presentations, and other copyrighted materials must not be redistributed without appropriate authorization.
+Third-party textbook content, publisher presentations, illustrations, and other copyrighted materials must not be redistributed without appropriate authorization.
 
 IEC branding and institutional materials should be used only with appropriate approval.
 
@@ -449,23 +512,20 @@ IEC branding and institutional materials should be used only with appropriate ap
 
 ## Project Status
 
-**Version:** 1.0.0
-
-**Stage:** Initial Development
-
-**Hosting:** GitHub Pages
-
-**Primary Audience:** IEC Teaching Staff
-
-**Project Focus:** ASU Lesson Plans and Classroom PowerPoint Presentations
+**Version:** 1.0.0  
+**Stage:** Initial Development  
+**Hosting:** GitHub Pages  
+**Primary Audience:** IEC Teaching Staff  
+**Instructional Standard:** IEC TESOL-Oriented Lesson Plan Template  
+**Primary Resources:** IEC Lesson Plans and Classroom PowerPoint Presentations
 
 ---
 
 ## Project Attribution
 
-IEC Teacher Portal
+**IEC Teacher Portal**
 
-Developed as an instructional resource initiative to support teachers and promote consistent classroom practice at IEC International Education City, Quang Ngai.
+Developed as an instructional resource initiative to support teachers and promote consistent classroom practice at IEC International Education City, Quang Ngai, Vietnam.
 
 Institutional adoption, ownership, and branding are subject to IEC approval.
 
