@@ -1,121 +1,224 @@
-"use strict";
 
-/*
- * IEC TEACHER PORTAL
- * Lesson Resource Catalog
- * Version 1.0.0
- *
- * These are demonstration records.
- * Replace them with verified IEC lesson information.
- *
- * Each lesson has exactly two resources:
- * 1. IEC Lesson Plan
- * 2. PowerPoint Presentation
- */
+"use strict";
 
 window.IEC_LESSONS = [
   {
-    id: "starters-u01-l01",
-    program: "Starters",
-    unit: 1,
-    lesson: 1,
-    title: "Greetings and Introductions",
-    duration: 45,
+    id: "toy-team-plus-3-starter",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Starter",
+    title: "Hello!",
+    focus: "Colors 11–20; characters; How are you?",
+    duration: null,
+    status: "planned",
     lessonPlan: null,
-    powerpoint: null
+    powerpoint: null,
+    kind: "starter"
   },
   {
-    id: "starters-u01-l02",
-    program: "Starters",
-    unit: 1,
-    lesson: 2,
-    title: "Colors and Classroom Objects",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "movers-u01-l01",
-    program: "Movers",
-    unit: 1,
-    lesson: 1,
-    title: "Everyday Activities",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "movers-u03-l02",
-    program: "Movers",
-    unit: 3,
-    lesson: 2,
-    title: "Describing People",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "flyers-u01-l01",
-    program: "Flyers",
-    unit: 1,
-    lesson: 1,
-    title: "Describing Experiences",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "ket-u01-l01",
-    program: "KET",
-    unit: 1,
-    lesson: 1,
-    title: "Everyday Communication",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "pet-u01-l01",
-    program: "PET",
-    unit: 1,
-    lesson: 1,
-    title: "Expressing Opinions",
-    duration: 45,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "ielts-u01-l01",
-    program: "IELTS",
-    unit: 1,
-    lesson: 1,
-    title: "Speaking Foundations",
-    duration: 60,
-    lessonPlan: null,
-    powerpoint: null
-  },
-  {
-    id: "oxford-u01-l01",
+    id: "toy-team-plus-3-1",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
     program: "Oxford",
     unit: 1,
-    lesson: 1,
-    title: "Language Development",
-    duration: 45,
+    title: "Jobs",
+    focus: "doctor, teacher, pilot, chef, dancer, firefighter; I'm a ...",
+    duration: 90,
+    status: "ready",
+    lessonPlan: "iec-prebuilt-lesson-library.html",
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-2",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: 2,
+    title: "Actions",
+    focus: "Action words and movement",
+    duration: null,
+    status: "planned",
     lessonPlan: null,
-    powerpoint: null
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-review-1-2",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Review 1–2",
+    title: "Story: What's the matter, Dino?",
+    focus: "Craft: Medal",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "review"
+  },
+  {
+    id: "toy-team-plus-3-3",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: 3,
+    title: "Animals",
+    focus: "Animal words and descriptions",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-4",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: 4,
+    title: "Pirates",
+    focus: "Pirate-themed language",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-review-3-4",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Review 3–4",
+    title: "Story: Little Bear and the fox",
+    focus: "Craft: Land and water flap book",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "review"
+  },
+  {
+    id: "toy-team-plus-3-5",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: 5,
+    title: "Food",
+    focus: "Food vocabulary and preferences",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-6",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: 6,
+    title: "Fairy tale",
+    focus: "Fairy-tale characters and adjectives",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
+  },
+  {
+    id: "toy-team-plus-3-review-5-6",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Review 5–6",
+    title: "Story: Robot's dream",
+    focus: "Craft: Table setting",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "review"
+  },
+  {
+    id: "toy-team-plus-3-festivals",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Supplementary",
+    title: "Festivals",
+    focus: "Diwali; Lunar New Year; Earth Day",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "supplementary"
+  },
+  {
+    id: "toy-team-plus-3-seasons",
+    curriculum: "Oxford",
+    level: "Kindergarten",
+    book: "Toy Team Plus 3",
+    program: "Oxford",
+    unit: "Supplementary",
+    title: "Seasons",
+    focus: "Fall; Winter; Spring; Summer",
+    duration: null,
+    status: "planned",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "supplementary"
+  },
+  ...[
+    ["Starters", 1, "Greetings and Introductions"],
+    ["Starters", 1, "Colors and Classroom Objects"],
+    ["Movers", 1, "Everyday Activities"],
+    ["Movers", 3, "Describing People"],
+    ["Flyers", 1, "Describing Experiences"],
+    ["KET", 1, "Everyday Communication"],
+    ["PET", 1, "Expressing Opinions"]
+  ].map(([program, unit, title], i) => ({
+    id: `cambridge-demo-${i + 1}`,
+    curriculum: "Cambridge",
+    level: program,
+    book: "",
+    program,
+    unit,
+    title,
+    focus: "Demonstration entry — no approved resources uploaded",
+    duration: 45,
+    status: "sample",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
+  })),
+  {
+    id: "ielts-demo-1",
+    curriculum: "IELTS",
+    level: "IELTS",
+    book: "",
+    program: "IELTS",
+    unit: 1,
+    title: "Speaking Foundations",
+    focus: "Demonstration entry — no approved resources uploaded",
+    duration: 60,
+    status: "sample",
+    lessonPlan: null,
+    powerpoint: null,
+    kind: "unit"
   }
 ];
 
-/*
- * When approved files are available, use paths such as:
- *
- * lessonPlan:
- *   "resources/lesson-plans/movers-u03-l02.pdf"
- *
- * powerpoint:
- *   "resources/presentations/movers-u03-l02.pptx"
- *
- * IMPORTANT:
- * GitHub Pages files are publicly accessible.
- * Do not upload confidential or restricted materials.
- */
