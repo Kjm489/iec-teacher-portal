@@ -1,282 +1,263 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#142747">
-  <meta name="description"
-        content="IEC Teacher Portal Lesson Library: IEC TESOL-oriented lesson plans and classroom PowerPoint presentations.">
-
+  <meta name="description" content="IEC Teacher Portal curriculum and lesson library">
   <title>Lesson Library | IEC Teacher Portal</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
-
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 
   <style>
     .portal-main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 55px 24px 90px;
+      max-width: 1240px;
+      margin: auto;
+      padding: 48px 22px 90px;
       min-height: 75vh;
     }
-
-    .portal-heading {
-      margin-bottom: 30px;
-    }
-
     .portal-heading h1 {
       color: #142747;
-      font-size: clamp(32px, 4vw, 46px);
-      letter-spacing: -1px;
-      margin: 12px 0;
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 10px 0;
     }
-
-    .portal-heading p {
-      color: #65748a;
-      max-width: 740px;
-      line-height: 1.75;
+    .portal-heading p,
+    .library-intro {
+      color: #64748b;
+      line-height: 1.7;
     }
-
+    .curriculum-path {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .curriculum-path strong {
+      color: #812d45;
+    }
+    .curriculum-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .curriculum-card {
+      background: #fff;
+      border: 1px solid #dce4ed;
+      border-radius: 17px;
+      padding: 23px;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      box-shadow: 0 5px 20px #1427470c;
+    }
+    .curriculum-card:hover,
+    .curriculum-card:focus-visible {
+      border-color: #812d45;
+      outline-offset: 3px;
+    }
+    .curriculum-card .icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .curriculum-card strong {
+      color: #142747;
+      font-size: 19px;
+      display: block;
+    }
+    .curriculum-card small {
+      color: #64748b;
+      display: block;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+    .featured-prebuilt {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 20px;
+      background: #fff;
+      border: 1px solid #dce4ed;
+      border-left: 5px solid #812d45;
+      border-radius: 17px;
+      padding: 25px;
+      margin: 28px 0;
+    }
+    .featured-prebuilt h2 {
+      color: #142747;
+      margin: 9px 0;
+    }
+    .featured-prebuilt p {
+      color: #64748b;
+      line-height: 1.6;
+    }
     .portal-filters {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
       background: #fff;
-      padding: 26px;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      box-shadow: 0 4px 16px rgba(15,30,55,.05);
-      margin-bottom: 32px;
+      padding: 23px;
+      border: 1px solid #dce4ed;
+      border-radius: 17px;
+      margin: 25px 0 30px;
     }
-
     .filter-field label {
       display: block;
-      margin-bottom: 8px;
       font-size: 13px;
       font-weight: 750;
       color: #142747;
+      margin-bottom: 7px;
     }
-
     .filter-field input,
     .filter-field select {
       width: 100%;
-      min-height: 48px;
-      padding: 12px 14px;
+      min-height: 46px;
+      padding: 10px 12px;
       border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      background: #fff;
-      color: #24334a;
+      border-radius: 9px;
+      background: white;
+      color: #142747;
     }
-
-    .filter-field input:focus,
-    .filter-field select:focus {
-      outline: 2px solid #812d45;
-      outline-offset: 1px;
+    .search-field {
+      grid-column: 1 / -1;
     }
-
     .library-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 12px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
-
     .library-header h2 {
-      margin: 0;
       color: #142747;
-      font-size: 23px;
+      margin: 0;
     }
-
     .result-count {
-      color: #65748a;
+      color: #64748b;
       font-size: 13px;
     }
-
     .lesson-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 18px;
     }
-
     .lesson-card {
       display: flex;
       flex-direction: column;
       background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 17px;
-      padding: 25px;
-      box-shadow: 0 4px 16px rgba(15,30,55,.05);
-      transition: transform .2s, box-shadow .2s;
+      border: 1px solid #dce4ed;
+      border-radius: 16px;
+      padding: 23px;
+      box-shadow: 0 5px 20px #1427470a;
     }
-
-    .lesson-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 35px rgba(15,30,55,.09);
+    .lesson-card h3 {
+      color: #142747;
+      font-size: 19px;
+      margin: 12px 0 9px;
     }
-
     .lesson-tag {
       align-self: flex-start;
       display: inline-block;
-      background: #f8edf1;
+      background: #f7e9ef;
       color: #812d45;
+      padding: 6px 10px;
       border-radius: 30px;
-      padding: 5px 12px;
       font-size: 11px;
       font-weight: 800;
     }
-
-    .lesson-card h3 {
-      margin: 17px 0 8px;
-      color: #142747;
-      font-size: 20px;
+    .lesson-breadcrumb {
+      color: #812d45;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 13px 0 0;
     }
-
-    .lesson-description {
-      color: #65748a;
+    .lesson-focus {
+      color: #526174;
       font-size: 14px;
-      margin: 0 0 20px;
+      line-height: 1.6;
     }
-
+    .lesson-status {
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
     .resource-actions {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 9px;
       margin-top: auto;
     }
-
     .resource-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 15px;
-      border-radius: 10px;
+      display: block;
+      padding: 12px 15px;
       background: #142747;
       color: white;
+      border-radius: 9px;
+      text-decoration: none;
       font-size: 13px;
       font-weight: 750;
-      transition: background .2s;
     }
-
     .resource-link:hover {
-      background: #213d66;
+      background: #243f69;
     }
-
     .resource-link.ppt {
       background: #812d45;
     }
-
-    .resource-link.ppt:hover {
-      background: #a74864;
-    }
-
     .resource-link.disabled {
-      background: #eef1f6;
-      color: #7a8799;
+      background: #edf0f5;
+      color: #778498;
       cursor: default;
     }
-
     .empty-state {
       grid-column: 1 / -1;
-      padding: 60px 24px;
-      background: #fff;
+      padding: 50px;
+      text-align: center;
+      background: white;
       border: 1px dashed #cbd5e1;
-      border-radius: 16px;
-      text-align: center;
-      color: #65748a;
+      border-radius: 15px;
     }
-
     .portal-note {
-      margin-top: 32px;
-      color: #65748a;
-      font-size: 13px;
+      margin-top: 30px;
+      color: #64748b;
       text-align: center;
+      font-size: 13px;
     }
-
-    /* IEC PREBUILT LESSON FEATURE */
-
-    .featured-prebuilt {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 22px;
-      align-items: center;
-      padding: 26px;
-      margin-bottom: 30px;
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-left: 5px solid #812d45;
-      border-radius: 16px;
-    }
-
-    .featured-prebuilt h2 {
-      color: #142747;
-      margin: 12px 0 5px;
-    }
-
-    .featured-prebuilt p {
-      color: #65748a;
-      line-height: 1.65;
-      margin: 8px 0;
-    }
-
-    .featured-prebuilt .resource-link {
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
     @media (max-width: 950px) {
-      .lesson-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .lesson-grid,
+      .curriculum-overview {
+        grid-template-columns: repeat(2, 1fr);
       }
-
       .portal-filters {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .search-field {
-        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
-
-    @media (max-width: 750px) {
+    @media (max-width: 650px) {
+      .lesson-grid,
+      .curriculum-overview,
+      .portal-filters,
       .featured-prebuilt {
         grid-template-columns: 1fr;
       }
-    }
-
-    @media (max-width: 650px) {
-      .portal-filters,
-      .lesson-grid {
-        grid-template-columns: 1fr;
-      }
-
       .search-field {
         grid-column: auto;
       }
-
       .portal-main {
-        padding: 35px 18px 65px;
-      }
-
-      .portal-filters {
-        padding: 18px;
+        padding: 30px 16px 65px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-container">
-
-      <a href="index.html" class="brand"
-         aria-label="IEC Portal Home">
+      <a href="index.html" class="brand" aria-label="IEC Portal Home">
         <span class="brand-icon">IEC</span>
         <span class="brand-text">
           IEC <strong>PORTAL</strong>
@@ -284,234 +265,163 @@
         </span>
       </a>
 
-      <button class="menu-toggle"
-              id="menuToggle"
-              type="button"
-              aria-label="Toggle navigation"
-              aria-expanded="false"
-              aria-controls="mainNav">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mainNav">
+        <span></span><span></span><span></span>
       </button>
 
-      <nav class="main-nav" id="mainNav"
-           aria-label="Main navigation">
-
-        <a class="nav-link" href="index.html">
-          Home
-        </a>
-
-        <a class="nav-link active"
-           href="portal.html"
-           aria-current="page">
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="portal.html" aria-current="page">
           Lesson Library
         </a>
-
-        <!-- NEW PREBUILT LESSON NAVIGATION -->
-        <a class="nav-link"
-           href="iec-prebuilt-lesson-library.html">
-          Prebuilt Lesson Plans
+        <a class="nav-link" href="iec-prebuilt-lesson-library.html">
+          Prebuilt Lesson
         </a>
-
         <a class="nav-login" href="index.html">
-          Back to Home
-          <span aria-hidden="true">→</span>
+          Back to Home →
         </a>
-
       </nav>
-
     </div>
   </header>
 
-  <!-- LESSON LIBRARY -->
   <main class="portal-main">
-
-    <div class="portal-heading">
-
-      <span class="section-eyebrow">
-        IEC TEACHER RESOURCES
-      </span>
-
-      <h1>Lesson Resource Library</h1>
-
+    <section class="portal-heading">
+      <span class="section-eyebrow">IEC TEACHER RESOURCES</span>
+      <h1>Curriculum & Lesson Library</h1>
       <p>
-        Browse IEC TESOL-oriented Lesson Plans and
-        corresponding PowerPoint presentations.
-        Search by program, unit, or lesson title.
-        No login required.
+        Find your curriculum, school level, textbook and unit.
+        Access structured IEC lesson plans, teaching activities,
+        and available classroom presentations.
       </p>
-
-    </div>
-
-    <!-- NEW FEATURED PREBUILT LESSON -->
-    <section class="featured-prebuilt"
-             aria-labelledby="prebuilt-heading">
-
-      <div>
-        <span class="lesson-tag">
-          READY TO TEACH
-        </span>
-
-        <h2 id="prebuilt-heading">
-          IEC Prebuilt Lesson Plans
-        </h2>
-
-        <p>
-          Open a complete 90-minute lesson with teacher
-          instructions, visual scaffolding, simplified
-          ICQs and CCQs, differentiated activities,
-          and assessment checks.
-        </p>
-
-        <p>
-          <strong>Featured:</strong>
-          Big Team 3 · Unit 1: Jobs ·
-          Beginner ELL · 2 × 45 minutes
-        </p>
-      </div>
-
-      <a class="resource-link"
-         href="iec-prebuilt-lesson-library.html">
-        Open Prebuilt Lesson
-        <span aria-hidden="true">→</span>
-      </a>
-
     </section>
 
-    <!-- FILTERS -->
-    <section class="portal-filters"
-             aria-label="Lesson search and filters">
+    <nav class="curriculum-path" aria-label="Curriculum path">
+      <span>Curriculum</span>
+      <span>›</span>
+      <strong>Oxford</strong>
+      <span>›</span>
+      <strong>Kindergarten</strong>
+      <span>›</span>
+      <strong>Toy Team Plus 3</strong>
+    </nav>
 
+    <section class="curriculum-overview" aria-label="Curriculum categories">
+      <button class="curriculum-card" type="button" data-curriculum="Oxford">
+        <span class="icon" aria-hidden="true">📚</span>
+        <strong>Oxford Curriculum</strong>
+        <small>
+          Kindergarten → Toy Team Plus 3.
+          Browse Starter, Units 1–6, reviews and supplementary sections.
+        </small>
+      </button>
+
+      <button class="curriculum-card" type="button" data-curriculum="Cambridge">
+        <span class="icon" aria-hidden="true">🎓</span>
+        <strong>Cambridge English</strong>
+        <small>
+          Pre-A1 Starters, A1 Movers, A2 Flyers,
+          A2 Key and B1 Preliminary.
+        </small>
+      </button>
+
+      <button class="curriculum-card" type="button" data-curriculum="IELTS">
+        <span class="icon" aria-hidden="true">🌍</span>
+        <strong>IELTS Program</strong>
+        <small>
+          IELTS teaching resources and speaking,
+          listening, reading and writing activities.
+        </small>
+      </button>
+    </section>
+
+    <section class="featured-prebuilt" aria-labelledby="featured-title">
+      <div>
+        <span class="lesson-tag">READY TO TEACH</span>
+        <h2 id="featured-title">Toy Team Plus 3 — Unit 1: Jobs</h2>
+        <p>
+          A complete IEC lesson plan for two 45-minute periods.
+          Includes six job words, the sentence structure
+          "I'm a ...", scaffolding, ICQs, CCQs,
+          assessment and interactive games.
+        </p>
+      </div>
+      <a class="resource-link" href="iec-prebuilt-lesson-library.html">
+        Open Unit 1 Lesson →
+      </a>
+    </section>
+
+    <section class="portal-filters" aria-label="Lesson search and filters">
       <div class="filter-field search-field">
         <label for="search">Search Lessons</label>
-        <input id="search"
-               type="search"
-               placeholder="Search lessons..."
-               autocomplete="off">
+        <input
+          id="search"
+          type="search"
+          placeholder="Search Jobs, Animals, Toy Team, Cambridge..."
+          autocomplete="off">
       </div>
 
       <div class="filter-field">
-        <label for="program">Program</label>
-
-        <select id="program">
-          <option value="all">All Programs</option>
-          <option value="Starters">Pre-A1 Starters</option>
-          <option value="Movers">A1 Movers</option>
-          <option value="Flyers">A2 Flyers</option>
-          <option value="KET">A2 Key</option>
-          <option value="PET">B1 Preliminary</option>
+        <label for="curriculum">Curriculum</label>
+        <select id="curriculum">
+          <option value="all">All curricula</option>
+          <option value="Oxford">Oxford</option>
+          <option value="Cambridge">Cambridge</option>
           <option value="IELTS">IELTS</option>
-          <option value="Oxford">Oxford K–9</option>
         </select>
       </div>
 
       <div class="filter-field">
-        <label for="unit">Unit</label>
-
-        <select id="unit">
-          <option value="all">All Units</option>
+        <label for="level">School Level</label>
+        <select id="level">
+          <option value="all">All levels</option>
         </select>
       </div>
 
+      <div class="filter-field">
+        <label for="book">Textbook</label>
+        <select id="book">
+          <option value="all">All textbooks</option>
+        </select>
+      </div>
+
+      <div class="filter-field">
+        <label for="unit">Unit / Section</label>
+        <select id="unit">
+          <option value="all">All units and sections</option>
+        </select>
+      </div>
     </section>
 
-    <!-- LESSON CARDS -->
     <section aria-labelledby="lessons-heading">
-
       <div class="library-header">
         <h2 id="lessons-heading">Available Lessons</h2>
-
-        <span class="result-count"
-              id="result-count"
-              aria-live="polite">
-        </span>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
       </div>
 
       <div class="lesson-grid" id="lesson-grid">
-        <div class="empty-state">
-          Loading lesson catalog...
-        </div>
+        <div class="empty-state">Loading lesson catalog...</div>
       </div>
-
     </section>
 
     <p class="portal-note">
-      Resources are added as IEC Lesson Plans and
-      presentations are developed and approved.
-      GitHub Pages is public: upload only resources
-      approved for public distribution.
+      Only resources marked ready are available for teaching.
+      Upload only materials approved for public distribution.
     </p>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-bottom">
-
-      <p>
-        © <span id="currentYear">2026</span>
-        IEC Teacher Portal
-      </p>
-
+      <p>© <span id="currentYear">2026</span> IEC Teacher Portal</p>
       <p>Less Preparation. More Teaching.</p>
-
     </div>
   </footer>
-
-  <!-- MOBILE NAVIGATION -->
-  <script>
-    "use strict";
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-      const toggle =
-        document.getElementById("menuToggle");
-
-      const nav =
-        document.getElementById("mainNav");
-
-      if (toggle && nav) {
-
-        toggle.addEventListener("click", () => {
-
-          const isOpen =
-            nav.classList.toggle("nav-open");
-
-          toggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-          );
-
-        });
-
-        nav.querySelectorAll("a").forEach(link => {
-
-          link.addEventListener("click", () => {
-
-            nav.classList.remove("nav-open");
-
-            toggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-          });
-
-        });
-
-      }
-
-      const year =
-        document.getElementById("currentYear");
-
-      if (year) {
-        year.textContent = new Date().getFullYear();
-      }
-
-    });
-  </script>
-
 </body>
 </html>
+
 
