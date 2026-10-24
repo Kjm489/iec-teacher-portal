@@ -197,6 +197,37 @@
       text-align: center;
     }
 
+    /* IEC PREBUILT LESSON FEATURE */
+
+    .featured-prebuilt {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      padding: 26px;
+      margin-bottom: 30px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #812d45;
+      border-radius: 16px;
+    }
+
+    .featured-prebuilt h2 {
+      color: #142747;
+      margin: 12px 0 5px;
+    }
+
+    .featured-prebuilt p {
+      color: #65748a;
+      line-height: 1.65;
+      margin: 8px 0;
+    }
+
+    .featured-prebuilt .resource-link {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
     @media (max-width: 950px) {
       .lesson-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -208,6 +239,12 @@
 
       .search-field {
         grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 750px) {
+      .featured-prebuilt {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -271,6 +308,12 @@
           Lesson Library
         </a>
 
+        <!-- NEW PREBUILT LESSON NAVIGATION -->
+        <a class="nav-link"
+           href="iec-prebuilt-lesson-library.html">
+          Prebuilt Lesson Plans
+        </a>
+
         <a class="nav-login" href="index.html">
           Back to Home
           <span aria-hidden="true">→</span>
@@ -300,6 +343,41 @@
       </p>
 
     </div>
+
+    <!-- NEW FEATURED PREBUILT LESSON -->
+    <section class="featured-prebuilt"
+             aria-labelledby="prebuilt-heading">
+
+      <div>
+        <span class="lesson-tag">
+          READY TO TEACH
+        </span>
+
+        <h2 id="prebuilt-heading">
+          IEC Prebuilt Lesson Plans
+        </h2>
+
+        <p>
+          Open a complete 90-minute lesson with teacher
+          instructions, visual scaffolding, simplified
+          ICQs and CCQs, differentiated activities,
+          and assessment checks.
+        </p>
+
+        <p>
+          <strong>Featured:</strong>
+          Big Team 3 · Unit 1: Jobs ·
+          Beginner ELL · 2 × 45 minutes
+        </p>
+      </div>
+
+      <a class="resource-link"
+         href="iec-prebuilt-lesson-library.html">
+        Open Prebuilt Lesson
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </section>
 
     <!-- FILTERS -->
     <section class="portal-filters"
@@ -436,3 +514,4 @@
 
 </body>
 </html>
+
