@@ -1,510 +1,317 @@
 
 "use strict";
 
-/*
- * ==========================================================
- * IEC TEACHER PORTAL
- * Application JavaScript
- * Version: 1.0.0
- * File: assets/js/app.js
- *
- * Features:
- * - Lesson resource dashboard
- * - Program filtering
- * - Unit filtering
- * - Live lesson searching
- * - IEC Lesson Plan download links
- * - PowerPoint presentation download links
- * - Responsive mobile navigation
- * - Automatic copyright year
- *
- * No login required.
- * ==========================================================
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ========================================================
-  // 1. LOAD LESSON CATALOG
-  // ========================================================
-
   const lessons = Array.isArray(window.IEC_LESSONS)
-    ? window.IEC_LESSONS
-    : [];
+    ? window.IEC_LESSONS : [];
 
-  const searchInput = document.getElementById("search");
-  const programSelect = document.getElementById("program");
-  const unitSelect = document.getElementById("unit");
-  const lessonGrid = document.getElementById("lesson-grid");
-  const resultCount = document.getElementById("result-count");
+  const $ = id => document.getElementById(id);
 
-  // ========================================================
-  // 2. PROGRAM LABELS
-  // ========================================================
+  const search = $("search");
+  const curriculum = $("curriculum");
+  const level = $("level");
+  const book = $("book");
+  const unit = $("unit");
+  const grid = $("lesson-grid");
+  const count = $("result-count");
 
-  const programLabels = {
-    Starters: "Pre-A1 Starters",
-    Movers: "A1 Movers",
-    Flyers: "A2 Flyers",
-    KET: "A2 Key",
-    PET: "B1 Preliminary",
-    IELTS: "IELTS",
-    Oxford: "Oxford K–9"
-  };
+  const year = $("currentYear");
+  if (year) year.textContent = String(new Date().getFullYear());
 
-  const programOrder = [
-    "Starters",
-    "Movers",
-    "Flyers",
-    "KET",
-    "PET",
-    "IELTS",
-    "Oxford"
-  ];
+  const toggle = $("menuToggle");
+  const nav = $("mainNav");
 
-  // ========================================================
-  // 3. AUTOMATIC COPYRIGHT YEAR
-  // ========================================================
-
-  const yearElement = document.getElementById("currentYear");
-
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
-
-  // ========================================================
-  // 4. MOBILE NAVIGATION
-  // ========================================================
-
-  const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
-
-  if (menuToggle && mainNav) {
-
-    menuToggle.addEventListener("click", () => {
-
-      const isOpen = mainNav.classList.toggle("nav-open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("nav-open");
+      toggle.setAttribute("aria-expanded", String(open));
     });
 
-    mainNav.querySelectorAll("a").forEach(link => {
-
-      link.addEventListener("click", () => {
-
-        mainNav.classList.remove("nav-open");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-    document.addEventListener("keydown", event => {
-
-      if (event.key === "Escape") {
-
-        mainNav.classList.remove("nav-open");
-
-        menuToggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      }
-
-    });
-
+    nav.querySelectorAll("a").forEach(a =>
+      a.addEventListener("click", () => {
+        nav.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      })
+    );
   }
 
-  // ========================================================
-  // 5. CHECK DASHBOARD ELEMENTS
-  // ========================================================
+  if (![search, curriculum, level, book, unit, grid, count]
+      .every(Boolean)) return;
 
-  if (
-    !searchInput ||
-    !programSelect ||
-    !unitSelect ||
-    !lessonGrid ||
-    !resultCount
-  ) {
-    return;
-  }
-
-  // ========================================================
-  // 6. ELEMENT CREATION HELPER
-  // ========================================================
-
-  function createElement(tag, className = "", text = "") {
-
+  function el(tag, cls, value) {
     const node = document.createElement(tag);
-
-    if (className) {
-      node.className = className;
-    }
-
-    node.textContent = text;
-
+    if (cls) node.className = cls;
+    if (value !== undefined) node.textContent = value;
     return node;
-
   }
 
-  // ========================================================
-  // 7. UPDATE AVAILABLE UNITS
-  // ========================================================
+  function options(select, items, placeholder, previous) {
+    select.replaceChildren(new Option(placeholder, "all"));
+    items.forEach(item => select.add(new Option(item, item)));
+    select.value = items.includes(previous) ? previous : "all";
+  }
 
-  function updateUnits() {
+  function matches(item, field, value) {
+    return value === "all" || String(item[field]) === value;
+  }
 
-    const selectedProgram = programSelect.value;
-    const previousUnit = unitSelect.value;
+  function unique(field, filter) {
+    return [...new Set(
+      lessons.filter(filter)
+        .map(item => String(item[field] || ""))
+        .filter(Boolean)
+    )].sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true })
+    );
+  }
 
-    const availableUnits = [
-      ...new Set(
-        lessons
-          .filter(item =>
-            selectedProgram === "all" ||
-            item.program === selectedProgram
-          )
-          .map(item => Number(item.unit))
-          .filter(Number.isFinite)
-      )
-    ].sort((a, b) => a - b);
+  function updateFilters() {
+    const oldLevel = level.value;
+    const oldBook = book.value;
+    const oldUnit = unit.value;
 
-    unitSelect.replaceChildren(
-      new Option("All Units", "all")
+    options(
+      level,
+      unique("level", item =>
+        matches(item, "curriculum", curriculum.value)
+      ),
+      "All levels",
+      oldLevel
     );
 
-    availableUnits.forEach(unit => {
-
-      unitSelect.add(
-        new Option(
-          `Unit ${unit}`,
-          String(unit)
-        )
-      );
-
-    });
-
-    if (
-      availableUnits.some(
-        unit => String(unit) === previousUnit
-      )
-    ) {
-      unitSelect.value = previousUnit;
-    } else {
-      unitSelect.value = "all";
-    }
-
-  }
-
-  // ========================================================
-  // 8. VALIDATE RESOURCE PATHS
-  // ========================================================
-
-  function validResourcePath(path, type) {
-
-    if (typeof path !== "string") {
-      return false;
-    }
-
-    const prefix = type === "ppt"
-      ? "resources/presentations/"
-      : "resources/lesson-plans/";
-
-    const allowedExtension = type === "ppt"
-      ? /\.pptx$/i
-      : /\.(pdf|docx)$/i;
-
-    return (
-      path.startsWith(prefix) &&
-      !path.includes("..") &&
-      !path.includes("\\") &&
-      !/[?#%]/.test(path) &&
-      allowedExtension.test(path)
+    options(
+      book,
+      unique("book", item =>
+        matches(item, "curriculum", curriculum.value) &&
+        matches(item, "level", level.value)
+      ),
+      "All textbooks",
+      oldBook
     );
 
+    const selected = lessons.filter(item =>
+      matches(item, "curriculum", curriculum.value) &&
+      matches(item, "level", level.value) &&
+      matches(item, "book", book.value)
+    );
+
+    const units = [...new Set(
+      selected.map(item => String(item.unit))
+    )];
+
+    units.sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true })
+    );
+
+    options(unit, units, "All units and sections", oldUnit);
   }
 
-  // ========================================================
-  // 9. CREATE RESOURCE DOWNLOAD LINKS
-  // ========================================================
+  function validPath(path) {
+    return typeof path === "string" &&
+      /^(iec-prebuilt-lesson-library\.html|resources\/(lesson-plans|presentations)\/[a-zA-Z0-9_\/-]+\.(pdf|docx|pptx))$/
+        .test(path) &&
+      !path.includes("..");
+  }
 
-  function createResourceLink(label, path, type) {
-
-    if (!validResourcePath(path, type)) {
-
-      const unavailable = createElement(
+  function resource(label, path, kind) {
+    if (!validPath(path)) {
+      const disabled = el(
         "span",
-        `resource-link disabled ${type}`,
-        `${label} — Coming Soon`
+        "resource-link disabled " + kind,
+        label + " — Not available yet"
       );
-
-      unavailable.setAttribute(
-        "aria-disabled",
-        "true"
-      );
-
-      return unavailable;
-
+      disabled.setAttribute("aria-disabled", "true");
+      return disabled;
     }
 
-    const link = createElement(
+    const link = el(
       "a",
-      `resource-link ${type}`
+      "resource-link " + kind,
+      label + " →"
     );
-
-    const labelText = createElement(
-      "span",
-      "",
-      label
-    );
-
-    const arrow = createElement(
-      "span",
-      "",
-      "↓"
-    );
-
-    arrow.setAttribute(
-      "aria-hidden",
-      "true"
-    );
-
-    link.append(
-      labelText,
-      arrow
-    );
-
     link.href = path;
-    link.download = "";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
 
-    link.setAttribute(
-      "aria-label",
-      `Download ${label}`
-    );
+    if (/\.(pdf|docx|pptx)$/.test(path)) {
+      link.setAttribute("download", "");
+    }
 
     return link;
-
   }
 
-  // ========================================================
-  // 10. FILTER LESSONS
-  // ========================================================
+  const curriculumOrder = {
+    Oxford: 0,
+    Cambridge: 1,
+    IELTS: 2
+  };
 
-  function getFilteredLessons() {
-
-    const query = searchInput.value
-      .trim()
-      .toLowerCase();
-
-    const selectedProgram = programSelect.value;
-    const selectedUnit = unitSelect.value;
-
+  function filtered() {
     return lessons.filter(item => {
-
-      const searchableText = [
+      const searchable = [
+        item.curriculum,
+        item.level,
+        item.book,
         item.program,
-        programLabels[item.program] || "",
         item.title,
+        item.focus,
         `Unit ${item.unit}`,
-        `Lesson ${item.lesson}`
+        String(item.unit)
       ].join(" ").toLowerCase();
 
-      const matchesSearch =
-        searchableText.includes(query);
+      return searchable.includes(
+        search.value.trim().toLowerCase()
+      ) &&
+        matches(item, "curriculum", curriculum.value) &&
+        matches(item, "level", level.value) &&
+        matches(item, "book", book.value) &&
+        matches(item, "unit", unit.value);
 
-      const matchesProgram =
-        selectedProgram === "all" ||
-        item.program === selectedProgram;
-
-      const matchesUnit =
-        selectedUnit === "all" ||
-        String(item.unit) === selectedUnit;
-
-      return (
-        matchesSearch &&
-        matchesProgram &&
-        matchesUnit
-      );
-
-    });
-
+    }).sort((a, b) =>
+      (curriculumOrder[a.curriculum] ?? 9) -
+      (curriculumOrder[b.curriculum] ?? 9) ||
+      (a.book || "").localeCompare(b.book || "") ||
+      String(a.unit).localeCompare(
+        String(b.unit), undefined, { numeric: true }
+      )
+    );
   }
 
-  // ========================================================
-  // 11. SORT LESSONS
-  // ========================================================
+  function render() {
+    const items = filtered();
 
-  function sortLessons(items) {
+    count.textContent =
+      `${items.length} section${items.length === 1 ? "" : "s"}`;
 
-    return [...items].sort((a, b) => {
+    grid.replaceChildren();
 
-      const programDifference =
-        programOrder.indexOf(a.program) -
-        programOrder.indexOf(b.program);
-
-      if (programDifference !== 0) {
-        return programDifference;
-      }
-
-      return (
-        Number(a.unit) - Number(b.unit) ||
-        Number(a.lesson) - Number(b.lesson)
-      );
-
-    });
-
-  }
-
-  // ========================================================
-  // 12. CREATE LESSON CARDS
-  // ========================================================
-
-  function createLessonCard(item) {
-
-    const card = createElement(
-      "article",
-      "lesson-card"
-    );
-
-    const tag = createElement(
-      "span",
-      "lesson-tag",
-      programLabels[item.program] || item.program
-    );
-
-    const title = createElement(
-      "h3",
-      "",
-      `Unit ${item.unit} · Lesson ${item.lesson}`
-    );
-
-    const description = createElement(
-      "p",
-      "lesson-description",
-      `${item.title} · ${item.duration} minutes`
-    );
-
-    const actions = createElement(
-      "div",
-      "resource-actions"
-    );
-
-    const lessonPlanLink = createResourceLink(
-      "IEC Lesson Plan",
-      item.lessonPlan,
-      "plan"
-    );
-
-    const powerpointLink = createResourceLink(
-      "PowerPoint Presentation",
-      item.powerpoint,
-      "ppt"
-    );
-
-    actions.append(
-      lessonPlanLink,
-      powerpointLink
-    );
-
-    card.append(
-      tag,
-      title,
-      description,
-      actions
-    );
-
-    return card;
-
-  }
-
-  // ========================================================
-  // 13. RENDER DASHBOARD
-  // ========================================================
-
-  function renderLessons() {
-
-    const filtered = sortLessons(
-      getFilteredLessons()
-    );
-
-    lessonGrid.replaceChildren();
-
-    const count = filtered.length;
-
-    resultCount.textContent =
-      `${count} lesson${count === 1 ? "" : "s"}`;
-
-    if (count === 0) {
-
-      const empty = createElement(
+    if (!items.length) {
+      grid.append(el(
         "div",
         "empty-state",
-        "No lessons found. Try another search or filter."
-      );
-
-      lessonGrid.appendChild(empty);
-
+        "No matching lessons. Try clearing the filters."
+      ));
       return;
-
     }
 
     const fragment = document.createDocumentFragment();
 
-    filtered.forEach(item => {
+    for (const item of items) {
+      const card = el("article", "lesson-card");
 
-      fragment.appendChild(
-        createLessonCard(item)
+      const status = item.status === "ready"
+        ? "READY TO TEACH"
+        : item.status === "sample"
+          ? "DEMONSTRATION"
+          : "SYLLABUS · IN DEVELOPMENT";
+
+      card.append(el("span", "lesson-tag", status));
+
+      card.append(el(
+        "p",
+        "lesson-breadcrumb",
+        [item.curriculum, item.level, item.book]
+          .filter(Boolean).join(" → ")
+      ));
+
+      let label;
+
+      if (typeof item.unit === "number") {
+        label = `Unit ${item.unit} — ${item.title}`;
+      } else if (item.kind === "starter") {
+        label = `Starter — ${item.title}`;
+      } else if (item.kind === "review") {
+        label = `${item.unit} — ${item.title}`;
+      } else if (item.kind === "supplementary") {
+        label = `Supplementary — ${item.title}`;
+      } else {
+        label = `${item.unit} — ${item.title}`;
+      }
+
+      card.append(el("h3", "", label));
+      card.append(el("p", "lesson-focus", item.focus || ""));
+
+      const note = item.status === "ready"
+        ? "IEC plan: 2 × 45 minutes · Interactive games included"
+        : item.status === "sample"
+          ? "Example catalog entry only — not an uploaded lesson"
+          : "Syllabus section verified; lesson and presentation pending";
+
+      card.append(el("p", "lesson-status", note));
+
+      const actions = el("div", "resource-actions");
+
+      actions.append(
+        resource("IEC Lesson Plan", item.lessonPlan, "plan"),
+        resource("Classroom Presentation", item.powerpoint, "ppt")
       );
 
-    });
+      card.append(actions);
+      fragment.append(card);
+    }
 
-    lessonGrid.appendChild(fragment);
-
+    grid.append(fragment);
   }
 
-  // ========================================================
-  // 14. EVENT LISTENERS
-  // ========================================================
+  curriculum.addEventListener("change", () => {
+    level.value = "all";
+    book.value = "all";
+    unit.value = "all";
+    updateFilters();
+    render();
+  });
 
-  searchInput.addEventListener(
-    "input",
-    renderLessons
-  );
+  level.addEventListener("change", () => {
+    book.value = "all";
+    unit.value = "all";
+    updateFilters();
+    render();
+  });
 
-  programSelect.addEventListener(
-    "change",
-    () => {
+  book.addEventListener("change", () => {
+    unit.value = "all";
+    updateFilters();
+    render();
+  });
 
-      updateUnits();
-      renderLessons();
+  unit.addEventListener("change", render);
+  search.addEventListener("input", render);
 
-    }
-  );
+  document.querySelectorAll("[data-curriculum]")
+    .forEach(button => {
+      button.addEventListener("click", () => {
+        curriculum.value = button.dataset.curriculum;
 
-  unitSelect.addEventListener(
-    "change",
-    renderLessons
-  );
+        level.value = "all";
+        book.value = "all";
+        unit.value = "all";
 
-  // ========================================================
-  // 15. INITIALIZE PORTAL
-  // ========================================================
+        updateFilters();
 
-  updateUnits();
-  renderLessons();
+        if (curriculum.value === "Oxford") {
+          level.value = "Kindergarten";
+          updateFilters();
 
-  console.info(
-    `[IEC Portal] Loaded ${lessons.length} lesson records.`
-  );
+          book.value = "Toy Team Plus 3";
+          updateFilters();
+        }
 
+        render();
+
+        $("lessons-heading").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+    });
+
+  curriculum.value = "Oxford";
+  updateFilters();
+
+  level.value = "Kindergarten";
+  updateFilters();
+
+  book.value = "Toy Team Plus 3";
+  updateFilters();
+
+  render();
 });
+
