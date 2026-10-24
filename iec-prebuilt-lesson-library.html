@@ -1,0 +1,1066 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IEC Prebuilt Lesson Library | Teacher Portal</title>
+
+  <meta name="description"
+        content="IEC ready-to-teach TESOL lesson plans for English Language Learners.">
+
+  <style>
+    :root {
+      --navy: #142747;
+      --maroon: #812d45;
+      --white: #ffffff;
+      --background: #f3f6fa;
+      --text: #26354a;
+      --muted: #64748b;
+      --border: #dce3ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 22px 6%;
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 11px;
+      font-weight: normal;
+      letter-spacing: 1.2px;
+      opacity: .85;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      color: var(--maroon);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: 34px;
+      margin: 10px 0;
+    }
+
+    h2 {
+      color: var(--navy);
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .intro p {
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    button,
+    .button {
+      border: none;
+      background: var(--maroon);
+      color: white;
+      padding: 12px 19px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover,
+    .button:hover {
+      opacity: .9;
+    }
+
+    .secondary {
+      background: var(--navy);
+    }
+
+    .lesson-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(20,39,71,.05);
+    }
+
+    .lesson-badge {
+      display: inline-block;
+      background: #f6eaf0;
+      color: var(--maroon);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .metadata {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .meta-item {
+      background: #f3f6fa;
+      padding: 14px;
+      border-radius: 9px;
+      font-size: 13px;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      background: var(--maroon);
+      color: white;
+      padding: 11px 15px;
+      border-radius: 6px;
+      font-size: 15px;
+      margin: 24px 0 14px;
+      font-weight: bold;
+    }
+
+    .objectives {
+      padding-left: 22px;
+    }
+
+    .objectives li {
+      margin-bottom: 7px;
+    }
+
+    .period-header {
+      background: var(--navy);
+      color: white;
+      padding: 15px 18px;
+      border-radius: 8px;
+      margin: 26px 0 15px;
+    }
+
+    .period-header h2 {
+      color: white;
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .period-header p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      opacity: .9;
+    }
+
+    .stage {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 17px;
+      break-inside: avoid;
+    }
+
+    .stage-heading {
+      background: #edf1f7;
+      padding: 12px 16px;
+      color: var(--navy);
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .stage-content {
+      padding: 16px 19px;
+    }
+
+    .stage-content p {
+      margin: 8px 0;
+    }
+
+    .method {
+      background: #f8f2f4;
+      border-left: 4px solid var(--maroon);
+      padding: 12px 15px;
+      margin-top: 13px;
+      border-radius: 4px;
+    }
+
+    .method strong {
+      color: var(--maroon);
+    }
+
+    .teacher-script {
+      background: #f2f5f9;
+      border-left: 4px solid var(--navy);
+      padding: 12px 15px;
+      margin: 12px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--navy);
+      color: white;
+      text-align: left;
+      padding: 11px;
+    }
+
+    td {
+      border: 1px solid var(--border);
+      padding: 11px;
+      vertical-align: top;
+    }
+
+    .assessment-table th {
+      background: var(--maroon);
+    }
+
+    .note {
+      background: #fff8e9;
+      border-left: 4px solid #d9a441;
+      padding: 14px 17px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .support-box {
+      background: #f4f6fa;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 18px;
+    }
+
+    .support-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .support-box ul {
+      padding-left: 20px;
+    }
+
+    .support-box li {
+      margin-bottom: 7px;
+    }
+
+    .reflection {
+      min-height: 90px;
+      border: 1px dashed #aebaca;
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .metadata {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .two-columns {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .lesson-card {
+        padding: 16px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      body {
+        background: white;
+        font-size: 11px;
+      }
+
+      header,
+      .intro,
+      .toolbar,
+      footer {
+        display: none !important;
+      }
+
+      main {
+        margin: 0;
+        padding: 0;
+        max-width: none;
+      }
+
+      .lesson-card {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .stage {
+        break-inside: avoid;
+      }
+
+      .period-header,
+      .section-title,
+      th,
+      .stage-heading {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="brand">
+      IEC TEACHER PORTAL
+      <small>INSTRUCTIONAL RESOURCE CENTER</small>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portal.html">Lesson Library</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <div class="intro">
+    <span class="eyebrow">IEC TEACHER RESOURCES</span>
+
+    <h1>Prebuilt TESOL Lesson Library</h1>
+
+    <p>
+      Ready-to-teach IEC lesson plans with complete instructional
+      procedures, student activities, scaffolding, simplified
+      ICQs and CCQs, differentiation, and assessment criteria.
+    </p>
+  </div>
+
+  <div class="toolbar">
+    <button type="button" onclick="window.print()">
+      Print / Save Lesson as PDF
+    </button>
+
+    <a class="button secondary" href="portal.html">
+      Back to Lesson Library
+    </a>
+  </div>
+
+  <article class="lesson-card">
+
+    <span class="lesson-badge">
+      PREBUILT IEC LESSON PLAN
+    </span>
+
+    <h2>Big Team 3 — Unit 1: Jobs</h2>
+
+    <p>
+      <strong>Focus:</strong> Jobs vocabulary and simple
+      spoken introductions.
+    </p>
+
+    <div class="metadata">
+
+      <div class="meta-item">
+        <strong>Duration</strong>
+        90 minutes
+      </div>
+
+      <div class="meta-item">
+        <strong>Periods</strong>
+        2 × 45 minutes
+      </div>
+
+      <div class="meta-item">
+        <strong>Level</strong>
+        Beginner ELL
+      </div>
+
+      <div class="meta-item">
+        <strong>Skills</strong>
+        Listening / Speaking
+      </div>
+
+    </div>
+
+    <div class="section-title">
+      LESSON OBJECTIVES
+    </div>
+
+    <p>By the end of the lesson, students will be able to:</p>
+
+    <ol class="objectives">
+      <li>
+        Recognize at least five of six target job words
+        when shown pictures.
+      </li>
+
+      <li>
+        Repeat at least four job words intelligibly
+        with visual or verbal support.
+      </li>
+
+      <li>
+        Use the sentence pattern
+        <strong>"I'm a ..."</strong>
+        to introduce a job.
+      </li>
+
+      <li>
+        Produce two simple job sentences
+        with appropriate scaffolding.
+      </li>
+    </ol>
+
+    <div class="section-title">
+      TARGET LANGUAGE
+    </div>
+
+    <p><strong>Vocabulary:</strong></p>
+
+    <p>
+      Chef · Dancer · Doctor · Firefighter ·
+      Pilot · Teacher
+    </p>
+
+    <p><strong>Sentence structure:</strong></p>
+
+    <div class="teacher-script">
+      Teacher: "I'm a doctor."
+
+      <p>Students: "I'm a doctor."</p>
+
+      Teacher: "I'm a pilot."
+
+      <p>Students: "I'm a pilot."</p>
+    </div>
+
+    <div class="section-title">
+      MATERIALS REQUIRED
+    </div>
+
+    <p>
+      Big Team 3 Student Book, Activity Book,
+      corresponding publisher audio, six job
+      flashcards or pictures, board, markers,
+      and optional presentation slides.
+    </p>
+
+    <div class="note">
+      <strong>Teacher preparation:</strong>
+      Open the appropriate Student Book and Activity Book
+      pages. Confirm the publisher audio tracks using
+      the approved teacher resources before class.
+    </div>
+
+    <!-- PERIOD ONE -->
+
+    <div class="period-header">
+      <h2>PERIOD 1 — 45 MINUTES</h2>
+      <p>Engage · Model · Guided Practice</p>
+    </div>
+
+    <section class="stage">
+
+      <div class="stage-heading">
+        <span>1. Warm-up and Objective Discussion</span>
+        <span>10 minutes</span>
+      </div>
+
+      <div class="stage-content">
+
+        <p><strong>Teacher procedure:</strong></p>
+
+        <p>
+          Greet students with a smile and simple
+          familiar language.
+        </p>
+
+        <div class="teacher-script">
+          "Hello!"
+
+          <p>"How are you?"</p>
+
+          "Look!"
+        </div>
+
+        <p>
+          Show pictures of a doctor, teacher,
+          and pilot. Ask students to name
+          any familiar jobs.
+        </p>
+
+        <p>
+          Accept pointing, gestures, or
+          single-word responses.
+        </p>
+
+        <p><strong>Student activity:</strong></p>
+
+        <p>
+          Look at pictures, repeat known words,
+          and respond to the teacher.
+        </p>
+
+        <div class="method">
+          <strong>Scaffolding:</strong>
+          Use pictures and gestures before
+          introducing new spoken language.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stage">
+
+      <div class="stage-heading">
+        <span>2. Instruct and Model</span>
+        <span>20 minutes</span>
+      </div>
+
+      <div class="stage-content">
+
+        <p><strong>Teacher procedure:</strong></p>
+
+        <p>
+          Introduce all six jobs using flashcards.
+          Point to each picture and say the word
+          slowly and clearly.
+        </p>
+
+        <div class="teacher-script">
+          "Look. Doctor."
+
+          <p>"Listen. Doctor."</p>
+
+          <p>"Say: Doctor."</p>
+
+          "Good!"
+        </div>
+
+        <p>
+          Repeat for chef, dancer, firefighter,
+          pilot, and teacher.
+        </p>
+
+        <p>
+          Play the relevant publisher audio,
+          pausing for students to point and repeat.
+        </p>
+
+        <p>
+          Model the structure:
+          <strong>"I'm a doctor."</strong>
+        </p>
+
+        <p><strong>Student activity:</strong></p>
+
+        <p>
+          Listen, point, repeat vocabulary,
+          and imitate short sentences.
+        </p>
+
+        <div class="method">
+          <strong>Simple CCQs:</strong>
+
+          <p>
+            Show a doctor picture:
+            "Doctor or pilot?"
+          </p>
+
+          <p>
+            Show a chef:
+            "Cook?" — "Yes!"
+          </p>
+
+          <p>
+            Show a pilot:
+            "Fly?" — "Yes!"
+          </p>
+
+          <p>
+            Show a dancer:
+            "Dance?" — "Yes!"
+          </p>
+
+          <strong>Scaffolding:</strong>
+          Picture → Word → Repetition → Sentence
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stage">
+
+      <div class="stage-heading">
+        <span>3. Guided Practice</span>
+        <span>15 minutes</span>
+      </div>
+
+      <div class="stage-content">
+
+        <p><strong>Teacher procedure:</strong></p>
+
+        <p>
+          Place job pictures on the board.
+          Demonstrate matching each picture
+          with its spoken job word.
+        </p>
+
+        <p>
+          Model a short partner activity.
+        </p>
+
+        <div class="teacher-script">
+          Teacher: "Doctor."
+
+          <p>Students point to doctor.</p>
+
+          Teacher: "I'm a doctor."
+
+          <p>Students repeat.</p>
+        </div>
+
+        <p><strong>Student activity:</strong></p>
+
+        <p>
+          Match pictures, repeat vocabulary,
+          and practice job sentences with
+          a partner.
+        </p>
+
+        <div class="method">
+          <strong>Simple ICQs:</strong>
+
+          <p>"Point?" — "Yes!"</p>
+
+          <p>"One or two?" — "Two!"</p>
+
+          <p>"Say it?" — "Yes!"</p>
+
+          <strong>Teacher check:</strong>
+          Ask one pair to demonstrate before
+          the whole class begins.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PERIOD TWO -->
+
+    <div class="period-header">
+      <h2>PERIOD 2 — 45 MINUTES</h2>
+      <p>Communicate · Apply · Assess</p>
+    </div>
+
+    <section class="stage">
+
+      <div class="stage-heading">
+        <span>4. Independent Practice</span>
+        <span>30 minutes</span>
+      </div>
+
+      <div class="stage-content">
+
+        <p><strong>Activity A — Song and Movement (8 min)</strong></p>
+
+        <p>
+          Play the relevant Unit 1 song.
+          Encourage students to sing or
+          repeat job words and use gestures.
+        </p>
+
+        <p><strong>Activity B — Activity Book (10 min)</strong></p>
+
+        <p>
+          Students complete the selected
+          matching or tracing tasks
+          from the Activity Book.
+        </p>
+
+        <p>
+          Demonstrate the first item
+          on the board.
+        </p>
+
+        <div class="method">
+          <strong>Simple ICQs:</strong>
+
+          <p>"Draw a line?" — "Yes!"</p>
+
+          <p>"Write?" — "Yes!" (for tracing tasks)</p>
+
+          <p>"Alone?" — "Yes!"</p>
+        </div>
+
+        <p><strong>Activity C — Job Role-play (12 min)</strong></p>
+
+        <p>
+          Give students job flashcards.
+          Students pretend to have
+          the job shown on their card.
+        </p>
+
+        <div class="teacher-script">
+          Student A: "I'm a chef."
+
+          <p>Student B: "I'm a pilot."</p>
+        </div>
+
+        <p>
+          Rotate cards and repeat.
+        </p>
+
+        <div class="method">
+          <strong>Scaffolding:</strong>
+
+          <p>Step 1: Show the picture.</p>
+
+          <p>Step 2: Say the word.</p>
+
+          <p>Step 3: Say "I'm a ..."</p>
+
+          <p>Step 4: Speak to a partner.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stage">
+
+      <div class="stage-heading">
+        <span>5. Assessment and Closure</span>
+        <span>15 minutes</span>
+      </div>
+
+      <div class="stage-content">
+
+        <p><strong>Teacher procedure:</strong></p>
+
+        <p>
+          Show job flashcards one at a time.
+          Ask students to identify the jobs.
+        </p>
+
+        <p>
+          Invite students to produce
+          two simple sentences.
+        </p>
+
+        <div class="teacher-script">
+          "Look. What job?"
+
+          <p>Student: "Doctor."</p>
+
+          "Say: I'm a doctor."
+
+          <p>Student: "I'm a doctor."</p>
+        </div>
+
+        <p>
+          Give supportive feedback
+          and praise students for
+          participation.
+        </p>
+
+        <p>
+          Record which students need
+          further vocabulary practice.
+        </p>
+
+        <div class="method">
+          <strong>Exit ticket:</strong>
+          Each student points to or names
+          one job and attempts one
+          complete sentence.
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-title">
+      DIFFERENTIATED INSTRUCTION
+    </div>
+
+    <div class="two-columns">
+
+      <div class="support-box">
+        <h3>Students Needing Support</h3>
+
+        <ul>
+          <li>Use picture cards.</li>
+          <li>Allow pointing first.</li>
+          <li>Repeat vocabulary slowly.</li>
+          <li>Use choral repetition.</li>
+          <li>Provide sentence frames.</li>
+          <li>Pair with a supportive peer.</li>
+        </ul>
+      </div>
+
+      <div class="support-box">
+        <h3>Students Ready for Extension</h3>
+
+        <ul>
+          <li>Name all six jobs.</li>
+          <li>Produce complete sentences.</li>
+          <li>Practice without picture prompts.</li>
+          <li>Ask and answer simple job questions.</li>
+          <li>Help model pronunciation.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="section-title">
+      IEC FORMATIVE ASSESSMENT
+    </div>
+
+    <table class="assessment-table">
+
+      <thead>
+        <tr>
+          <th>Assessment Area</th>
+          <th>Success Criteria</th>
+          <th>Evidence</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Vocabulary Recognition</td>
+          <td>5 of 6 jobs</td>
+          <td>Picture identification</td>
+        </tr>
+
+        <tr>
+          <td>Pronunciation</td>
+          <td>4 of 6 job words intelligible</td>
+          <td>Oral repetition</td>
+        </tr>
+
+        <tr>
+          <td>Sentence Production</td>
+          <td>2 complete sentences with support</td>
+          <td>Role-play / teacher observation</td>
+        </tr>
+
+        <tr>
+          <td>Participation</td>
+          <td>Participates in supported activities</td>
+          <td>Teacher observation</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <div class="section-title">
+      TEACHER SUPPORT — SIMPLIFIED ICQs & CCQs
+    </div>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Purpose</th>
+          <th>Teacher Language</th>
+          <th>Expected Response</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>ICQ — Listening</td>
+          <td>"Listen or write?"</td>
+          <td>"Listen."</td>
+        </tr>
+
+        <tr>
+          <td>ICQ — Speaking</td>
+          <td>"Say it?"</td>
+          <td>"Yes."</td>
+        </tr>
+
+        <tr>
+          <td>ICQ — Pair Work</td>
+          <td>"One or two?"</td>
+          <td>"Two."</td>
+        </tr>
+
+        <tr>
+          <td>ICQ — Matching</td>
+          <td>"Draw a line?"</td>
+          <td>"Yes."</td>
+        </tr>
+
+        <tr>
+          <td>CCQ — Doctor</td>
+          <td>"Doctor or pilot?"</td>
+          <td>"Doctor."</td>
+        </tr>
+
+        <tr>
+          <td>CCQ — Chef</td>
+          <td>"Cook?"</td>
+          <td>"Yes."</td>
+        </tr>
+
+        <tr>
+          <td>CCQ — Pilot</td>
+          <td>"Fly?"</td>
+          <td>"Yes."</td>
+        </tr>
+
+        <tr>
+          <td>CCQ — Dancer</td>
+          <td>"Dance?"</td>
+          <td>"Yes."</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <div class="note">
+      <strong>Important for beginner ELL learners:</strong>
+      Demonstrate before asking an ICQ.
+      Use pictures and gestures for CCQs.
+      Accept one-word answers when appropriate.
+      Gradually build toward complete sentences.
+    </div>
+
+    <div class="section-title">
+      TEACHER REFLECTION
+    </div>
+
+    <div class="reflection">
+      Which students achieved the lesson objectives?
+
+      <p>Which vocabulary items require reteaching?</p>
+
+      What should be adjusted for the next lesson?
+    </div>
+
+    <div class="note">
+      <strong>IEC Academic Review:</strong>
+      This is a model prebuilt lesson. Confirm the
+      exact textbook activities, publisher audio,
+      and intended assessment targets against
+      the approved teaching materials before
+      releasing it as an official IEC lesson.
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  IEC Teacher Portal · Instructional Resource Center
+  <p>Less Preparation. More Teaching.</p>
+</footer>
+
+</body>
+</html>
