@@ -4,215 +4,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IEC Prebuilt Lesson Library</title>
+<title>IEC | Toy Team Plus 3 | Unit 1: Jobs</title>
 
 <style>
 :root {
-  --navy: #142747;
-  --maroon: #812d45;
-  --light: #f3f5f9;
-  --border: #d7dce4;
+  --navy:#142747;
+  --maroon:#812d45;
+  --light:#f3f5f9;
+  --border:#d7dce4;
 }
-* { box-sizing: border-box; }
+* {box-sizing:border-box}
 body {
-  margin: 0;
-  font: 15px/1.5 system-ui, Arial, sans-serif;
-  background: var(--light);
-  color: #1b2b40;
+  margin:0;
+  font:15px/1.55 system-ui,Arial,sans-serif;
+  background:var(--light);
+  color:#1b2b40;
 }
 header {
-  background: var(--navy);
-  color: white;
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
+  background:var(--navy);
+  color:white;
+  padding:18px 5%;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
 }
-header a { color: white; }
+header a {color:white}
 main {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 0 16px;
+  max-width:960px;
+  margin:30px auto;
+  padding:0 16px;
 }
-h1, h2 { color: var(--navy); }
-.intro { color: #596779; }
+h1,h2,h3 {color:var(--navy)}
+.intro {color:#596779}
 .toolbar {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
 }
 .btn {
-  border: 0;
-  background: var(--maroon);
-  color: white;
-  padding: 11px 17px;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
+  display:inline-block;
+  border:0;
+  background:var(--maroon);
+  color:white;
+  padding:11px 17px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  text-decoration:none;
 }
-.btn.alt { background: var(--navy); }
+.btn.alt {background:var(--navy)}
 .sheet {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 28px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 20px #17274212;
+  background:white;
+  border:1px solid var(--border);
+  padding:28px;
+  margin-bottom:20px;
+  box-shadow:0 5px 20px #17274212;
 }
 .heading {
-  background: var(--navy);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  background:var(--navy);
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
 }
 .band {
-  background: var(--maroon);
-  color: white;
-  padding: 8px 12px;
-  margin: 15px 0 10px;
-  font-weight: bold;
+  background:var(--maroon);
+  color:white;
+  padding:8px 12px;
+  margin:15px 0 10px;
+  font-weight:700;
 }
 .meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
 }
 .meta div {
-  border: 1px solid var(--border);
-  padding: 9px;
+  border:1px solid var(--border);
+  padding:9px;
 }
 .section {
-  border: 1px solid var(--border);
-  margin: 12px 0;
-  break-inside: avoid;
+  border:1px solid var(--border);
+  margin:12px 0;
+  break-inside:avoid;
 }
 .section h3 {
-  background: #eaf0f6;
-  color: var(--navy);
-  margin: 0;
-  padding: 8px 12px;
-  font-size: 15px;
+  background:#eaf0f6;
+  margin:0;
+  padding:9px 12px;
+  font-size:15px;
 }
-.section p, .section ul {
-  margin: 8px 14px;
+.section p,.section ul {
+  margin:9px 14px;
 }
-.section ul { padding-left: 18px; }
-.small { font-size: 12px; color: #536174; }
+.section ul {padding-left:18px}
+.small {font-size:12px;color:#536174}
 .pagefoot {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  font-size: 11px;
-  color: #607088;
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+  font-size:11px;
+  color:#607088;
 }
-
-/* INTERACTIVE GAME SECTION */
 .game-zone {
-  max-width: 1000px;
-  margin: 26px auto 45px;
-  padding: 0 14px;
+  max-width:1000px;
+  margin:25px auto 50px;
+  padding:0 14px;
 }
-.game-intro { color: #526174; }
 .game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:15px;
 }
 .game-card {
-  background: white;
-  border: 1px solid #d9e0eb;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 3px 12px #1427470a;
+  background:white;
+  border:1px solid #d9e0eb;
+  border-radius:13px;
+  padding:19px;
 }
-.game-card h3 { margin: 5px 0 10px; color: var(--navy); }
-.game-card ol { padding-left: 22px; }
-.game-card li { margin: 5px 0; }
+.game-card h3 {margin:8px 0}
+.game-card ol {padding-left:22px}
+.game-card li {margin:6px 0}
 .tag {
-  display: inline-block;
-  background: #f6eaf0;
-  color: var(--maroon);
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-weight: bold;
-  font-size: 12px;
+  display:inline-block;
+  background:#f6eaf0;
+  color:var(--maroon);
+  border-radius:20px;
+  padding:5px 11px;
+  font-size:12px;
+  font-weight:700;
 }
 .guide {
-  border-left: 3px solid var(--maroon);
-  padding: 8px 10px;
-  background: #faf4f6;
-  margin: 12px 0;
+  border-left:3px solid var(--maroon);
+  background:#faf4f6;
+  padding:10px;
+  margin:12px 0;
 }
 .game-play {
-  margin-top: 22px;
-  background: var(--navy);
-  color: white;
-  border-radius: 15px;
-  padding: 22px;
+  margin-top:25px;
+  background:var(--navy);
+  color:white;
+  border-radius:16px;
+  padding:25px;
 }
-.game-play h3 { color: white; }
-.game-play p { color: #e3eaf3; }
+.game-play h3 {color:white}
+.game-play p {color:#e3eaf3}
 .game-play button {
-  background: var(--maroon);
-  color: white;
-  border: 0;
-  border-radius: 8px;
-  padding: 12px 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 4px;
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:8px;
+  padding:12px 16px;
+  font-weight:700;
+  cursor:pointer;
+  margin:4px;
 }
-.game-play button:focus-visible {
-  outline: 3px solid white;
+.game-play button:disabled {
+  opacity:.5;
+  cursor:not-allowed;
 }
 .answer {
-  background: white;
-  color: var(--navy);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  min-height: 95px;
-  font-size: clamp(21px, 4vw, 38px);
-  font-weight: bold;
+  background:white;
+  color:var(--navy);
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  min-height:125px;
+  font-size:clamp(21px,4vw,38px);
+  font-weight:700;
+}
+.emoji {
+  display:block;
+  font-size:65px;
 }
 .teacher-prompt {
-  background: #263d61;
-  padding: 10px;
-  border-radius: 8px;
-  margin: 12px 0;
+  background:#263d61;
+  padding:13px;
+  border-radius:9px;
+  margin:14px 0;
 }
-.emoji { font-size: 50px; display: block; }
-.game-play button:disabled { opacity: .5; cursor: not-allowed; }
-.status { font-size: 14px; }
-
-@media (max-width: 550px) {
-  .meta { grid-template-columns: 1fr; }
-  .sheet { padding: 14px; }
-  .heading { flex-direction: column; }
+@media(max-width:550px) {
+  .meta {grid-template-columns:1fr}
+  .sheet {padding:14px}
+  .heading {flex-direction:column}
 }
-@page { size: A4; margin: 10mm; }
+@page {size:A4;margin:10mm}
 @media print {
-  body { background: white; font-size: 11px; }
-  header, .toolbar, .intro, h1, .game-zone { display: none !important; }
-  main { padding: 0; margin: 0; max-width: none; }
+  body {background:white;font-size:11px}
+  header,.toolbar,.intro,h1,.game-zone {display:none!important}
+  main {padding:0;margin:0;max-width:none}
   .sheet {
-    box-shadow: none;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    break-after: page;
+    border:0;
+    box-shadow:none;
+    padding:0;
+    break-after:page;
   }
-  .sheet:last-child { break-after: auto; }
-  .heading, .band, .section h3 {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+  .sheet:last-child {break-after:auto}
+  .heading,.band,.section h3 {
+    print-color-adjust:exact;
+    -webkit-print-color-adjust:exact;
   }
-  .section { margin: 7px 0; }
-  .section p, .section ul { margin: 5px 10px; }
-  .band { margin: 9px 0 6px; }
 }
 </style>
 </head>
@@ -221,415 +215,401 @@ h1, h2 { color: var(--navy); }
 
 <header>
   <strong>IEC Teacher Portal</strong>
-  <a href="portal.html">← Lesson Library</a>
+  <a href="portal.html">← Curriculum & Lesson Library</a>
 </header>
 
 <main>
-<h1>Ready-to-Teach Lesson Library</h1>
+  <h1>Ready-to-Teach IEC Lesson Plan</h1>
+  <p class="intro">
+    Oxford → Kindergarten → Toy Team Plus 3 → Unit 1: Jobs.
+    Complete teaching guidance for two 45-minute periods.
+    Confirm publisher audio and assigned activity pages
+    against the school copies.
+  </p>
 
-<p class="intro">
-Complete IEC lesson plans, prepared in advance for teachers.
-This sample uses Big Team 3 Unit 1 materials.
-Confirm the assigned pages and audio against the school copy.
-</p>
-
-<div class="toolbar">
-  <button class="btn" onclick="window.print()">
-    Print / Save Lesson Plan
-  </button>
-  <a class="btn alt" href="#interactive-games">
-    Interactive Games
-  </a>
-  <a class="btn alt" href="portal.html">
-    Return to Library
-  </a>
-</div>
-
-<!-- LESSON PLAN PAGE 1 -->
-<article class="sheet">
-  <div class="heading">
-    <strong>
-      IEC INTERNATIONAL EDUCATION CITY<br>
-      TESOL LESSON PLAN
-    </strong>
-    <span>PAGE 1 / 2</span>
+  <div class="toolbar">
+    <button class="btn" onclick="window.print()">
+      Print / Save Lesson Plan
+    </button>
+    <a class="btn alt" href="#interactive-games">
+      Interactive Games
+    </a>
+    <a class="btn alt" href="portal.html">
+      Return to Library
+    </a>
   </div>
 
-  <div class="band">LESSON INFORMATION & OBJECTIVES</div>
+  <article class="sheet">
+    <div class="heading">
+      <strong>
+        IEC INTERNATIONAL EDUCATION CITY<br>
+        TESOL LESSON PLAN
+      </strong>
+      <span>PAGE 1 / 2</span>
+    </div>
 
-  <div class="meta">
-    <div><b>Program:</b> Big Team 3 · English</div>
-    <div><b>Unit:</b> 1 — Jobs</div>
-    <div><b>Lessons:</b> 1–2 (sample pairing)</div>
-    <div><b>Duration:</b> 90 minutes (2 × 45)</div>
-    <div><b>Skills:</b> Listening · Speaking · Early literacy</div>
-    <div><b>Level:</b> Emerging / Pre-A1-oriented (verify)</div>
-  </div>
+    <div class="band">LESSON INFORMATION & OBJECTIVES</div>
 
-  <div class="section">
-    <h3>Materials & Target Language</h3>
-    <p>
-      Student Book Unit 1 job illustrations;
-      Activity Book matching and tracing;
-      job picture cards; relevant publisher audio.
-    </p>
-    <p>
-      <b>Vocabulary:</b> doctor, teacher, pilot,
-      chef, dancer, firefighter.
-    </p>
-    <p><b>Structure:</b> "I'm a ..."</p>
-  </div>
+    <div class="meta">
+      <div><b>Curriculum:</b> Oxford</div>
+      <div><b>Level:</b> Kindergarten</div>
+      <div><b>Textbook:</b> Toy Team Plus 3</div>
+      <div><b>Unit:</b> 1 — Jobs</div>
+      <div><b>Lessons:</b> 1–2</div>
+      <div><b>Duration:</b> 90 minutes (2 × 45)</div>
+      <div><b>Skills:</b> Listening and Speaking</div>
+      <div><b>Language:</b> I'm a ...</div>
+    </div>
 
-  <div class="section">
-    <h3>Measurable Learning Objectives</h3>
-    <ul>
-      <li>Identify at least 5 of 6 jobs from pictures.</li>
-      <li>Pronounce at least 4 of 6 job words intelligibly.</li>
-      <li>Produce two "I'm a ..." sentences with a recorded support level.</li>
-    </ul>
-    <p class="small">
-      Proposed IEC lesson targets, not publisher-defined pass standards.
-    </p>
-  </div>
+    <section class="section">
+      <h3>Materials & Target Language</h3>
+      <p>
+        <b>Materials:</b> Student Book Unit 1,
+        Activity Book, six job picture cards,
+        board, projector and approved publisher audio.
+      </p>
+      <p>
+        <b>Vocabulary:</b> doctor, teacher, pilot,
+        chef, dancer, firefighter.
+      </p>
+      <p><b>Sentence:</b> "I'm a doctor."</p>
+    </section>
 
-  <div class="band">PERIOD 1 — 45 MINUTES</div>
+    <section class="section">
+      <h3>Measurable Learning Objectives</h3>
+      <ul>
+        <li>Identify at least five of six jobs from pictures.</li>
+        <li>Pronounce at least four job words intelligibly.</li>
+        <li>Produce two "I'm a ..." sentences with support recorded.</li>
+      </ul>
+      <p class="small">
+        These are proposed IEC assessment targets,
+        not publisher-defined passing standards.
+      </p>
+    </section>
 
-  <div class="section">
-    <h3>1. Warm-up & Objective Discussion · 10 min</h3>
-    <p>
-      <b>Teacher:</b> Greet students, show doctor and teacher
-      pictures, and ask "Doctor or teacher?"
-      Introduce today's goal: name jobs and say "I'm a ..."
-    </p>
-    <p>
-      <b>Students:</b> Point, identify familiar jobs,
-      and repeat the target language.
-    </p>
-    <p><b>Scaffold:</b> Pictures, gestures, teacher modeling.</p>
-    <p><b>Optional game:</b> Guess the Job (5 min).</p>
-  </div>
+    <div class="band">PERIOD 1 — 45 MINUTES</div>
 
-  <div class="section">
-    <h3>2. Instruct & Model · 20 min</h3>
-    <p>
-      <b>Teacher:</b> Present six job pictures.
-      Say each word, model pronunciation,
-      play relevant listening audio, and introduce
-      "I'm a doctor."
-    </p>
-    <p>
-      <b>CCQs:</b> Show pilot and chef pictures.
-      "Who flies?" [Pilot].
-      "Who cooks?" [Chef].
-      Students point or say one word.
-    </p>
-    <p>
-      <b>Optional game:</b> Listen, Point, Act (5 min).
-    </p>
-  </div>
+    <section class="section">
+      <h3>1. Warm-up & Objectives — 10 minutes</h3>
+      <p>
+        <b>Teacher:</b> Greet students.
+        Show a doctor and teacher picture.
+        Ask "Doctor or teacher?"
+        Introduce the goal: name jobs and say "I'm a ..."
+      </p>
+      <p>
+        <b>Students:</b> Point, identify and repeat.
+      </p>
+      <p>
+        <b>Scaffolding:</b> Pictures, gestures,
+        repetition and two-choice questions.
+      </p>
+      <p><b>Game:</b> Guess the Job (5 minutes).</p>
+    </section>
 
-  <div class="section">
-    <h3>3. Guided Practice · 15 min</h3>
-    <p>
-      <b>Teacher:</b> Demonstrate picture-word matching
-      and paired flashcard exchanges.
-    </p>
-    <p>
-      <b>ICQs:</b> "Say or write?" [Say].
-      "One or two?" [Two].
-    </p>
-    <p>
-      <b>Students:</b> Match pictures and practice
-      "I'm a pilot / chef / teacher ..."
-    </p>
-    <p>
-      <b>Optional game:</b> Find Your Partner (7 min).
-    </p>
-  </div>
+    <section class="section">
+      <h3>2. Instruct & Model — 20 minutes</h3>
+      <p>
+        <b>Teacher:</b> Display six job pictures.
+        Say each word, model pronunciation,
+        play the appropriate publisher audio,
+        and demonstrate "I'm a doctor."
+      </p>
+      <p>
+        <b>Model:</b> Teacher says "pilot";
+        students repeat and make a flying gesture.
+      </p>
+      <p>
+        <b>CCQs:</b> "Who flies?" [Pilot].
+        "Who cooks?" [Chef].
+      </p>
+      <p><b>Game:</b> Listen, Point, Act (5 minutes).</p>
+    </section>
 
-  <div class="pagefoot">
-    <span>IEC · MODEL → GUIDE → PRACTICE → ASSESS</span>
-    <span>1 / 2</span>
-  </div>
-</article>
+    <section class="section">
+      <h3>3. Guided Practice — 15 minutes</h3>
+      <p>
+        <b>Teacher:</b> Demonstrate matching
+        job pictures and word cards.
+        Model a paired exchange.
+      </p>
+      <p>
+        <b>Students:</b> Match cards and practice
+        "I'm a pilot", "I'm a chef" and other examples.
+      </p>
+      <p>
+        <b>ICQs:</b> "Say or write?" [Say].
+        "One or two?" [Two].
+      </p>
+      <p><b>Game:</b> Find Your Partner (7 minutes).</p>
+    </section>
 
-<!-- LESSON PLAN PAGE 2 -->
-<article class="sheet">
-  <div class="heading">
-    <strong>
-      IEC INTERNATIONAL EDUCATION CITY<br>
-      TESOL LESSON PLAN
-    </strong>
-    <span>PAGE 2 / 2</span>
-  </div>
+    <div class="pagefoot">
+      <span>IEC · MODEL → GUIDE → PRACTICE → ASSESS</span>
+      <span>1 / 2</span>
+    </div>
+  </article>
 
-  <div class="band">PERIOD 2 — 45 MINUTES</div>
+  <article class="sheet">
+    <div class="heading">
+      <strong>
+        IEC INTERNATIONAL EDUCATION CITY<br>
+        TESOL LESSON PLAN
+      </strong>
+      <span>PAGE 2 / 2</span>
+    </div>
 
-  <div class="section">
-    <h3>4. Independent Practice & Communication · 30 min</h3>
-    <p>
-      <b>0–5 min:</b> Flashcard retrieval.
-      Students identify jobs with less teacher support.
-      Optional: Flashcard Challenge.
-    </p>
-    <p>
-      <b>5–12 min:</b> Listen to the assigned song,
-      then repeat or sing with gestures.
-    </p>
-    <p>
-      <b>12–22 min:</b> Activity Book matching/tracing.
-      Model one example. ICQ: "Line or color?" [Line].
-    </p>
-    <p>
-      <b>22–30 min:</b> Job role-play.
-      Students select job cards and say "I'm a ..."
-      Optional: Job Charades.
-    </p>
-  </div>
+    <div class="band">PERIOD 2 — 45 MINUTES</div>
 
-  <div class="section">
-    <h3>5. Assessment & Closure · 15 min</h3>
-    <p>
-      <b>0–8 min:</b> Show six job pictures.
-      Record recognition and pronunciation.
-    </p>
-    <p>
-      <b>8–13 min:</b> Students attempt two
-      "I'm a ..." sentences using different cards.
-      Record independent, prompted, or modeled support.
-    </p>
-    <p>
-      <b>13–15 min:</b> Praise progress,
-      review a difficult word, and preview next lesson.
-    </p>
-    <p>
-      <b>Optional game:</b> Pass and Say can replace
-      part of oral assessment practice.
-    </p>
-  </div>
+    <section class="section">
+      <h3>4. Independent Practice & Communication — 30 minutes</h3>
+      <p>
+        <b>0–5 minutes:</b> Flashcard retrieval.
+        Students identify jobs with reduced teacher support.
+        Play Flashcard Challenge.
+      </p>
+      <p>
+        <b>5–12 minutes:</b> Listen to the assigned song
+        using authorized audio, then repeat with gestures.
+      </p>
+      <p>
+        <b>12–22 minutes:</b> Activity Book practice.
+        Model one matching or tracing example.
+        ICQ: "Line or color?" Adapt to the assigned page.
+      </p>
+      <p>
+        <b>22–30 minutes:</b> Job role-play.
+        Students select cards and say "I'm a ..."
+        Play Job Charades.
+      </p>
+    </section>
 
-  <div class="band">INTEGRATED SUPPORT & FOLLOW-UP</div>
+    <section class="section">
+      <h3>5. Assessment & Closure — 15 minutes</h3>
+      <p>
+        <b>0–8 minutes:</b> Show six job pictures.
+        Record recognition and pronunciation.
+      </p>
+      <p>
+        <b>8–13 minutes:</b> Students produce two
+        "I'm a ..." sentences using different cards.
+        Record support level.
+      </p>
+      <p>
+        <b>13–15 minutes:</b> Praise effort,
+        review a difficult word and preview the next lesson.
+      </p>
+      <p>
+        <b>Optional:</b> Use Pass and Say as part
+        of oral practice.
+      </p>
+    </section>
 
-  <div class="section">
-    <h3>Differentiation</h3>
-    <p>
-      <b>Support:</b> Picture bank, gestures,
-      choral repetition, sentence strips,
-      peer modeling.
-    </p>
-    <p>
-      <b>Core:</b> Identify jobs and produce
-      supported sentences.
-    </p>
-    <p>
-      <b>Extension:</b> Independent sentence
-      production and simple job questions.
-    </p>
-  </div>
+    <div class="band">DIFFERENTIATION & FOLLOW-UP</div>
 
-  <div class="section">
-    <h3>Evidence & Teacher Reflection</h3>
-    <p>
-      <b>Checklist:</b> Recognition ___/6 ·
-      Pronunciation ___/6 · Sentences ___/2.
-    </p>
-    <p>
-      <b>Support:</b> Independent / Prompted / Modeled.
-    </p>
-    <p>
-      <b>Reflection:</b> Which words need reteaching?
-      Who needs additional visual support?
-    </p>
-  </div>
+    <section class="section">
+      <h3>Differentiation</h3>
+      <p>
+        <b>Support:</b> Two-choice picture bank,
+        gestures, choral repetition,
+        sentence strips and peer modeling.
+      </p>
+      <p>
+        <b>Core:</b> Identify jobs and produce
+        supported sentences.
+      </p>
+      <p>
+        <b>Extension:</b> Independent sentences
+        and simple job questions.
+      </p>
+    </section>
 
-  <div class="section">
-    <h3>Preparation Checklist</h3>
-    <p>
-      ☐ Student Book ☐ Activity Book ☐ Audio
-      ☐ Six job cards ☐ Assessment checklist
-    </p>
-  </div>
+    <section class="section">
+      <h3>Assessment & Teacher Reflection</h3>
+      <p>
+        <b>Recognition:</b> ____ / 6<br>
+        <b>Pronunciation:</b> ____ / 6<br>
+        <b>Sentences:</b> ____ / 2
+      </p>
+      <p>
+        <b>Support level:</b>
+        Independent / Prompted / Modeled.
+      </p>
+      <p>
+        <b>Reflection:</b> Which words need reteaching?
+        Which students need more visual support?
+      </p>
+    </section>
 
-  <div class="pagefoot">
-    <span>IEC · BEGINNER ELL SUPPORT</span>
-    <span>2 / 2</span>
-  </div>
-</article>
+    <section class="section">
+      <h3>Preparation Checklist</h3>
+      <p>
+        ☐ Student Book
+        ☐ Activity Book
+        ☐ Authorized audio
+        ☐ Job cards
+        ☐ Assessment checklist
+      </p>
+    </section>
+
+    <div class="pagefoot">
+      <span>IEC · BEGINNER ELL SUPPORT</span>
+      <span>2 / 2</span>
+    </div>
+  </article>
 </main>
 
-<!-- TEACHER GAME GUIDE -->
 <section class="game-zone" id="interactive-games">
-
-<h2>IEC Teacher Game & Interactive Activity Guide</h2>
-
-<p class="game-intro">
-Choose a game to replace part of the existing practice time.
-Demonstrate first. Use short instructions, gestures,
-pictures, and one-word responses for beginner ELL students.
-</p>
-
-<div class="game-grid">
-
-  <div class="game-card">
-    <span class="tag">Period 1 · Warm-up · 5 min</span>
-    <h3>1. Guess the Job</h3>
-    <p><b>Materials:</b> Job pictures.</p>
-    <ol>
-      <li>Cover most of a job picture.</li>
-      <li>Reveal one small part.</li>
-      <li>Students guess by pointing or speaking.</li>
-      <li>Reveal the answer and repeat together.</li>
-    </ol>
-    <div class="guide">
-      <b>ICQ:</b> "Look or write?" [Look].<br>
-      <b>CCQ:</b> "Who cooks?" [Point to chef].<br>
-      <b>Check:</b> Correct picture recognition.
-    </div>
-    <p><b>Support:</b> Show two choices instead of six.</p>
-  </div>
-
-  <div class="game-card">
-    <span class="tag">Period 1 · Modeling · 5 min</span>
-    <h3>2. Listen, Point, Act</h3>
-    <p><b>Materials:</b> Job cards.</p>
-    <ol>
-      <li>Display two or three job pictures.</li>
-      <li>Say "Pilot" and model pointing.</li>
-      <li>Students point to the named job.</li>
-      <li>Add actions for flying, cooking, dancing.</li>
-    </ol>
-    <div class="guide">
-      <b>ICQ:</b> "Point or draw?" [Point].<br>
-      <b>CCQ:</b> "Who flies?" [Pilot].<br>
-      <b>Check:</b> Correct pointing before speaking.
-    </div>
-    <p><b>Support:</b> Teacher acts first; students copy.</p>
-  </div>
-
-  <div class="game-card">
-    <span class="tag">Period 1 · Guided · 7 min</span>
-    <h3>3. Find Your Partner</h3>
-    <p><b>Materials:</b> Matching pairs of job cards.</p>
-    <ol>
-      <li>Give each student one job card.</li>
-      <li>Demonstrate finding a matching card.</li>
-      <li>Students walk to find their partner.</li>
-      <li>Pairs practice "I'm a doctor."</li>
-    </ol>
-    <div class="guide">
-      <b>ICQs:</b> "One or two?" [Two].
-      "Walk or run?" [Walk].<br>
-      <b>CCQ:</b> Show two matching cards:
-      "Same?" [Yes].<br>
-      <b>Check:</b> Matching and sentence attempts.
-    </div>
-    <p><b>Support:</b> Use seated pairs if movement is difficult.</p>
-  </div>
-
-  <div class="game-card">
-    <span class="tag">Period 2 · Retrieval · 5 min</span>
-    <h3>4. Flashcard Challenge</h3>
-    <p><b>Materials:</b> Cards or browser game below.</p>
-    <ol>
-      <li>Show one picture.</li>
-      <li>Students think and name the job.</li>
-      <li>Invite a sentence: "I'm a ..."</li>
-      <li>Repeat with the next picture.</li>
-    </ol>
-    <div class="guide">
-      <b>ICQ:</b> "Look or write?" [Look].<br>
-      <b>CCQ:</b> "Who flies?" [Pilot].<br>
-      <b>Check:</b> Independent vocabulary recall.
-    </div>
-    <p><b>Support:</b> Choral responses before individual turns.</p>
-  </div>
-
-  <div class="game-card">
-    <span class="tag">Period 2 · Speaking · 8 min</span>
-    <h3>5. Job Charades</h3>
-    <p><b>Materials:</b> Job cards.</p>
-    <ol>
-      <li>Teacher acts out cooking.</li>
-      <li>Students guess "Chef."</li>
-      <li>Students take turns acting out jobs.</li>
-      <li>Class practices "I'm a chef."</li>
-    </ol>
-    <div class="guide">
-      <b>ICQ:</b> "Talk or act?" [Act].<br>
-      <b>CCQ:</b> "Chef or pilot?" [Chef].<br>
-      <b>Check:</b> Job meaning and oral production.
-    </div>
-    <p><b>Support:</b> Students may act in pairs.</p>
-  </div>
-
-  <div class="game-card">
-    <span class="tag">Period 2 · Closure · 5 min</span>
-    <h3>6. Pass and Say</h3>
-    <p><b>Materials:</b> One soft job picture card.</p>
-    <ol>
-      <li>Students pass a card around the group.</li>
-      <li>Teacher says "Stop."</li>
-      <li>Student holding the card names the job.</li>
-      <li>Student attempts "I'm a ..."</li>
-    </ol>
-    <div class="guide">
-      <b>ICQ:</b> "Pass or throw?" [Pass].<br>
-      <b>CCQ:</b> "Doctor or dancer?" [Doctor].<br>
-      <b>Check:</b> Independent, prompted, or modeled answer.
-    </div>
-    <p><b>Support:</b> Allow pointing or partner help.</p>
-  </div>
-
-</div>
-
-<!-- INTERACTIVE BROWSER GAME -->
-<div class="game-play" id="flashcard-game">
-
-  <h3>Play in Class: Interactive Job Flashcards</h3>
+  <h2>Teacher Game & Interactive Activity Guide</h2>
 
   <p>
-    Project this game on a screen.
-    Students identify the job from the picture symbol.
-    Reveal the answer, then practice the sentence.
+    These games fit within the teaching periods above.
+    They are not additional lesson time.
+    Demonstrate each activity before students begin.
   </p>
 
-  <div class="answer" aria-live="polite">
-    <span class="emoji" id="job-symbol"
-          aria-hidden="true">🧑‍⚕️</span>
-    <span id="job-answer">What job?</span>
+  <div class="game-grid">
+    <article class="game-card">
+      <span class="tag">Period 1 · Warm-up · 5 min</span>
+      <h3>1. Guess the Job</h3>
+      <p><b>Materials:</b> Job pictures.</p>
+      <ol>
+        <li>Cover most of a job picture.</li>
+        <li>Reveal one small part.</li>
+        <li>Students guess by pointing or speaking.</li>
+        <li>Reveal the answer and repeat together.</li>
+      </ol>
+      <div class="guide">
+        <b>ICQ:</b> "Look or write?" [Look].<br>
+        <b>CCQ:</b> "Who cooks?" [Chef].<br>
+        <b>Check:</b> Correct picture recognition.
+      </div>
+      <p><b>Support:</b> Show two choices instead of six.</p>
+    </article>
+
+    <article class="game-card">
+      <span class="tag">Period 1 · Modeling · 5 min</span>
+      <h3>2. Listen, Point, Act</h3>
+      <p><b>Materials:</b> Job cards.</p>
+      <ol>
+        <li>Display two or three job pictures.</li>
+        <li>Say "Pilot" and model pointing.</li>
+        <li>Students point to the named job.</li>
+        <li>Add flying, cooking and dancing gestures.</li>
+      </ol>
+      <div class="guide">
+        <b>ICQ:</b> "Point or draw?" [Point].<br>
+        <b>CCQ:</b> "Who flies?" [Pilot].<br>
+        <b>Check:</b> Correct pointing before speaking.
+      </div>
+      <p><b>Support:</b> Teacher acts first; students copy.</p>
+    </article>
+
+    <article class="game-card">
+      <span class="tag">Period 1 · Guided · 7 min</span>
+      <h3>3. Find Your Partner</h3>
+      <p><b>Materials:</b> Matching job cards.</p>
+      <ol>
+        <li>Give each student one job card.</li>
+        <li>Demonstrate finding a matching card.</li>
+        <li>Students walk to find their partner.</li>
+        <li>Pairs practice "I'm a doctor."</li>
+      </ol>
+      <div class="guide">
+        <b>ICQs:</b> "One or two?" [Two].
+        "Walk or run?" [Walk].<br>
+        <b>CCQ:</b> Show matching cards: "Same?" [Yes].<br>
+        <b>Check:</b> Matching and sentence attempts.
+      </div>
+      <p><b>Support:</b> Use seated pairs if needed.</p>
+    </article>
+
+    <article class="game-card">
+      <span class="tag">Period 2 · Retrieval · 5 min</span>
+      <h3>4. Flashcard Challenge</h3>
+      <p><b>Materials:</b> Job cards or browser game.</p>
+      <ol>
+        <li>Show one picture.</li>
+        <li>Students think and name the job.</li>
+        <li>Invite a sentence: "I'm a ..."</li>
+        <li>Repeat with the next picture.</li>
+      </ol>
+      <div class="guide">
+        <b>ICQ:</b> "Look or write?" [Look].<br>
+        <b>CCQ:</b> "Who flies?" [Pilot].<br>
+        <b>Check:</b> Independent vocabulary recall.
+      </div>
+      <p><b>Support:</b> Choral responses first.</p>
+    </article>
+
+    <article class="game-card">
+      <span class="tag">Period 2 · Speaking · 8 min</span>
+      <h3>5. Job Charades</h3>
+      <p><b>Materials:</b> Job cards.</p>
+      <ol>
+        <li>Teacher acts out cooking.</li>
+        <li>Students guess "Chef."</li>
+        <li>Students take turns acting out jobs.</li>
+        <li>Class practices "I'm a chef."</li>
+      </ol>
+      <div class="guide">
+        <b>ICQ:</b> "Talk or act?" [Act].<br>
+        <b>CCQ:</b> "Chef or pilot?" [Chef].<br>
+        <b>Check:</b> Job meaning and oral production.
+      </div>
+      <p><b>Support:</b> Students may act in pairs.</p>
+    </article>
+
+    <article class="game-card">
+      <span class="tag">Period 2 · Closure · 5 min</span>
+      <h3>6. Pass and Say</h3>
+      <p><b>Materials:</b> One soft job picture card.</p>
+      <ol>
+        <li>Students pass a card around the group.</li>
+        <li>Teacher says "Stop."</li>
+        <li>Student holding the card names the job.</li>
+        <li>Student attempts "I'm a ..."</li>
+      </ol>
+      <div class="guide">
+        <b>ICQ:</b> "Pass or throw?" [Pass].<br>
+        <b>CCQ:</b> Show doctor: "Doctor or dancer?" [Doctor].<br>
+        <b>Check:</b> Independent, prompted or modeled answer.
+      </div>
+      <p><b>Support:</b> Allow pointing or partner help.</p>
+    </article>
   </div>
 
-  <div class="teacher-prompt" id="game-instruction">
-    Teacher: "Look. What job?"
-    Students point or say one word.
+  <div class="game-play" id="flashcard-game">
+    <h3>Interactive Job Flashcards</h3>
+    <p>
+      Project this game for whole-class practice.
+      Students identify the job, then say the sentence.
+    </p>
+
+    <div class="answer" aria-live="polite">
+      <span class="emoji" id="job-symbol" aria-hidden="true">🧑‍⚕️</span>
+      <span id="job-answer">What job?</span>
+    </div>
+
+    <div class="teacher-prompt" id="game-instruction">
+      Teacher: "Look. What job?"
+    </div>
+
+    <button type="button" id="reveal-job">Reveal Answer</button>
+    <button type="button" id="next-job">Next Card</button>
+    <button type="button" id="correct-job">Correct ✓</button>
+    <button type="button" id="reset-job">Reset</button>
+
+    <p id="game-score" aria-live="polite">
+      Cards shown: 1 · Correct: 0
+    </p>
+
+    <p class="small">
+      Classroom practice score only.
+      Do not display individual student names or scores.
+    </p>
   </div>
-
-  <button type="button" id="reveal-job">
-    Reveal Answer
-  </button>
-
-  <button type="button" id="next-job">
-    Next Card
-  </button>
-
-  <button type="button" id="correct-job">
-    Correct ✓
-  </button>
-
-  <button type="button" id="reset-job">
-    Reset
-  </button>
-
-  <p class="status" id="game-score" aria-live="polite">
-    Cards shown: 1 · Correct: 0
-  </p>
-
-  <p style="font-size:13px">
-    Classroom practice score only.
-    Do not display individual student names or scores.
-  </p>
-
-</div>
 </section>
 
 <script>
@@ -638,34 +618,34 @@ pictures, and one-word responses for beginner ELL students.
 
   const jobs = [
     {
-      word: "doctor",
-      symbol: "🧑‍⚕️",
-      cue: "Who helps sick people?"
+      word:"doctor",
+      symbol:"🧑‍⚕️",
+      cue:"Who helps sick people?"
     },
     {
-      word: "teacher",
-      symbol: "🧑‍🏫",
-      cue: "Who teaches?"
+      word:"teacher",
+      symbol:"🧑‍🏫",
+      cue:"Who teaches?"
     },
     {
-      word: "pilot",
-      symbol: "🧑‍✈️",
-      cue: "Who flies?"
+      word:"pilot",
+      symbol:"🧑‍✈️",
+      cue:"Who flies?"
     },
     {
-      word: "chef",
-      symbol: "🧑‍🍳",
-      cue: "Who cooks?"
+      word:"chef",
+      symbol:"🧑‍🍳",
+      cue:"Who cooks?"
     },
     {
-      word: "dancer",
-      symbol: "💃",
-      cue: "Who dances?"
+      word:"dancer",
+      symbol:"💃",
+      cue:"Who dances?"
     },
     {
-      word: "firefighter",
-      symbol: "🧑‍🚒",
-      cue: "Who puts out fires?"
+      word:"firefighter",
+      symbol:"🧑‍🚒",
+      cue:"Who puts out fires?"
     }
   ];
 
@@ -734,7 +714,6 @@ pictures, and one-word responses for beginner ELL students.
 
     correct++;
     scored = true;
-
     el("correct-job").disabled = true;
     updateScore();
   });
@@ -749,6 +728,5 @@ pictures, and one-word responses for beginner ELL students.
   nextCard();
 })();
 </script>
-
 </body>
 </html>
