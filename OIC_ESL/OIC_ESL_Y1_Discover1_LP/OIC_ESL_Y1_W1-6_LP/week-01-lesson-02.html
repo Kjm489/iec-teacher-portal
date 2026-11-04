@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEC OIC ESL | Year 1 | Week 1 | Lesson 2</title>
+<style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+header a {
+  color:white;
+  text-decoration:none;
+  margin-left:14px;
+}
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+h1 {font-size:23px;color:var(--navy);margin:0 0 5px}
+.subtitle {color:#536174;margin:0 0 14px}
+.toolbar {display:flex;gap:9px;margin-bottom:15px;flex-wrap:wrap}
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+.btn.secondary {background:var(--navy)}
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+.inside {padding:7px 10px}
+p {margin:4px 0}
+ul,ol {margin:4px 0;padding-left:20px}
+li {margin:3px 0}
+.label {color:var(--maroon);font-weight:bold}
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+@media(max-width:650px) {
+  header {flex-direction:column;align-items:flex-start}
+  .meta {grid-template-columns:1fr 1fr}
+  .two-col {grid-template-columns:1fr}
+  .sheet {padding:12px}
+}
+@page {size:A4;margin:9mm}
+@media print {
+  html,body {background:white;margin:0;padding:0}
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  header,h1,.subtitle,.toolbar {display:none!important}
+  main {max-width:none;margin:0;padding:0}
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+  .heading {padding:6px 9px;font-size:10px}
+  .band {padding:4px 8px;margin:7px 0 4px}
+  .meta {gap:3px;margin-bottom:5px}
+  .meta div {padding:3px 5px}
+  .stage {margin:4px 0;break-inside:avoid}
+  .stage h3 {padding:4px 7px;font-size:9.6px}
+  .inside {padding:4px 7px}
+  p {margin:2px 0}
+  li {margin:2px 0}
+  ul,ol {margin:2px 0;padding-left:16px}
+  .note {padding:3px 6px;margin:3px 0}
+  .two-col {gap:5px}
+  .pagefoot {margin-top:5px;padding-top:4px}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <strong>IEC · YEAR 1 · WEEK 1 · LESSON 2</strong>
+  <nav>
+    <a href="index.html">Lesson Library</a>
+    <a href="week-01-lesson-01.html">← Previous</a>
+    <a href="week-01-lesson-03.html">Next →</a>
+  </nav>
+</header>
+
+<main>
+<h1>IEC TESOL / OIC Lesson Plan — What's your name? (2)</h1>
+<p class="subtitle">
+  Year 1 · Week 1 · Lesson 2 · 90 minutes · Two 45-minute periods
+</p>
+
+<div class="toolbar">
+  <button class="btn" onclick="window.print()">
+    Print / Save as 2-Page PDF
+  </button>
+  <a class="btn secondary" href="index.html">Lesson Library</a>
+</div>
+
+<!-- PAGE ONE -->
+<article class="sheet">
+
+  <div class="heading">
+    <span>IEC INTERNATIONAL EDUCATION CITY<br>
+    TESOL / OIC LESSON PLAN</span>
+    <span>PAGE 1 / 2</span>
+  </div>
+
+  <div class="band">LESSON INFORMATION & OBJECTIVES</div>
+
+  <div class="meta">
+    <div><b>Curriculum:</b> OIC ESL Year 1</div>
+    <div><b>Theme:</b> Me and my classroom</div>
+    <div><b>Week / Lesson:</b> 1 / 2</div>
+    <div><b>Topic:</b> What's your name? (2)</div>
+    <div><b>Duration:</b> 90 minutes (45 + 45)</div>
+    <div><b>OIC Outcomes:</b> 1.1b, 1.2b</div>
+  </div>
+
+  <section class="stage">
+    <h3>Learning Objectives & Success Criteria</h3>
+    <div class="inside">
+      <p>By the end of the lesson, students will be able to:</p>
+      <ol>
+        <li>Listen carefully and identify the correct person or name from spoken information.</li>
+        <li>Create a self-portrait poster to introduce themselves.</li>
+        <li>Present their poster using simple English greetings and introductions.</li>
+        <li>Listen respectfully and follow simple classroom activity instructions.</li>
+      </ol>
+      <p><span class="label">Success:</span> Students identify a person or name from a listening prompt, complete a recognizable self-portrait and give a short introduction with appropriate support.</p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>Target Language, Materials & Preparation</h3>
+    <div class="inside">
+      <p><span class="label">Language:</span> Hello. What's your name? My name is ___. This is me. Nice to meet you.</p>
+      <p><span class="label">Materials:</span> Original OIC listening resource or teacher-read identification prompts, name/character picture cards, paper, crayons or colored pencils, and self-portrait poster examples.</p>
+      <p><span class="label">Preparation:</span> Prepare the listening identification task from the original OIC lesson. Create a simple teacher self-portrait as a model. Ensure students have suitable materials for drawing and presenting.</p>
+    </div>
+  </section>
+
+  <div class="band">PERIOD 1 — 45 MINUTES</div>
+
+  <section class="stage">
+    <h3>1. Warm-up & Objective Discussion — 8 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Teacher:</span> Welcome students and review greetings from Lesson 1 using a puppet. Ask: "What's your name?" and model the response. Invite several students to answer.</p>
+      <p>Show a sample self-portrait and explain: "Today we will listen, find the correct person, draw ourselves and introduce ourselves."</p>
+      <p><span class="label">Students:</span> Practise the greeting exchange and identify what they will make.</p>
+      <p><span class="label">Scaffolding:</span> Display "My name is ___" and use a puppet for reluctant speakers.</p>
+      <p><span class="label">ICQ:</span> "Will we draw ourselves or draw the teacher?" <b>Expected:</b> "Ourselves."</p>
+      <p><span class="label">CCQ:</span> "If I say 'My name is Mai,' is Mai my name?" <b>Yes.</b></p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>2. Teacher Modeling — I DO — 12 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Listening model:</span> Display two character pictures with names. Say: "Listen: My name is Ben." Point to Ben. Repeat with another character, demonstrating how to listen before selecting.</p>
+      <p><span class="label">Poster model:</span> Show the teacher self-portrait. Point to the drawing and demonstrate:</p>
+      <p class="note">
+        "Hello! My name is Ms. Lan.<br>
+        This is me. Nice to meet you!"
+      </p>
+      <p>Think aloud: "I draw myself. I put my name on my poster. Then I tell my classmates my name."</p>
+      <p><span class="label">ICQs:</span> "Do you point before or after listening?" <b>After.</b> "Whose picture will you draw?" <b>My own.</b></p>
+      <p><span class="label">CCQs:</span> "If the voice says 'My name is Ben,' should I choose Ben or Anna?" <b>Ben.</b> "Does 'This is me' refer to my own picture?" <b>Yes.</b></p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>3. Guided Practice — WE DO — 15 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Listening identification:</span> Conduct the original OIC listening task. Play or read each prompt, pause, and have students point to or select the matching person/name. Check responses together.</p>
+      <p><span class="label">Guided poster preparation:</span> Demonstrate drawing a face and adding a name. Invite students to describe the steps and rehearse the introductory sentence together.</p>
+      <p><span class="label">Scaffolding:</span> Repeat audio when needed, reduce picture choices, use pointing, and model the first response before students complete later examples.</p>
+      <p><span class="label">ICQs:</span> "Do you listen first and then point?" <b>Yes.</b> "Do you draw your portrait before presenting?" <b>Yes.</b></p>
+      <p><span class="label">CCQ:</span> "If the speaker says 'I'm Anna,' should you point to the picture labeled Ben?" <b>No.</b></p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>4. Supported Pair/Group Practice — 10 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Teacher:</span> Pair students. Partner A introduces themselves using a name card or drawing; Partner B listens and repeats the name. Students swap roles.</p>
+      <p>Then ask partners to explain what they will include in their self-portrait posters.</p>
+      <p><span class="label">Students:</span> Practise introductions and listen for names while preparing their poster ideas.</p>
+      <p><span class="label">Scaffolding:</span> Display the name sentence frame and allow rehearsal before independent presentation.</p>
+      <p><span class="label">ICQ:</span> "Does each partner get a turn to speak and listen?" <b>Yes.</b></p>
+      <p><span class="label">CCQ:</span> "When someone tells you their name, should you listen for the name or their age?" <b>The name.</b></p>
+    </div>
+  </section>
+
+  <div class="pagefoot">
+    <span>IEC International Programs · TESOL / OIC</span>
+    <span>Year 1 · Week 1 · Lesson 2</span>
+  </div>
+
+</article>
+
+<!-- PAGE TWO -->
+<article class="sheet">
+
+  <div class="heading">
+    <span>IEC · INDEPENDENT PRACTICE & ASSESSMENT</span>
+    <span>PAGE 2 / 2</span>
+  </div>
+
+  <div class="band">PERIOD 2 — 45 MINUTES</div>
+
+  <section class="stage">
+    <h3>5. Independent Practice — YOU DO — 25 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Activity A — Self-portrait poster (12 min):</span> Each child draws themselves and adds their name. The teacher circulates without taking over the work.</p>
+      <p><span class="label">Activity B — Presentation rehearsal (5 min):</span> Students practise a short introduction using their completed poster. Allow visual prompts for those who need them.</p>
+      <p><span class="label">Activity C — Student presentations (8 min):</span> Students show their posters and introduce themselves to a small group or the class, depending on class size.</p>
+      <p class="note">
+        Student model:<br>
+        "Hello! My name is ___.<br>
+        This is me. Nice to meet you!"
+      </p>
+      <p><span class="label">ICQs:</span> "Do you draw yourself or your partner?" <b>Yourself.</b> "When presenting, do you show your poster and say your name?" <b>Yes.</b></p>
+      <p><span class="label">CCQs:</span> "If your poster says 'Linh,' should you introduce yourself as 'Ben'?" <b>No.</b> "Does your self-portrait show you?" <b>Yes.</b></p>
+      <p><span class="label">Assessment evidence:</span> Collect the poster and record the student's ability to introduce themselves clearly.</p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>6. Differentiation & Scaffolding — 10 minutes</h3>
+    <div class="inside">
+      <div class="two-col">
+        <div>
+          <p><span class="label">Support:</span></p>
+          <ul>
+            <li>Provide a partially prepared portrait outline.</li>
+            <li>Offer a name-writing model.</li>
+            <li>Allow a one-sentence introduction.</li>
+            <li>Use picture cues and partner rehearsal.</li>
+            <li>Repeat listening prompts and reduce choices.</li>
+          </ul>
+        </div>
+        <div>
+          <p><span class="label">Extension:</span></p>
+          <ul>
+            <li>Present without reading a sentence frame.</li>
+            <li>Ask a classmate "What's your name?"</li>
+            <li>Respond with "Nice to meet you."</li>
+            <li>Identify several names independently during listening.</li>
+          </ul>
+        </div>
+      </div>
+      <p><span class="label">ICQ:</span> "Can you use a name card or sentence frame if you need help?" <b>Yes.</b></p>
+      <p><span class="label">CCQ:</span> "Is 'My name is...' used to introduce yourself?" <b>Yes.</b></p>
+    </div>
+  </section>
+
+  <section class="stage">
+    <h3>7. Formative Assessment, Review & Exit Ticket — 10 minutes</h3>
+    <div class="inside">
+      <p><span class="label">Listening check:</span> Give a new spoken name prompt and ask students to identify the matching picture or name.</p>
+      <p><span class="label">Speaking check:</span> Invite students to introduce themselves using their posters.</p>
+      <p><span class="label">Exit ticket:</span> Each student:</p>
+      <ol>
+        <li>Identifies a name from a listening prompt.</li>
+        <li>Shows their self-portrait and says "My name is ___."</li>
+      </ol>
+      <p><span class="label">Final CCQs:</span> "When someone asks 'What's your name?', do you say your name?" <b>Yes.</b> "Do you listen carefully before choosing a picture?" <b>Yes.</b></p>
+      <p><span class="label">Teacher records:</span> Independent / With prompt / Not yet demonstrated.</p>
+    </div>
+  </section>
+
+  <div class="band">ORIGINAL OIC ACTIVITY ALIGNMENT</div>
+
+  <section class="stage">
+    <h3>Source Content Incorporated into TESOL Delivery</h3>
+    <div class="inside">
+      <ul>
+        <li><b>Listening identification:</b> I DO modeling, WE DO listening and independent assessment.</li>
+        <li><b>Self-portrait poster:</b> Guided preparation and independent production.</li>
+        <li><b>Student presentation:</b> Pair rehearsal and individual oral presentation.</li>
+        <li><b>Greetings and introductions:</b> Recycled from Lesson 1 and applied to the poster task.</li>
+        <li><b>OIC outcomes 1.1b and 1.2b:</b> Retained from the original lesson comparison.</li>
+      </ul>
+      <p class="note"><b>Source fidelity:</b> Listening identification, self-portrait creation and presentation are the original activities identified during the curriculum comparison. The sample listening prompts, timings and teacher scripts are TESOL adaptations; use the original OIC listening material where available.</p>
+    </div>
+  </section>
+
+  <div class="band">TEACHER REFLECTION & NEXT STEPS</div>
+
+  <section class="stage">
+    <h3>Post-Lesson Evaluation</h3>
+    <div class="inside">
+      <p><b>Listening:</b> Which students could identify names accurately without repeated prompts?</p>
+      <p><b>Speaking:</b> Which students could introduce themselves independently?</p>
+      <p><b>Scaffolding:</b> Which students benefited from name cards, visual cues or sentence frames?</p>
+      <p><b>Next lesson:</b> Reinforce listening and introductions as needed before progressing to numbers and age.</p>
+    </div>
+  </section>
+
+  <div class="pagefoot">
+    <span>IEC International Programs · TESOL / OIC</span>
+    <span>Page 2 of 2 · Teacher Delivery Copy</span>
+  </div>
+
+</article>
+</main>
+</body>
+</html>
