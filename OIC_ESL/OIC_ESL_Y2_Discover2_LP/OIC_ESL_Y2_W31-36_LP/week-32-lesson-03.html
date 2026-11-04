@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 32 Lesson 3 · Complimenting</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 32 · LESSON 3</strong><nav><a href="index.html">All lessons</a><a href="week-32-lesson-02.html">← Previous</a><a href="week-32-lesson-04.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Complimenting</h1><p class="subtitle">OIC ESL Year 2 · Week 32 · Lesson 3 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Shapes</div><div><b>Week:</b> 32</div><div><b>Lesson:</b> 3</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 2.2b, 2.2f</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 3</p><p><b>Measurable goals:</b> Students demonstrate the language and skills required by the original lesson, use topic vocabulary in a meaningful response, and produce one independent piece of evidence.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Original warm-up:</b> Ask children if they like it when people say nice and positive things about their work. Elicit why. Explain that this is called a ‘compliment’ (they don’t need to learn this word). Talk with the class about who often gives them compliments, and if they give compliments to others. If so, who do they tend to compliment? Discuss why it is important to show kindness in this way. Say that we all have strengths and are good at something. If they feel comfortable, encourage children to tell you what they think their strengths are, or what they think the strengths of the person sat next to them are. They can also write this down.</p><p><b>Scaffold:</b> Show a relevant picture or object; invite think–pair–share before asking for full sentences.</p><p><b>ICQs:</b> “Are you thinking first or answering immediately?” “Will both partners speak?” <b>CCQs:</b> “What is happening in this example?” “Which example belongs to this unit? How do you know?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Model the original task with a worked example: Introduce some homophones – two words that are pronounced the same but have different meanings. To illustrate, ask children to write the word ‘road’/‘rode’ on their whiteboards (or use a different example). Don’t give the meaning – just say the word and ask children to write it down. Now ask children to hold up their whiteboards on the count of three. Hopefully some children have written ‘road’, and others ‘rode’. Establish that both words are correct. They sound exactly the same, but are spelled differently and mean different things. Then draw a picture of a bag of flour and a picture of a flower. Elicit the word. Show both spellings on the board. Tell children that there are quite a few words in English that are like this. However, emphasize that we can tell which word somebody means from the context of the sentence (i.e. what it is about). Give an example that is meaningful for your context. Turn to Oxford Discover SB 2 p.175 and do ex.F together. Now indicate to your drawing of the flower on the board. Ask children if they like it and try to get some compliments! Invite a child to the front to draw another picture. Give praise: e.g. Wow! That’s a really good, [Ibrahim]. / You’re good at … Encourage the child to reply: e.g. Thank you! / What a lovely thing to say. Pair up chil</p><p>Think aloud, highlight key language and demonstrate an accurate answer before students try. Use gestures, visual evidence or a short example as appropriate.</p><p><b>CCQs:</b> “What did I do first?” “What makes the example accurate?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>Original task guided by the teacher:</b> Introduce some homophones – two words that are pronounced the same but have different meanings. To illustrate, ask children to write the word ‘road’/‘rode’ on their whiteboards (or use a different example). Don’t give the meaning – just say the word and ask children to write it down. Now ask children to hold up their whiteboards on the count of three. Hopefully some children have written ‘road’, and others ‘rode’. Establish that both words are correct. They sound exactly the same, but are spelled differently and mean different things. Then draw a picture of a bag of flour and a picture of a flower. Elicit the word. Show both spellings on the board. Tell children that there are quite a few words in English that are like this. However, emphasize that we can tell which word somebody means from the context of the sentence (i.e. what it is about). Give an example that is meaningful for your context. Turn to Oxford Discover SB 2 p.175 and do ex.F together. Now indicate to your drawing of the flower on the board. Ask children if they like it and try to get some compliments! Invite a child to the front to draw another picture. Give praise: e.g. Wow! That’s a really good, [Ibrahim]. / You’re good at … Encourage the child to reply: e.g. Thank you! / What a lovely thing to say. Pair up children to make a role-play in which one of them has </p><p>Work through one example together; students answer on mini-whiteboards or orally. Gradually remove the sentence starter.</p><p><b>ICQs:</b> “Are we working together for this first example?” <b>CCQs:</b> “Where is the evidence for your answer?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner application:</b> Partners use the original lesson’s pictures, vocabulary, reading, listening, demonstration or project materials to explain, ask and respond about <b>complimenting</b>. Swap roles after two turns; require a meaningful response, not just a single word.</p><p><b>ICQs:</b> “Who speaks first?” “When do you swap?” <b>CCQs:</b> “Does your response fit the original example?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent task:</b> Complete Oxford Discover WB 2 p.153 Word Study ex.A. Create a useful homophone poster for the classroom. Ask children to note down one or two things they would like to be better at and to consider what they can do to improve. Remind them that lots of practice helps!</p><p>Students create an original response, illustration with labels, written explanation, or review-project artifact. Teacher checks accuracy against the original learning outcomes.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture choices, word bank, modeled phrase, gestures and oral rehearsal. <b>Developing:</b> complete the target response independently with one detail. <b>Extending:</b> add a reason, comparison, prediction or further example.</p><p><b>Original support:</b> To support less able children, write a model role-play dialogue on the board. Challenge fast finishers to find some more homophones online and to add them to the list on the board.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review:</b> Children have learned about homophones. They have practised giving compliments.</p><p><b>Exit ticket:</b> Give one new example directly linked to <b>complimenting</b>; students respond without copying. Mark I = independent, P = prompted, N = not yet. <b>CCQ:</b> “What did you learn and how can you show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 19 · Lesson 1</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 32, LESSON 3</div><section class="game"><h3>1. Odd One Out — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>Original warm-up: Ask children if they like it when people say nice and positive things about their work. Elicit why. Explain that this is called a ‘compliment’ (they don’t need to learn this word). Talk with the class about who often gives them compliments, and if they give compliments to others. If so, who do they tend to compliment? Discuss why it is important to show kindness in this</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><section class="game"><h3>2. Mini Debate — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>Scaffold: Show a relevant picture or object; invite think–pair–share before asking for full sentences.</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Mini Debate”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>Pairs choose between two lesson-related options and give one supporting reason before listening to a counterpoint.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><section class="game"><h3>3. Picture Dictation — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>Teacher demonstration: Model the original task with a worked example: Introduce some homophones – two words that are pronounced the same but have different meanings. To illustrate, ask children to write the word ‘road’/‘rode’ on their whiteboards (or use a different example). Don’t give the meaning – just say the word and ask children to write it down. Now ask children to hold up their w</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Dictation”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>One learner describes a source picture while the other draws or arranges cards without looking; compare results.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><section class="game"><h3>4. Complete the Dialogue — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>Original task guided by the teacher: Introduce some homophones – two words that are pronounced the same but have different meanings. To illustrate, ask children to write the word ‘road’/‘rode’ on their whiteboards (or use a different example). Don’t give the meaning – just say the word and ask children to write it down. Now ask children to hold up their whiteboards on the count of three.</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><section class="game"><h3>5. Class Survey — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>Partner application: Partners use the original lesson’s pictures, vocabulary, reading, listening, demonstration or project materials to explain, ask and respond about complimenting . Swap roles after two turns; require a meaningful response, not just a single word.</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Class Survey”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>Learners ask three classmates a lesson-related question, tally answers and describe the result.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><section class="game"><h3>6. Odd One Out — Complimenting</h3><p><b>Lesson-specific language focus: </b>people and community</p><p><b>Original teaching source: </b>ICQs: “Who speaks first?” “When do you swap?” CCQs: “Does your response fit the original example?”</p><p><b>Materials: </b>community helper picture cards and workplace cards</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “A ___ helps by ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about people and community.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Does a doctor help sick people?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about people and community.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “A ___ helps by ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of people and community.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect one student response or work sample for complimenting. <b>Next steps:</b> Reteach any misconception, adjust language scaffolds and use the original Year 2 source sequence for the following lesson.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Shapes
+Week 32, Lesson 3: Complimenting
+Learning outcomes: 2.2b, 2.2f 
+
+Context
+This is the eighth lesson of the unit ‘Shapes’.
+In this lesson, children will develop their speaking skills by learning how to give compliments to each other, practising this further in a role-play activity.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>

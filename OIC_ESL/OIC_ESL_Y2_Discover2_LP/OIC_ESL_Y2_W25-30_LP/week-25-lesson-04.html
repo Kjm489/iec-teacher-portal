@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 25 Lesson 4 · Music and imagination</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 25 · LESSON 4</strong><nav><a href="index.html">All lessons</a><a href="week-25-lesson-03.html">← Previous</a><a href="week-25-lesson-05.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Music and imagination</h1><p class="subtitle">OIC ESL Year 2 · Week 25 · Lesson 4 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Music and feelings</div><div><b>Week:</b> 25</div><div><b>Lesson:</b> 4</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 2.2a, 2.2b</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 4</p><p><b>Measurable goals:</b> Students demonstrate the language and skills required by the original lesson, use topic vocabulary in a meaningful response, and produce one independent piece of evidence.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Original warm-up:</b> Instruct children to stand in a line. Explain the game instructions: when you say a musical instrument, they mime playing it. When you say a group of instruments (e.g. woodwind), they huddle into groups of four and pretend to play different instruments that are woodwind (e.g. clarinet, flute, recorder, saxophone, etc.). Write some musical instrument names on the board to help them. When children have grasped the game, they can continue to play in their groups.</p><p><b>Scaffold:</b> Show a relevant picture or object; invite think–pair–share before asking for full sentences.</p><p><b>ICQs:</b> “Are you thinking first or answering immediately?” “Will both partners speak?” <b>CCQs:</b> “What is happening in this example?” “Is the rhythm fast or slow? How does it make you feel?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Model the original task with a worked example: Pre-teach/Elicit the adjectives by giving some concrete examples. For example, say: I have a chocolate cake. How do I feel? Elicit ‘happy’. Continue with the rest of the adjectives. Ask children to copy them down. Put children into groups to play a game. Ask groups to decide on an order of adjectives before starting. The first child rolls the dice or spins the spinner, then says that number of situations when they feel that feeling – if the adjective is ‘sad’ and the child rolls four, they say four situations when they might feel sad (e.g. if they feel lonely at playtime). Monitor actively, encouraging children to prompt their classmate with clues if they are struggling to think of ideas. Hold a whole-class discussion, eliciting the best or funniest ideas from each group. Play the music clips one by one. Encourage children to write down the adjective that best matches how they feel on their whiteboard. Remind them that everyone will have different answers and that is OK. As a class, talk about each other’s answers. Make a tally of results on the board. Invite volunteers to share their observations while the rest of the class listens and responds. Now play the longer music track. Tell children to draw a picture while listening, to express how the music makes them feel. Encourage t</p><p>Think aloud, highlight key language and demonstrate an accurate answer before students try. Use gestures, visual evidence or a short example as appropriate.</p><p><b>CCQs:</b> “What did I do first?” “What makes the example accurate?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>Original task guided by the teacher:</b> Pre-teach/Elicit the adjectives by giving some concrete examples. For example, say: I have a chocolate cake. How do I feel? Elicit ‘happy’. Continue with the rest of the adjectives. Ask children to copy them down. Put children into groups to play a game. Ask groups to decide on an order of adjectives before starting. The first child rolls the dice or spins the spinner, then says that number of situations when they feel that feeling – if the adjective is ‘sad’ and the child rolls four, they say four situations when they might feel sad (e.g. if they feel lonely at playtime). Monitor actively, encouraging children to prompt their classmate with clues if they are struggling to think of ideas. Hold a whole-class discussion, eliciting the best or funniest ideas from each group. Play the music clips one by one. Encourage children to write down the adjective that best matches how they feel on their whiteboard. Remind them that everyone will have different answers and that is OK. As a class, talk about each other’s answers. Make a tally of results on the board. Invite volunteers to share their observations while the rest of the class listens and responds. Now play the longer music track. Tell children to draw a picture while listening, to express how the music makes them feel. Encourage them to draw and mark-make freely. They don’t need </p><p>Work through one example together; students answer on mini-whiteboards or orally. Gradually remove the sentence starter.</p><p><b>ICQs:</b> “Are we working together for this first example?” <b>CCQs:</b> “Where is the evidence for your answer?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner application:</b> Partners use the original lesson’s pictures, vocabulary, reading, listening, demonstration or project materials to explain, ask and respond about <b>music and imagination</b>. Swap roles after two turns; require a meaningful response, not just a single word.</p><p><b>ICQs:</b> “Who speaks first?” “When do you swap?” <b>CCQs:</b> “Does your response fit the original example?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent task:</b> Ask children to write one or two sentences underneath their picture, describing the music and how it makes them feel. Play another long track with changes in tempo. In pairs or groups, encourage children to create a story to go with the music. What is happening at each section? Support children to write sentences about what they do when they feel particular emotions: e.g. When I feel excited, I run a lot.</p><p>Students create an original response, illustration with labels, written explanation, or review-project artifact. Teacher checks accuracy against the original learning outcomes.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture choices, word bank, modeled phrase, gestures and oral rehearsal. <b>Developing:</b> complete the target response independently with one detail. <b>Extending:</b> add a reason, comparison, prediction or further example.</p><p><b>Original support:</b> To support less able children, provide them with some cut-out magazine pictures to choose from to represent their feelings. This will give them a good starting point. Encourage fast finishers to research more adjectives to describe their emotional responses to music.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review:</b> Children have expressed their feelings about music using a range of adjectives and other artistic methods.</p><p><b>Exit ticket:</b> Give one new example directly linked to <b>music and imagination</b>; students respond without copying. Mark I = independent, P = prompted, N = not yet. <b>CCQ:</b> “What did you learn and how can you show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 19 · Lesson 1</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 25, LESSON 4</div><section class="game"><h3>1. Venn Diagram Detectives — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>Original warm-up: Instruct children to stand in a line. Explain the game instructions: when you say a musical instrument, they mime playing it. When you say a group of instruments (e.g. woodwind), they huddle into groups of four and pretend to play different instruments that are woodwind (e.g. clarinet, flute, recorder, saxophone, etc.). Write some musical instrument names on the board t</p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Venn Diagram Detectives”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Partners place source examples into two overlapping categories and explain one similarity and one difference.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><section class="game"><h3>2. Comic Strip Builder — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>Scaffold: Show a relevant picture or object; invite think–pair–share before asking for full sentences.</p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Comic Strip Builder”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Pairs draw three panels illustrating the lesson idea and narrate each panel with one sentence.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><section class="game"><h3>3. Listen and Sequence — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>Teacher demonstration: Model the original task with a worked example: Pre-teach/Elicit the adjectives by giving some concrete examples. For example, say: I have a chocolate cake. How do I feel? Elicit ‘happy’. Continue with the rest of the adjectives. Ask children to copy them down. Put children into groups to play a game. Ask groups to decide on an order of adjectives before starting. T</p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Listen and Sequence”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Read three short source statements; learners arrange picture cards in the order heard and explain the sequence.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><section class="game"><h3>4. Complete the Dialogue — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>Original task guided by the teacher: Pre-teach/Elicit the adjectives by giving some concrete examples. For example, say: I have a chocolate cake. How do I feel? Elicit ‘happy’. Continue with the rest of the adjectives. Ask children to copy them down. Put children into groups to play a game. Ask groups to decide on an order of adjectives before starting. The first child rolls the dice or </p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><section class="game"><h3>5. Cause and Effect Chain — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>Partner application: Partners use the original lesson’s pictures, vocabulary, reading, listening, demonstration or project materials to explain, ask and respond about music and imagination . Swap roles after two turns; require a meaningful response, not just a single word.</p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Cause and Effect Chain”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Learners match source actions to consequences and explain each connection using because.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><section class="game"><h3>6. Find the Evidence — Music and imagination</h3><p><b>Lesson-specific language focus: </b>weather and seasons</p><p><b>Original teaching source: </b>ICQs: “Who speaks first?” “When do you swap?” CCQs: “Does your response fit the original example?”</p><p><b>Materials: </b>weather symbol cards, a daily forecast chart and clothing pictures</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Find the Evidence”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “It is ___. I need ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about weather and seasons.</p><p><b>YOU DO — game procedure: </b>Give a claim and two possible supporting source details. Students select and explain the stronger evidence.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we use an umbrella when it rains?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about weather and seasons.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “It is ___. I need ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of weather and seasons.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect one student response or work sample for music and imagination. <b>Next steps:</b> Reteach any misconception, adjust language scaffolds and use the original Year 2 source sequence for the following lesson.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Music and feelings
+Week 25, Lesson 4: Music and imagination
+Learning outcomes: 2.2a, 2.2b
+
+Context
+This is the fourth lesson of the unit ‘Music and feelings’.
+In this lesson, children will develop their speaking skills by listening to different types of music and reacting to them.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>
