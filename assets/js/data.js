@@ -222,3 +222,44 @@ window.IEC_LESSONS = [
   }
 ];
 
+
+
+// OIC ESL Years 1–9: register the existing HTML lessons without duplicating
+// their contents. Upload the unchanged OIC_ESL folder beside portal.html.
+// Each entry links to its corresponding file in the existing folder structure.
+(() => {
+  const books = {
+    1: "Oxford Discover 1", 2: "Oxford Discover 2",
+    3: "Oxford Discover 3", 4: "Oxford Discover 4",
+    5: "Oxford Discover 5", 6: "Oxford Discover 6",
+    7: "Oxford Discover Future", 8: "Oxford Discover Future",
+    9: "Oxford Discover Future"
+  };
+  for (let year = 1; year <= 9; year++) {
+    const folder = `OIC_ESL_Y${year}_Discover${year <= 6 ? year : "_Future"}_LP`;
+    for (let week = 1; week <= 36; week++) {
+      const start = Math.floor((week - 1) / 6) * 6 + 1;
+      const end = start + 5;
+      const range = `W${start}${year === 1 && start > 1 ? "_" : "-"}${end}`;
+      for (let lesson = 1; lesson <= 5; lesson++) {
+        const w = String(week).padStart(2, "0");
+        const l = String(lesson).padStart(2, "0");
+        window.IEC_LESSONS.push({
+          id: `oic-y${year}-w${w}-l${l}`,
+          curriculum: "Oxford",
+          level: `Year ${year}`,
+          book: books[year],
+          program: "OIC ESL",
+          unit: `Week ${w}`,
+          title: `Lesson ${lesson}`,
+          focus: `OIC ESL · Year ${year} · Week ${week} · Lesson ${lesson}`,
+          duration: 90,
+          status: "ready",
+          lessonPlan: `OIC_ESL/${folder}/OIC_ESL_Y${year}_${range}_LP/week-${w}-lesson-${l}.html`,
+          powerpoint: null,
+          kind: "oic-lesson"
+        });
+      }
+    }
+  }
+})();
