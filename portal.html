@@ -250,6 +250,36 @@
         padding: 30px 16px 65px;
       }
     }
+
+    /* Compact, paginated library — no endless scrolling */
+    .portal-main{max-width:1200px;padding-top:34px}
+    .portal-heading h1{margin-bottom:6px}
+    .portal-heading p{max-width:780px}
+    .curriculum-overview{margin:22px 0 18px}
+    .curriculum-card{padding:19px 21px;transition:border-color .18s,transform .18s}
+    .curriculum-card:hover{transform:translateY(-2px)}
+    .curriculum-card[aria-pressed="true"]{border:2px solid #812d45;background:#fff9fb}
+    .portal-filters{margin:18px 0 26px;gap:12px;padding:20px}
+    .library-header{margin-bottom:14px}
+    .library-subtitle{color:#64748b;margin:6px 0 0;font-size:14px}
+    .library-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .quick-years{display:flex;flex-wrap:wrap;gap:7px}
+    .year-chip,.clear-filters,.page-button{border:1px solid #d7dfeb;background:#fff;color:#142747;border-radius:9px;padding:9px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+    .year-chip[aria-pressed="true"],.page-button[aria-current="page"]{background:#142747;color:#fff;border-color:#142747}
+    .clear-filters{color:#812d45}
+    .lesson-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .lesson-card{padding:18px 20px;box-shadow:0 3px 12px #14274708;min-width:0}
+    .lesson-card h3{font-size:17px;margin:8px 0}
+    .lesson-breadcrumb{margin-top:10px}
+    .lesson-focus{font-size:13px;margin:0 0 10px}
+    .lesson-status{margin:0 0 14px}
+    .lesson-tag{font-size:10px}
+    .resource-link{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px}
+    .pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;margin:26px 0 8px}
+    .pagination .page-label{color:#526174;font-size:13px;padding:0 8px}
+    .page-button:disabled{opacity:.4;cursor:not-allowed}
+    @media(max-width:720px){.lesson-grid{grid-template-columns:1fr}.portal-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.library-header{align-items:flex-start;flex-direction:column}}
+    @media(max-width:480px){.portal-filters{grid-template-columns:1fr}.curriculum-overview{grid-template-columns:1fr}}
   </style>
 </head>
 
@@ -279,9 +309,6 @@
         <a class="nav-link active" href="portal.html" aria-current="page">
           Lesson Library
         </a>
-        <a class="nav-link" href="iec-prebuilt-lesson-library.html">
-          Prebuilt Lesson
-        </a>
         <a class="nav-login" href="index.html">
           Back to Home →
         </a>
@@ -296,27 +323,16 @@
       <p>
         Find your curriculum, school level, textbook and unit.
         Access structured IEC lesson plans, teaching activities,
-        and available classroom presentations.
+        and open your existing teaching resources.
       </p>
     </section>
-
-    <nav class="curriculum-path" aria-label="Curriculum path">
-      <span>Curriculum</span>
-      <span>›</span>
-      <strong>Oxford</strong>
-      <span>›</span>
-      <strong>Kindergarten</strong>
-      <span>›</span>
-      <strong>Toy Team Plus 3</strong>
-    </nav>
 
     <section class="curriculum-overview" aria-label="Curriculum categories">
       <button class="curriculum-card" type="button" data-curriculum="Oxford">
         <span class="icon" aria-hidden="true">📚</span>
         <strong>Oxford Curriculum</strong>
         <small>
-          Kindergarten → Toy Team Plus 3.
-          Browse Starter, Units 1–6, reviews and supplementary sections.
+          Kindergarten and Years 1–9. Browse Oxford Discover lessons by year and week.
         </small>
       </button>
 
@@ -339,29 +355,13 @@
       </button>
     </section>
 
-    <section class="featured-prebuilt" aria-labelledby="featured-title">
-      <div>
-        <span class="lesson-tag">READY TO TEACH</span>
-        <h2 id="featured-title">Toy Team Plus 3 — Unit 1: Jobs</h2>
-        <p>
-          A complete IEC lesson plan for two 45-minute periods.
-          Includes six job words, the sentence structure
-          "I'm a ...", scaffolding, ICQs, CCQs,
-          assessment and interactive games.
-        </p>
-      </div>
-      <a class="resource-link" href="iec-prebuilt-lesson-library.html">
-        Open Unit 1 Lesson →
-      </a>
-    </section>
-
     <section class="portal-filters" aria-label="Lesson search and filters">
       <div class="filter-field search-field">
         <label for="search">Search Lessons</label>
         <input
           id="search"
           type="search"
-          placeholder="Search Jobs, Animals, Toy Team, Cambridge..."
+          placeholder="Search lesson title, topic, year, or week..."
           autocomplete="off">
       </div>
 
@@ -390,27 +390,34 @@
       </div>
 
       <div class="filter-field">
-        <label for="unit">Unit / Section</label>
+        <label for="unit">Week / Unit</label>
         <select id="unit">
-          <option value="all">All units and sections</option>
+          <option value="all">All weeks / units</option>
         </select>
       </div>
     </section>
 
     <section aria-labelledby="lessons-heading">
       <div class="library-header">
-        <h2 id="lessons-heading">Available Lessons</h2>
+        <div>
+          <h2 id="lessons-heading">Browse Lessons</h2>
+          <p class="library-subtitle">Choose a program, year and week. Open the lesson plan directly.</p>
+        </div>
         <span class="result-count" id="result-count" aria-live="polite"></span>
+      </div>
+      <div class="library-toolbar">
+        <div class="quick-years" id="quick-years" aria-label="Oxford year shortcuts"></div>
+        <button type="button" class="clear-filters" id="clear-filters">Reset filters</button>
       </div>
 
       <div class="lesson-grid" id="lesson-grid">
         <div class="empty-state">Loading lesson catalog...</div>
       </div>
+      <nav class="pagination" id="pagination" aria-label="Lesson pages"></nav>
     </section>
 
     <p class="portal-note">
-      Only resources marked ready are available for teaching.
-      Upload only materials approved for public distribution.
+      Lesson plans open directly from the library. Only publish materials approved for distribution.
     </p>
   </main>
 
