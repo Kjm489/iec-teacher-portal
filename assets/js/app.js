@@ -1,304 +1,178 @@
-
 "use strict";
-
 document.addEventListener("DOMContentLoaded", () => {
-  const lessons = Array.isArray(window.IEC_LESSONS)
-    ? window.IEC_LESSONS : [];
-
+  const lessons = Array.isArray(window.IEC_LESSONS) ? window.IEC_LESSONS : [];
   const $ = id => document.getElementById(id);
-
-  const search = $("search");
-  const curriculum = $("curriculum");
-  const level = $("level");
-  const book = $("book");
-  const unit = $("unit");
-  const grid = $("lesson-grid");
-  const count = $("result-count");
+  const search = $("search"), curriculum = $("curriculum"), level = $("level");
+  const book = $("book"), unit = $("unit"), grid = $("lesson-grid");
+  const count = $("result-count"), pages = $("pagination");
+  const quickYears = $("quick-years"), clear = $("clear-filters");
+  const PAGE_SIZE = 12;
+  let page = 1;
 
   const year = $("currentYear");
   if (year) year.textContent = String(new Date().getFullYear());
-
-  const toggle = $("menuToggle");
-  const nav = $("mainNav");
-
+  const toggle = $("menuToggle"), nav = $("mainNav");
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const open = nav.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", String(open));
     });
-
-    nav.querySelectorAll("a").forEach(a =>
-      a.addEventListener("click", () => {
-        nav.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-      })
-    );
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      nav.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }));
   }
+  if (![search,curriculum,level,book,unit,grid,count,pages,quickYears].every(Boolean)) return;
 
-  if (![search, curriculum, level, book, unit, grid, count]
-      .every(Boolean)) return;
-
-  function el(tag, cls, value) {
+  const el = (tag, className, value) => {
     const node = document.createElement(tag);
-    if (cls) node.className = cls;
+    if (className) node.className = className;
     if (value !== undefined) node.textContent = value;
     return node;
-  }
-
-  function options(select, items, placeholder, previous) {
-    select.replaceChildren(new Option(placeholder, "all"));
-    items.forEach(item => select.add(new Option(item, item)));
-    select.value = items.includes(previous) ? previous : "all";
-  }
-
-  function matches(item, field, value) {
-    return value === "all" || String(item[field]) === value;
-  }
-
-  function unique(field, filter) {
-    return [...new Set(
-      lessons.filter(filter)
-        .map(item => String(item[field] || ""))
-        .filter(Boolean)
-    )].sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true })
-    );
-  }
+  };
+  const match = (item, key, value) => value === "all" || String(item[key] ?? "") === value;
+  const unique = (key, predicate) => [...new Set(lessons.filter(predicate)
+    .map(item => String(item[key] ?? "")).filter(Boolean))]
+    .sort((a,b) => a.localeCompare(b, undefined, {numeric:true}));
+  const setOptions = (select, values, label, previous) => {
+    select.replaceChildren(new Option(label, "all"));
+    values.forEach(value => select.add(new Option(value,value)));
+    select.value = values.includes(previous) ? previous : "all";
+  };
 
   function updateFilters() {
-    const oldLevel = level.value;
-    const oldBook = book.value;
-    const oldUnit = unit.value;
-
-    options(
-      level,
-      unique("level", item =>
-        matches(item, "curriculum", curriculum.value)
-      ),
-      "All levels",
-      oldLevel
-    );
-
-    options(
-      book,
-      unique("book", item =>
-        matches(item, "curriculum", curriculum.value) &&
-        matches(item, "level", level.value)
-      ),
-      "All textbooks",
-      oldBook
-    );
-
-    const selected = lessons.filter(item =>
-      matches(item, "curriculum", curriculum.value) &&
-      matches(item, "level", level.value) &&
-      matches(item, "book", book.value)
-    );
-
-    const units = [...new Set(
-      selected.map(item => String(item.unit))
-    )];
-
-    units.sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true })
-    );
-
-    options(unit, units, "All units and sections", oldUnit);
+    const oldLevel = level.value, oldBook = book.value, oldUnit = unit.value;
+    setOptions(level, unique("level", item => match(item,"curriculum",curriculum.value)), "All levels", oldLevel);
+    setOptions(book, unique("book", item => match(item,"curriculum",curriculum.value) &&
+      match(item,"level",level.value)), "All textbooks", oldBook);
+    setOptions(unit, unique("unit", item => match(item,"curriculum",curriculum.value) &&
+      match(item,"level",level.value) && match(item,"book",book.value)),
+      "All weeks / units", oldUnit);
   }
 
   function validPath(path) {
-    if (typeof path !== "string" || path.includes("..")) return false;
-    if (/^OIC_ESL\/OIC_ESL_Y[1-9]_Discover(?:[1-6]|_Future)_LP\/OIC_ESL_Y[1-9]_W\d+[-_]\d+_LP\/week-\d{2}-lesson-\d{2}\.html$/.test(path)) return true;
-    return /^(iec-prebuilt-lesson-library\.html|resources\/(lesson-plans|presentations)\/[a-zA-Z0-9_\/-]+\.(pdf|docx|pptx))$/.test(path);
+    if (typeof path !== "string" || path.includes("..") || path.includes("\\")) return false;
+    return /^OIC_ESL\/[A-Za-z0-9_/-]+\.html$/.test(path) ||
+      /^(iec-prebuilt-lesson-library\.html|resources\/(lesson-plans|presentations)\/[a-zA-Z0-9_/-]+\.(pdf|docx|pptx))$/.test(path);
   }
-
-  function resource(label, path, kind) {
-    if (!validPath(path)) {
-      const disabled = el(
-        "span",
-        "resource-link disabled " + kind,
-        label + " — Not available yet"
-      );
-      disabled.setAttribute("aria-disabled", "true");
-      return disabled;
-    }
-
-    const link = el(
-      "a",
-      "resource-link " + kind,
-      label + " →"
-    );
-    link.href = path;
-
-    if (/\.(pdf|docx|pptx)$/.test(path)) {
-      link.setAttribute("download", "");
-    }
-
-    return link;
-  }
-
-  const curriculumOrder = {
-    Oxford: 0,
-    Cambridge: 1,
-    IELTS: 2
-  };
-
   function filtered() {
+    const q = search.value.trim().toLowerCase();
     return lessons.filter(item => {
-      const searchable = [
-        item.curriculum,
-        item.level,
-        item.book,
-        item.program,
-        item.title,
-        item.focus,
-        `Unit ${item.unit}`,
-        String(item.unit)
-      ].join(" ").toLowerCase();
-
-      return searchable.includes(
-        search.value.trim().toLowerCase()
-      ) &&
-        matches(item, "curriculum", curriculum.value) &&
-        matches(item, "level", level.value) &&
-        matches(item, "book", book.value) &&
-        matches(item, "unit", unit.value);
-
-    }).sort((a, b) =>
-      (curriculumOrder[a.curriculum] ?? 9) -
-      (curriculumOrder[b.curriculum] ?? 9) ||
-      (a.book || "").localeCompare(b.book || "") ||
-      String(a.unit).localeCompare(
-        String(b.unit), undefined, { numeric: true }
-      )
+      const haystack = [item.curriculum,item.level,item.book,item.program,item.title,item.focus,
+        item.unit,`Unit ${item.unit}`].join(" ").toLowerCase();
+      return haystack.includes(q) && match(item,"curriculum",curriculum.value) &&
+        match(item,"level",level.value) && match(item,"book",book.value) &&
+        match(item,"unit",unit.value);
+    }).sort((a,b) =>
+      ["Oxford","Cambridge","IELTS"].indexOf(a.curriculum) -
+      ["Oxford","Cambridge","IELTS"].indexOf(b.curriculum) ||
+      String(a.level).localeCompare(String(b.level),undefined,{numeric:true}) ||
+      String(a.unit).localeCompare(String(b.unit),undefined,{numeric:true}) ||
+      String(a.id).localeCompare(String(b.id),undefined,{numeric:true})
     );
+  }
+
+  function renderYears() {
+    quickYears.replaceChildren();
+    if (curriculum.value !== "Oxford") return;
+    for (let n=1;n<=9;n++) {
+      const chip = el("button","year-chip",`Year ${n}`);
+      chip.type = "button";
+      chip.setAttribute("aria-pressed",String(level.value === `Year ${n}`));
+      chip.addEventListener("click",() => {
+        level.value = `Year ${n}`;
+        book.value = "all"; unit.value = "all";
+        updateFilters(); page=1; render();
+      });
+      quickYears.append(chip);
+    }
+  }
+
+  function renderPages(total) {
+    pages.replaceChildren();
+    const totalPages = Math.ceil(total/PAGE_SIZE);
+    if (totalPages <= 1) return;
+    const add = (label,target,disabled=false) => {
+      const button=el("button","page-button",label);
+      button.type="button";button.disabled=disabled;
+      button.addEventListener("click",() => {
+        page=target;render();
+        $("lessons-heading").scrollIntoView({behavior:"smooth",block:"start"});
+      });
+      pages.append(button);
+    };
+    add("← Previous",page-1,page===1);
+    pages.append(el("span","page-label",`Page ${page} of ${totalPages}`));
+    add("Next →",page+1,page===totalPages);
   }
 
   function render() {
     const items = filtered();
-
-    count.textContent =
-      `${items.length} section${items.length === 1 ? "" : "s"}`;
-
+    const maxPage = Math.max(1,Math.ceil(items.length/PAGE_SIZE));
+    page = Math.min(page,maxPage);
+    const start = (page-1)*PAGE_SIZE;
+    count.textContent = items.length
+      ? `${items.length.toLocaleString()} lessons · showing ${start+1}–${Math.min(start+PAGE_SIZE,items.length)}`
+      : "0 matching lessons";
     grid.replaceChildren();
-
+    renderYears();
+    document.querySelectorAll("[data-curriculum]").forEach(button =>
+      button.setAttribute("aria-pressed",String(button.dataset.curriculum===curriculum.value)));
     if (!items.length) {
-      grid.append(el(
-        "div",
-        "empty-state",
-        "No matching lessons. Try clearing the filters."
-      ));
-      return;
+      grid.append(el("div","empty-state","No matching lessons. Change your filters or search."));
+      renderPages(0);return;
     }
-
     const fragment = document.createDocumentFragment();
-
-    for (const item of items) {
-      const card = el("article", "lesson-card");
-
-      const status = item.status === "ready"
-        ? "READY TO TEACH"
-        : item.status === "sample"
-          ? "DEMONSTRATION"
-          : "SYLLABUS · IN DEVELOPMENT";
-
-      card.append(el("span", "lesson-tag", status));
-
-      card.append(el(
-        "p",
-        "lesson-breadcrumb",
-        [item.curriculum, item.level, item.book]
-          .filter(Boolean).join(" → ")
-      ));
-
-      let label;
-
-      if (typeof item.unit === "number") {
-        label = `Unit ${item.unit} — ${item.title}`;
-      } else if (item.kind === "starter") {
-        label = `Starter — ${item.title}`;
-      } else if (item.kind === "review") {
-        label = `${item.unit} — ${item.title}`;
-      } else if (item.kind === "supplementary") {
-        label = `Supplementary — ${item.title}`;
+    for (const item of items.slice(start,start+PAGE_SIZE)) {
+      const card=el("article","lesson-card");
+      const available=validPath(item.lessonPlan);
+      const status=item.status==="sample" ? "DEMONSTRATION" :
+        available ? "LESSON PLAN" : "COMING SOON";
+      card.append(el("span","lesson-tag",status));
+      card.append(el("p","lesson-breadcrumb",[item.curriculum,item.level,item.book]
+        .filter(Boolean).join(" → ")));
+      const heading = item.kind === "oic-lesson"
+        ? `${item.unit} · ${item.title}`
+        : `${typeof item.unit === "number" ? `Unit ${item.unit}` : item.unit} · ${item.title}`;
+      card.append(el("h3","",heading));
+      if(item.focus) card.append(el("p","lesson-focus",item.focus));
+      if(item.kind==="oic-lesson")
+        card.append(el("p","lesson-status","OIC ESL · 2 × 45-minute periods"));
+      const actions=el("div","resource-actions");
+      if (available) {
+        const link=el("a","resource-link","Open IEC Lesson Plan →");
+        link.href=item.lessonPlan;
+        if (/\.(pdf|docx)$/i.test(item.lessonPlan)) link.setAttribute("download","");
+        actions.append(link);
       } else {
-        label = `${item.unit} — ${item.title}`;
+        const disabled=el("span","resource-link disabled","Lesson plan not available");
+        disabled.setAttribute("aria-disabled","true");actions.append(disabled);
       }
-
-      card.append(el("h3", "", label));
-      card.append(el("p", "lesson-focus", item.focus || ""));
-
-      const note = item.kind === "oic-lesson"
-        ? "OIC ESL HTML lesson · 2 × 45 minutes"
-        : item.status === "ready"
-        ? "IEC plan: 2 × 45 minutes · Interactive games included"
-        : item.status === "sample"
-          ? "Example catalog entry only — not an uploaded lesson"
-          : "Syllabus section verified; lesson and presentation pending";
-
-      card.append(el("p", "lesson-status", note));
-
-      const actions = el("div", "resource-actions");
-
-      actions.append(
-        resource("IEC Lesson Plan", item.lessonPlan, "plan"),
-        resource("Classroom Presentation", item.powerpoint, "ppt")
-      );
-
-      card.append(actions);
-      fragment.append(card);
+      card.append(actions);fragment.append(card);
     }
-
-    grid.append(fragment);
+    grid.append(fragment);renderPages(items.length);
   }
 
-  curriculum.addEventListener("change", () => {
-    level.value = "all";
-    book.value = "all";
-    unit.value = "all";
-    updateFilters();
-    render();
-  });
+  function changeCurriculum(value) {
+    curriculum.value=value;level.value="all";book.value="all";unit.value="all";
+    search.value="";page=1;updateFilters();render();
+  }
+  curriculum.addEventListener("change",()=>changeCurriculum(curriculum.value));
+  level.addEventListener("change",()=>{book.value="all";unit.value="all";page=1;updateFilters();render();});
+  book.addEventListener("change",()=>{unit.value="all";page=1;updateFilters();render();});
+  unit.addEventListener("change",()=>{page=1;render();});
+  search.addEventListener("input",()=>{page=1;render();});
+  document.querySelectorAll("[data-curriculum]").forEach(button => button.addEventListener("click",()=>{
+    changeCurriculum(button.dataset.curriculum);
+    $("lessons-heading").scrollIntoView({behavior:"smooth",block:"start"});
+  }));
+  if(clear) clear.addEventListener("click",()=>changeCurriculum("Oxford"));
 
-  level.addEventListener("change", () => {
-    book.value = "all";
-    unit.value = "all";
-    updateFilters();
-    render();
-  });
-
-  book.addEventListener("change", () => {
-    unit.value = "all";
-    updateFilters();
-    render();
-  });
-
-  unit.addEventListener("change", render);
-  search.addEventListener("input", render);
-
-  document.querySelectorAll("[data-curriculum]")
-    .forEach(button => {
-      button.addEventListener("click", () => {
-        curriculum.value = button.dataset.curriculum;
-
-        level.value = "all";
-        book.value = "all";
-        unit.value = "all";
-
-        updateFilters();
-
-        render();
-
-        $("lessons-heading").scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      });
-    });
-
-  curriculum.value = "Oxford";
-  updateFilters();
-
+  // Start with a manageable five-lesson week, not all 1,620 cards.
+  curriculum.value="Oxford";updateFilters();
+  if ([...level.options].some(option=>option.value==="Year 1")) {
+    level.value="Year 1";updateFilters();
+    if ([...unit.options].some(option=>option.value==="Week 01")) unit.value="Week 01";
+  }
   render();
 });
-
