@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 8 Lesson 2 · What place do you like most?</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 8 \1 Lesson 2</strong><nav><a href="index.html">All lessons</a><a href="week-08-lesson-01.html">← Previous</a><a href="week-08-lesson-03.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — What place do you like most?</h1><p class="sub">OIC ESL Year 3 · Week 8 \1 Lesson 2 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Moving house</div><div><b>Week:</b> 8</div><div><b>Lesson:</b> 2</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.2a, 3.2b, 3.2e</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> What place do you like most?. <b>Original outcomes:</b> 3.2a, 3.2b, 3.2e. <b>Unit:</b> Moving house.</p><p><b>Measurable goals: </b>Students demonstrate the original OIC learning outcomes through the source activity: Pre-teach or revise different phrases to express (dis)agreement. You may like to look at some of the examples in the table in Oxford Discover WB 3 p.120 ex.A:</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Show the class several pictures of different types of house. If available, you can use the Oxford Reading Tree text The Right Home. Children work in small groups to rank the houses from their favourite to least favourite, explaining why. As part of their discussion, encourage them to think about what they could do in each house, where the houses might be, and how similar or different the houses are to where they live now.</p><p><strong>Oxford opening: </strong>Ask someone from each group to report their results back to the class.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Pre-teach or revise different phrases to express (dis)agreement. You may like to look at some of the examples in the table in Oxford Discover WB 3 p.120 ex.A:</p><p><strong>Oxford task — teacher demonstration: </strong>Agree: Me too. / Me neither. / So do I. / That’s right. / I agree.</p><p><strong>Oxford task — teacher demonstration: </strong>Disagree: I don’t (think the same). / I disagree. / I’m not so sure.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Write five random things on the board: e.g. ‘elephant’, ‘broccoli’, ‘badminton’, ‘cartoons’, ‘homework’. In pairs, children take turns making sentences about the things on the board. Their partner listens and expresses their (dis)agreement in response. For example:</p><p><strong>Oxford task — guided: </strong>A: I love watching cartoons on Saturday morning. B: So do I!</p><p><strong>Oxford task — guided: </strong>A: Broccoli is the most delicious vegetable. B: I disagree. My favourite vegetable is radish.</p><p><strong>Oxford task — guided: </strong>A: I don’t enjoy playing badminton. B: Me neither. I prefer cricket!</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Write five random things on the board: e.g. ‘elephant’, ‘broccoli’, ‘badminton’, ‘cartoons’, ‘homework’. In pairs, children take turns making sentences about the things on the board. Their partner listens and expresses their (dis)agreement in response. For example:</p><p><strong>Oxford pair/group task: </strong>Explain to children that they are going to look at different places around the world and decide on their favourite destination. Project the fact files on the board or provide handouts. You can create your own or use the ones provided. Divide the class into small groups and instruct each group to choose two or three fact files about different places. See if children can challenge themselves by choosing an unfamiliar place and use recently acquired topic vocabulary to talk about it.</p><p><strong>Oxford pair/group task: </strong>In their groups, children read the fact files together. They could assign one fact file to each group member to read aloud. After a moment of reflection, they take turns saying which place they like the most and why, using the information offered to guide them. As each group member expresses their opinion, the others agree or disagree using one of the set phrases learned. Remind them to explain their decisions using because.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Look at Oxford Discover SB 3 p.42 ex.C.</p><p><strong>Oxford source task: </strong>Explain to children that they are going to look at different places around the world and decide on their favourite destination. Project the fact files on the board or provide handouts. You can create your own or use the ones provided. Divide the class into small groups and instruct each group to choose two or three fact files about different places. See if children can challenge themselves by choosing an unfamiliar place and use recently acquired topic vocabulary to talk about it.</p><p><strong>Oxford source task: </strong>In their groups, children read the fact files together. They could assign one fact file to each group member to read aloud. After a moment of reflection, they take turns saying which place they like the most and why, using the information offered to guide them. As each group member expresses their opinion, the others agree or disagree using one of the set phrases learned. Remind them to explain their decisions using because.</p><p><strong>Oxford source task: </strong>Hold a whole-class vote to establish which is the most popular place. Ask children to raise their hands when you say their favourite place. Keep a tally on the board.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>For more support with the speaking task, ask a more confident child to demonstrate the activity in front of the class before children practise in groups.</p><p><strong>Oxford differentiation: </strong>Less able children can focus on just two fact files.</p><p><strong>Oxford differentiation: </strong>Challenge more able children to compare the places in the fact files to their hometown: e.g. I would like to move to Ostuni because there are fewer cars than in Kuala Lumpur.</p><p><strong>Oxford differentiation: </strong>Additional information: Week 8, Lesson 2</p><p><strong>Oxford additional tasks: </strong>Allow children to research their favourite place in more depth.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have read a selection of fact files and chosen their favourite place, using because to explain the reasons behind their decision. They have expressed agreement and disagreement in response to their classmates’ preferences.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Show the class several pictures of different types of house. If available, you can use the Oxford Reading Tree text The Right Home. Children work in small groups to rank the houses from their favourite to least favourite, explaining why. As part of their discussion, encourage them to think about what they could do in each house, where the houses might be, and how similar or different the houses are to where they live now. Ask someone from each group to report their results back to the class. Scaffold: Show a relevant picture or object; invite think–pair–share before asking for full sentences. ICQs: “Are you thinking first or answering immediately?” “Will both partners speak?” CCQs: “What is happening in this example?” “How does it connect to what place do you like most??”</p><p><strong>I DO source: </strong>Model the original task with a worked example: Pre-teach or revise different phrases to express (dis)agreement. You may like to look at some of the examples in the table in Oxford Discover WB 3 p.120 ex.A: Agree: Me too. / Me neither. / So do I. / That’s right. / I agree. Disagree: I don’t (think the same). / I disagree. / I’m not so sure. Write five random things on the board: e.g. ‘elephant’, ‘broccoli’, ‘badminton’, ‘cartoons’, ‘homework’. In pairs, children take turns making sentences about the things on the board. Their partner listens and expresses their (dis)agreement in response. For example: A: I love watching cartoons on Saturday morning. B: So do I! A: Broccoli is the most delicious vegetable. B: I disagree. My favourite vegetable is radish. A: I don’t enjoy playing badminton. B: Me neither. I prefer cricket! Look at Oxford Discover SB 3 p.42 ex.C. Explain to children that they are going to look at different places around the world and decide on their favourite destination. Project the fact files on the board or provide handouts. You can create your own or use the ones provided. Divide the class into small groups and instruct each group to choose two or three fact files about different places. See if children can challenge themselves by choosing an unfamiliar place and use recently acquired topic vocabulary to talk Think aloud, highlight key language and demonstrate an accurate answer before students try. Use gestures, visual evidence or a short example as appropriate. CCQs: “What did I do first?” “What makes the example accurate?”</p><p><strong>WE DO source: </strong>Pre-teach or revise different phrases to express (dis)agreement. You may like to look at some of the examples in the table in Oxford Discover WB 3 p.120 ex.A: Agree: Me too. / Me neither. / So do I. / That’s right. / I agree. Disagree: I don’t (think the same). / I disagree. / I’m not so sure. Write five random things on the board: e.g. ‘elephant’, ‘broccoli’, ‘badminton’, ‘cartoons’, ‘homework’. In pairs, children take turns making sentences about the things on the board. Their partner listens and expresses their (dis)agreement in response. For example: A: I love watching cartoons on Saturday morning. B: So do I! A: Broccoli is the most delicious vegetable. B: I disagree. My favourite vegetable is radish. A: I don’t enjoy playing badminton. B: Me neither. I prefer cricket! Look at Oxford Discover SB 3 p.42 ex.C. Explain to children that they are going to look at different places around the world and decide on their favourite destination. Project the fact files on the board or provide handouts. You can create your own or use the ones provided. Divide the class into small groups and instruct each group to choose two or three fact files about different places. See if children can challenge themselves by choosing an unfamiliar place and use recently acquired topic vocabulary to talk about it. In their groups, children read the fact Work through one example together; students answer on mini-whiteboards or orally. Gradually remove the sentence starter. ICQs: “Are we working together for this first example?” CCQs: “Where is the evidence for your answer?”</p><p><strong>YOU DO source: </strong>Pre-teach or revise different phrases to express (dis)agreement. You may like to look at some of the examples in the table in Oxford Discover WB 3 p.120 ex.A: Agree: Me too. / Me neither. / So do I. / That’s right. / I agree. Disagree: I don’t (think the same). / I disagree. / I’m not so sure. Write five random things on the board: e.g. ‘elephant’, ‘broccoli’, ‘badminton’, ‘cartoons’, ‘homework’. In pairs, children take turns making sentences about the things on the board. Their partner listens and expresses their (dis)agreement in response. For example: A: I love watching cartoons on Saturday morning. B: So do I! A: Broccoli is the most delicious vegetable. B: I disagree. My favourite vegetable is radish. A: I don’t enjoy playing badminton. B: Me neither. I prefer cricket! Look at Oxford Discover SB 3 p.42 ex.C. Explain to children that Students create an original response, illustration with labels, written explanation, or review-project artifact. Teacher checks accuracy against the original learning outcomes.</p><p><strong>Review: </strong>Children have read a selection of fact files and chosen their favourite place, using because to explain the reasons behind their decision. They have expressed agreement and disagreement in response to their classmates’ preferences. Exit ticket: Give one new example directly linked to what place do you like most? ; students respond without copying. Mark I = independent, P = prompted, N = not yet. CCQ: “What did you learn and how can you show it?”</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 8 \1 Lesson 2</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 8, LESSON 2</div><section class="game"><h3>IEC supplemental game — Favourite place photo ranking</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Place preference corners</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Describe and guess a place</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Favourite place interview</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Model one question-and-answer exchange using the lesson language. Partners ask and answer, record one key response, then change partners and report what they learned.</p><p><b>ICQ: </b>Do both partners ask and answer? Do you change partners after recording a response?</p><p><b>CCQ: </b>Does your reply answer the question asked? Which detail supports it?</p><p><b>Assessment: </b>An understandable question, relevant answer and report</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Place recommendation postcard</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Preference reasons challenge</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: What place do you like most?.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Place topic vocabulary and picture cards around the room. Teams take turns choosing one, using it accurately in a sentence, and checking with the teacher before scoring.</p><p><b>ICQ: </b>Does a team earn a point for speed alone? Must the answer be correct?</p><p><b>CCQ: </b>Why does your sentence match this picture or example?</p><p><b>Assessment: </b>Correct target-language use, not speed</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect one student response or work sample for what place do you like most?. <b>Next steps:</b> Reteach any misconception, adjust language scaffolds and use the original Year 3 source sequence for the following lesson.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Moving house
+Week 8, Lesson 2: What place do you like most?
+Learning outcomes: 3.2a, 3.2b, 3.2e
+
+Context
+This is the seventh lesson of the unit ‘Moving house’.
+In this lesson, children will develop their speaking skills by discussing what different places around the world have to offer and expressing their preferences.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 14 Lesson 5 · </title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 14 \1 Lesson 5</strong><nav><a href="index.html">All lessons</a><a href="week-14-lesson-04.html">← Previous</a><a href="week-15-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — </h1><p class="sub">OIC ESL Year 3 · Week 14 \1 Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Exploring the past</div><div><b>Week:</b> 14</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.4b, 3.4c, 3.4f</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Topic:</b> Writing a diary entry. <b>OIC outcomes:</b> 3.4b, 3.4c, 3.4f. <b>Unit:</b> Exploring the past.</p><p><b>Success criteria:</b> Students use lesson vocabulary and skills to complete a meaningful supported task and produce independent evidence of learning.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Ask children to find the three questions they wrote down in Week 13, Lesson 1. In pairs, they discuss whether they found the answers to their questions in the unit, what they have learned and found interesting, what they haven’t learned yet, and what activities they have enjoyed. Remind them to listen actively to their partner’s ideas and opinions, then respond with their 
+own thoughts. Bring the class back together and invite a few volunteers to share their ideas.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Tell children that they are going to pretend to be a character from the past and write their own diary entries in today’s lesson.</p><p><strong>Oxford task — teacher demonstration: </strong>You could start them off with some ideas by looking at the black-and-white photos in 
+Oxford Discover SB 2 pp.50–51. Quickly discuss as a class life in the past to help them. 
+Children volunteer what they remember from their previous learning.</p><p><strong>Oxford task — teacher demonstration: </strong>Remind children of the lesson on diary entries in Week 14, Lesson 3.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Quickly review the past simple tense. Elicit from children common regular and irregular verbs in the past tense that they could use in their diary entries. Do this in a game by miming different actions for children to guess, or by playing past tense ‘Tic-tac-toe’ (in a 3x3 grid, children have to get three correct present–past tense conjugations in a row). Explain that they have to practise new tenses over and over again in order to master them!</p><p><strong>Oxford task — guided: </strong>Encourage children to plan their diary entries in a graphic organizer, with a different section for each day. Draw a basic table on the board for children to copy.</p><p><strong>Oxford task — guided: </strong>Allow children time to complete the graphic organizer with their diary entry ideas.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Children swap their diary entries with a partner. Tell them to read their partner’s work and give helpful feedback, including one thing they really liked, and one area to improve on (such as spelling, use of punctuation, use of tenses, and interesting language choices).</p><p><strong>Oxford pair/group task: </strong>Bring the class back together and gauge how children are feeling. It’s not easy to plan and write diary entries, so commend their efforts. Elicit from children if they’ve enjoyed learning about the past.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Encourage them to think of a name for their character and the year that they are writing in, or allocate this information. Each day should include a short description of the activity, who they were with, and how it made them feel. Remind children to think about people’s day-to-day lives and hobbies in the past – they didn’t have video games and tablets!</p><p><strong>Oxford source task: </strong>Now tell children to use their plan to write their diary entries, using a range of verbs that they know (past simple, present simple, present continuous) and connecting their ideas with but and because. They can refer back to the input texts from the unit to guide them.</p><p><strong>Oxford source task: </strong>Children swap their diary entries with a partner. Tell them to read their partner’s work and give helpful feedback, including one thing they really liked, and one area to improve on (such as spelling, use of punctuation, use of tenses, and interesting language choices).</p><p><strong>Oxford source task: </strong>Bring the class back together and gauge how children are feeling. It’s not easy to plan and write diary entries, so commend their efforts. Elicit from children if they’ve enjoyed learning about the past.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>Less confident children can write a short diary entry for one day of the week, while more confident children can write entries for a five-day or seven-day week.</p><p><strong>Oxford differentiation: </strong>Encourage more able children and fast finishers to support less able children with past tense conjugations.</p><p><strong>Oxford additional tasks: </strong>Ask children to revise and improve their diary entries following their partner’s feedback, then write a final, illustrated draft for display.</p><p><strong>Oxford additional tasks: </strong>Draw a picture of a favourite day from the diary.</p><p><strong>Oxford additional tasks: </strong>Provide dressing-up clothes for children to pretend to be characters from the past.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have planned and written short diary entries, using their understanding of the past and learning from the unit. They have practised using the past simple.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Ask children to find the three questions they wrote down in Week 14 \1 Lesson 5. In pairs, they discuss whether they found the answers to their questions in the unit, what they have learned and found interesting, what they haven’t learned yet, and what activities they have enjoyed. Remind them to listen actively to their partner’s ideas and opinions, then respond with their own thoughts. Bring the class back together and invite a few volunteers to share their ideas. Scaffolding: Picture prompt → teacher example → partner rehearsal. ICQs: “Do we think first?” “Will both partners speak?” CCQ: “How does this connect to Writing a diary entry?”</p><p><strong>I DO source: </strong>Teacher models: Tell children that they are going to pretend to be a character from the past and write their own diary entries in today’s lesson. You could start them off with some ideas by looking at the black-and-white photos in Oxford Discover SB 2 pp.50–51. Quickly discuss as a class life in the past to help them. Children volunteer what they remember from their previous learning. Remind children of the lesson on diary entries in Week 14 \1 Lesson 5. Quickly review the past simple tense. Elicit from children common regular and irregular verbs in the past tense that they could use in their diary entries. Do this in a game by miming different actions for children to guess, or by playing past tense ‘Tic-tac-toe’ (in a 3x3 grid, children have to get three correct present–past tense conjugations in a row). Explain that they have to practise new tenses over and over again in order to master them! Encourage children to plan their diary entries in a graphic organizer, with a different section for each day. Draw a basic table on the board for children to copy. Allow children time to complete the graphic organizer with their diary entry ideas. Encourage them to think of a name for their character and the year that they are writing in, or allocate this information. Each day should include a short description of the activity, who they were with, and how Think aloud, display the target words, demonstrate an accurate answer, and invite students to identify the evidence or language used. CCQs: “What was the first step?” “Which detail makes the answer correct?”</p><p><strong>WE DO source: </strong>Original guided task: Tell children that they are going to pretend to be a character from the past and write their own diary entries in today’s lesson. You could start them off with some ideas by looking at the black-and-white photos in Oxford Discover SB 2 pp.50–51. Quickly discuss as a class life in the past to help them. Children volunteer what they remember from their previous learning. Remind children of the lesson on diary entries in Week 14 \1 Lesson 5. Quickly review the past simple tense. Elicit from children common regular and irregular verbs in the past tense that they could use in their diary entries. Do this in a game by miming different actions for children to guess, or by playing past tense ‘Tic-tac-toe’ (in a 3x3 grid, children have to get three correct present–past tense conjugations in a row). Explain that they have to practise new tenses over and over again in order to master them! Encourage children to plan their diary entries in a graphic organizer, with a different section for each day. Draw a basic table on the board for children to copy. Allow children time to complete the graphic organizer with their diary entry ideas. Encourage them to think of a name for their character and the year that they are writing in, or allocate this information. Each day should include a short description of the activity, who they were with, and how Students rehearse a shared example using sentence frames, gestures and mini-whiteboards. Fade prompts as understanding grows. ICQ: “Do we work together first?” CCQ: “What evidence supports the answer?”</p><p><strong>YOU DO source: </strong>Ask children to revise and improve their diary entries following their partner’s feedback, then write a final, illustrated draft for display. Draw a picture of a favourite day from the diary. Provide dressing-up clothes for children to pretend to be characters from the past. Each student produces an individual spoken or written response. Check for vocabulary, meaning and completion of the original OIC outcomes.</p><p><strong>Review: </strong>Children have planned and written short diary entries, using their understanding of the past and learning from the unit. They have practised using the past simple. Exit ticket: Demonstrate one new example of Writing a diary entry. Record I (independent), P (prompted) or N (not yet).</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 14 \1 Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 14, LESSON 5</div><section class="game"><h3>IEC supplemental game — Historical fact or opinion</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Demonstrate an action connected to the lesson without saying the answer. Teams take turns acting, guessing with the target phrase, and giving one reason for their guess.</p><p><b>ICQ: </b>Do actors say the answer? Does the team guess before the reveal?</p><p><b>CCQ: </b>What action or clue helped you identify the meaning?</p><p><b>Assessment: </b>Accurate spoken guess supported by a clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Then-and-now comparison quiz</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Past tense correction clinic</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Old photo captions</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — History research summary</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Provide three to five event or process cards from the lesson. Pairs place them in order and narrate the sequence using first, next and finally.</p><p><b>ICQ: </b>Do you arrange the cards before telling the sequence?</p><p><b>CCQ: </b>What happens first? What clue shows the next step?</p><p><b>Assessment: </b>Logical sequence and use of sequencing language</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Historical knowledge interview</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing a diary entry.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Model one question-and-answer exchange using the lesson language. Partners ask and answer, record one key response, then change partners and report what they learned.</p><p><b>ICQ: </b>Do both partners ask and answer? Do you change partners after recording a response?</p><p><b>CCQ: </b>Does your reply answer the question asked? Which detail supports it?</p><p><b>Assessment: </b>An understandable question, relevant answer and report</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect an individual response linked to Writing a diary entry. <b>Next step:</b> Reteach misunderstandings or extend with the original Year 3 lesson sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Exploring the past
+Week 14, Lesson 5: Writing a diary entry
+Learning outcomes: 3.4b, 3.4c, 3.4f
+
+Context
+This is the tenth lesson of the unit ‘Exploring the past’.
+In this lesson, children will develop their writing skills by using their learning in the unit to plan and write diary entries of a character from the past.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Year 3 Week 14, lesson 5.</pre></details></main></body></html>

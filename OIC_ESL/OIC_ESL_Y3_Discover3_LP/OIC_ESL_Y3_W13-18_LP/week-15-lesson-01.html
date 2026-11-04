@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 15 Lesson 1 · Review and reflection — IEC lesson 1 of 5</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 15 \1 Lesson 1</strong><nav><a href="index.html">All lessons</a><a href="week-14-lesson-05.html">← Previous</a><a href="week-15-lesson-02.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Review and reflection — IEC lesson 1 of 5</h1><p class="sub">OIC ESL Year 3 · Week 15 \1 Lesson 1 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Exploring the past</div><div><b>Week:</b> 15</div><div><b>Lesson:</b> 1</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> Unit summary</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Topic:</b> Review and reflect. <b>OIC outcomes:</b> Unit summary. <b>Unit:</b> Exploring the past.</p><p><b>Success criteria:</b> Students use lesson vocabulary and skills to complete a meaningful supported task and produce independent evidence of learning.</p><p class="source-reference">Source alignment note: Oxford supplies one shared weekly review plan. The five IEC lesson divisions are adaptations, not separate Oxford lesson titles.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Ask children to reflect on the English language skills they have used over the last couple of weeks, while working through the unit ‘Exploring the past’. Encourage them to think about the core communicative skills: Listening, Speaking, Reading, Writing.</p><p><strong>Oxford opening: </strong>Children discuss in pairs when they used the skills. They can assess areas that need further work, what they are comfortable with, and where they feel they were stretched and challenged. Teachers should support lower-attaining children.</p><p><strong>Oxford opening: </strong>Children may wish to keep a log of their goals which they can refer back to during future ‘Reflection and review’ weeks to track their progress and achievements.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Remind children that positive moods are contagious. Discuss how to share positive emotions as a class and elicit how children can apply this to their teamwork.</p><p><strong>Oxford task — guided: </strong>Teachers may choose one or more of the following activity ideas:</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way.</p><p><strong>Oxford pair/group task: </strong>Remind children that positive moods are contagious. Discuss how to share positive emotions as a class and elicit how children can apply this to their teamwork.</p><p><strong>Oxford pair/group task: </strong>Using junk modelling and other art materials, children work in small groups to recreate a historic building of their choice – it could be a building from their local area, or a well-known historic building in a different part of the world. Provide a range of photos which show the building from different angles, so children can develop their model accordingly. Encourage them to sketch their ideas first, thinking about the different shapes that make up the building – for instance, how will they build different shapes on top of each other (e.g. a sphere, a cylinder, or a cone on top of a cuboid)? At least one group member should use a computer or look through a book or tourist leaflet to find out some facts about their building of choice. When children present their final model to the class, they will also need to present the facts they have learned, including the name of the building, where it is, the date it was built, what it was in the past and what it is now, and what a visitor can do there.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Using junk modelling and other art materials, children work in small groups to recreate a historic building of their choice – it could be a building from their local area, or a well-known historic building in a different part of the world. Provide a range of photos which show the building from different angles, so children can develop their model accordingly. Encourage them to sketch their ideas first, thinking about the different shapes that make up the building – for instance, how will they build different shapes on top of each other (e.g. a sphere, a cylinder, or a cone on top of a cuboid)? At least one group member should use a computer or look through a book or tourist leaflet to find out some facts about their building of choice. When children present their final model to the class, they will also need to present the facts they have learned, including the name of the building, where it is, the date it was built, what it was in the past and what it is now, and what a visitor can do there.</p><p><strong>Oxford source task: </strong>In pairs, children plan and write a story about travelling back in time. Prompt them to think about how their character(s) travelled back in time, the decade or century that they arrived in, what things were the same as the present day, and what things were different. They can research different inventions and the type of lifestyle people had during their chosen decade or century using the internet or history books. They can also ask the teacher and other adults in the classroom questions about their own or their parents’/grandparents’ experiences. At the end of the week, pairs will read their story aloud to the class. They might want to include a visual or use props to accompany their story. They may like to also look at Oxford Discover SB 2 pp.50–51 for additional ideas. Alternatively, they could look at the inventions in Oxford Discover SB 3 p.142.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>For more support with either project, allocate a historic building or a time period for children to explore further in their creative task. Provide a checklist of items that each project should have. Monitor children actively, but try not to intervene too much, unless necessary. They should have the freedom to test their ideas (e.g. working out how to make a stable foundation for their model and how to attach the different pieces), apply logical thinking, and learn from their mistakes, rather than being told how to complete each stage. You can prompt them with questions: e.g. What is the shape of the roof in the photo? What can we use that has curved edges like this shape? What happens in the middle of your story? What do you think your characters see inside a house [in 1900]?</p><p><strong>Oxford differentiation: </strong>Challenge more able children to think about how they will present their work effectively at the end of the week. What language can they use (including new grammatical forms learned)? What do they need to do to maintain the audience’s interest?</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have identified the core English language skills that they would like to improve or consolidate, and have done so over the week’s activities. They have participated in an extended activity which has helped to develop and reinforce these skills, while firmly placing them in a real-world context.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Revisit exploring the past learning and explain today’s review and reflect focus. Scaffolding: Picture prompt → teacher example → partner rehearsal. ICQs: “Do we think first?” “Will both partners speak?” CCQ: “How does this connect to Review and reflect?”</p><p><strong>I DO source: </strong>Teacher models: Independent reflection
+Ask children to reflect on the English language skills they have used over the last couple of weeks, while working through the unit ‘Exploring the past’. Encourage them to think about the core communicative skills: Listening, Speaking, Reading, Writing.
+Children discuss in pairs when they used the skills. They can assess areas that need further work, what they are comfortable with, and where they feel they were stretched and challenged. Teachers should support lower-attaining children.
+Children may wish to keep a log of their goals which they can refer back to during future ‘Reflection and review’ weeks to track their progress and achievements.
+Main activity
+Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way.
+ Remind children that positive moods are contagious. Discuss how to share positive emotions as a class and elicit how children can apply this to their teamwork.
+  Teachers may choose one or more of the following activity ideas:
+Using junk modelling and other art materials, children work in small groups to recreate a historic building of their choice – it could be a building from their local area, or a well-known historic building in a different part of the world. Provide a Think aloud, display the target words, demonstrate an accurate answer, and invite students to identify the evidence or language used. CCQs: “What was the first step?” “Which detail makes the answer correct?”</p><p><strong>WE DO source: </strong>Original guided task: Independent reflection
+Ask children to reflect on the English language skills they have used over the last couple of weeks, while working through the unit ‘Exploring the past’. Encourage them to think about the core communicative skills: Listening, Speaking, Reading, Writing.
+Children discuss in pairs when they used the skills. They can assess areas that need further work, what they are comfortable with, and where they feel they were stretched and challenged. Teachers should support lower-attaining children.
+Children may wish to keep a log of their goals which they can refer back to during future ‘Reflection and review’ weeks to track their progress and achievements.
+Main activity
+Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way.
+ Remind children that positive moods are contagious. Discuss how to share positive emotions as a class and elicit how children can apply this to their teamwork.
+  Teachers may choose one or more of the following activity ideas:
+Using junk modelling and other art materials, children work in small groups to recreate a historic building of their choice – it could be a building from their local area, or a well-known historic building in a different part of the world. Provide a Students rehearse a shared example using sentence frames, gestures and mini-whiteboards. Fade prompts as understanding grows. ICQ: “Do we work together first?” CCQ: “What evidence supports the answer?”</p><p><strong>YOU DO source: </strong>Complete the chosen unit review or project component. Each student produces an individual spoken or written response. Check for vocabulary, meaning and completion of the original OIC outcomes.</p><p><strong>Review: </strong>Use the original unit reflection prompts and project success criteria. Exit ticket: Demonstrate one new example of Review and reflect. Record I (independent), P (prompted) or N (not yet).</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 15 \1 Lesson 1</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 15, LESSON 1</div><section class="game"><h3>IEC supplemental game — Past unit vocabulary retrieval</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Give small groups mixed word cards selected from the lesson. They build a meaningful target sentence, read it aloud, then replace one word and explain the change.</p><p><b>ICQ: </b>Do you arrange the words first? Will you read the complete sentence aloud?</p><p><b>CCQ: </b>Does the sentence make sense for this lesson example? Which word changes the meaning?</p><p><b>Assessment: </b>Accurate sentence order and meaning</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Evidence versus inference quiz</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — History skills self-rating</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Provide three to five event or process cards from the lesson. Pairs place them in order and narrate the sequence using first, next and finally.</p><p><b>ICQ: </b>Do you arrange the cards before telling the sequence?</p><p><b>CCQ: </b>What happens first? What clue shows the next step?</p><p><b>Assessment: </b>Logical sequence and use of sequencing language</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Reflection pair interview</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Model one question-and-answer exchange using the lesson language. Partners ask and answer, record one key response, then change partners and report what they learned.</p><p><b>ICQ: </b>Do both partners ask and answer? Do you change partners after recording a response?</p><p><b>CCQ: </b>Does your reply answer the question asked? Which detail supports it?</p><p><b>Assessment: </b>An understandable question, relevant answer and report</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Historical project brainstorm</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Review goal ticket</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Review and reflect.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect an individual response linked to Review and reflect. <b>Next step:</b> Reteach misunderstandings or extend with the original Year 3 lesson sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Reflection and review
+Week 15, Lessons 1–5: Reflection on ‘Exploring the past’
+Learning outcomes: Unit summary
+
+Independent reflection
+Ask children to reflect on the English language skills they have used over the last couple of weeks, while working through the unit ‘Exploring the past’. Encourage them to think about the core communicative skills: Listening, Speaking, Reading, Writing.
+Children discuss in pairs when they used the skills. They can assess areas that need further work, what they are comfortable with, and where they feel they were stretched and challenged. Teachers should support lower-attaining children.
+Children may wish to keep a log of their goals which they can refer back to during future ‘Reflection and review’ weeks to track their progress and achievements.
+Main activity
+Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way.
+ Remind children that positive moods are contagious. Discuss how to share positive emotions as a class and elicit how children can apply this to their teamwork.
+  Teachers may choose one or more of the following activity ideas:
+Using junk modelling and other art materials, children work in small groups to recreate a historic building of their choice – it could be a building from their local area, or a well-known historic building in a different part of the world. Provide a range of photos which show the building from different angles, so children can develop their model accordingly. Encourage them to sketch their ideas first, thinking about the different shapes that make up the building – for instance, how will they build different shapes on top of each other (e.g. a sphere, a cylinder, or a cone on top of a cuboid)? At least one group member should use a computer or look through a book or tourist leaflet to find out some facts about their building of choice. When children present their final model to the class, they will also need to present the facts they have learned, including the name of the building, where it is, the date it was built, what it was in the past and what it is now, and what a visitor can do there.
+In pairs, children plan and write a story about travelling back in time. Prompt them to think about how their character(s) travelled back in time, the decade or century that they arrived in, what things were the same as the present day, and what things were different. They can research different inventions and the type of lifestyle people had during their chosen decade or century using the internet or history books. They can also ask the teacher and other adults in the classroom questions about their own or their parents’/grandparents’ experiences. At the end of the week, pairs will read their story aloud to the class. They might want to include a visual or use props to accompany their story. They may like to also look at Oxford Discover SB 2 pp.50–51 for additional ideas. Alternatively, they could look at the inventions in Oxford Discover SB 3 p.142.
+Learning review
+Children have identified the core English language skills that they would like to improve or consolidate, and have done so over the week’s activities. They have participated in an extended activity which has helped to develop and reinforce these skills, while firmly placing them in a real-world context.
+Differentiation
+For more support with either project, allocate a historic building or a time period for children to explore further in their creative task. Provide a checklist of items that each project should have. Monitor children actively, but try not to intervene too much, unless necessary. They should have the freedom to test their ideas (e.g. working out how to make a stable foundation for their model and how to attach the different pieces), apply logical thinking, and learn from their mistakes, rather than being told how to complete each stage. You can prompt them with questions: e.g. What is the shape of the roof in the photo? What can we use that has curved edges like this shape? What happens in the middle of your story? What do you think your characters see inside a house [in 1900]?
+Challenge more able children to think about how they will present their work effectively at the end of the week. What language can they use (including new grammatical forms learned)? What do they need to do to maintain the audience’s interest?
+Context
+This week, children will reflect on their individual learning from Weeks 13–14.
+Children will also participate in an extended activity, practising the skills they have learned and focusing their work on areas of particular interest.
+Lessons this week will vary, depending on the scope of the chosen activity. 
+Break up the activity into manageable stages to fit into the ESL lessons this week.
+
+
+Year 3 Week 15, lesson 1.</pre></details></main></body></html>

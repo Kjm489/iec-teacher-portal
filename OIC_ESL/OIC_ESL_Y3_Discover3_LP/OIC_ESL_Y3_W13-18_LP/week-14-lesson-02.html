@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 14 Lesson 2 · A historic building</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 14 \1 Lesson 2</strong><nav><a href="index.html">All lessons</a><a href="week-14-lesson-01.html">← Previous</a><a href="week-14-lesson-03.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — A historic building</h1><p class="sub">OIC ESL Year 3 · Week 14 \1 Lesson 2 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Exploring the past</div><div><b>Week:</b> 14</div><div><b>Lesson:</b> 2</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.3c, 3.3f, 3.3g</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Topic:</b> A historic building. <b>OIC outcomes:</b> 3.3c, 3.3f, 3.3g. <b>Unit:</b> Exploring the past.</p><p><b>Success criteria:</b> Students use lesson vocabulary and skills to complete a meaningful supported task and produce independent evidence of learning.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Write the word ‘historic’ on the board. Establish that it means ‘from the past’ or ‘very old’, and comes from the word ‘history’, which children learn at school.</p><p><strong>Oxford opening: </strong>Ask children: What historic buildings do you know in our country? Children write a list in small groups then share answers as a class.</p><p><strong>Oxford opening: </strong>Repeat the activity for historic buildings in different countries.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Show children pictures of interesting historic buildings from around the world. 
+Ask: Which buildings do you know? Where in the world are they? Discuss as a class.</p><p><strong>Oxford task — teacher demonstration: </strong>Hand out the reading text provided.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Ask children: What type of text is this? (an email) How do you know? As this is a handout, you may like to show children an authentic email or zoom in on the photo in Oxford Discover SB 2 p.48 ex.A.</p><p><strong>Oxford task — guided: </strong>Tell children to look at the picture(s) and read the subject line. In pairs, they note down three things that they expect to read about (e.g. how old the building is, where the building is, who lived in the building).</p><p><strong>Oxford task — guided: </strong>Read the email aloud and children follow on their handouts. Alternatively, invite volunteers to read one paragraph each.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Tell children to look at the picture(s) and read the subject line. In pairs, they note down three things that they expect to read about (e.g. how old the building is, where the building is, who lived in the building).</p><p><strong>Oxford pair/group task: </strong>Ask a few comprehension questions: e.g. Where is the castle? Why is the castle popular? What will Liza do in the spring? Can you find another word that means ‘enormous’? 
+To make this activity more fun, create a quiz and divide the class into teams.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Encourage children to use reading strategies to work out the meaning of unknown words (using context or co-text, looking at the type of word [e.g. a noun or verb], and if there are any capital letters [e.g. Füssen = a proper noun]). Check as a class.</p><p><strong>Oxford source task: </strong>Elicit the main points and write them on the board. Were children’s predictions correct?</p><p><strong>Oxford source task: </strong>Ask a few comprehension questions: e.g. Where is the castle? Why is the castle popular? What will Liza do in the spring? Can you find another word that means ‘enormous’? 
+To make this activity more fun, create a quiz and divide the class into teams.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>To support less able children, provide additional support in a small group guided by 
+an adult. Look at the email paragraph by paragraph, focusing on the main point in 
+each one.</p><p><strong>Oxford differentiation: </strong>Challenge more confident children to read the text independently. Ask them to note down the main point in each paragraph in their own words. Encourage them to share their ideas with the class and explain how they found the answers.</p><p><strong>Oxford differentiation: </strong>Additional information: Week 14, Lesson 2</p><p><strong>Oxford differentiation: </strong>To: liza@happymail.net</p><p><strong>Oxford additional tasks: </strong>Write an email to a penfriend about a visit to a historic building in your local area.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have read and understood an email about a historic building.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Write the word ‘historic’ on the board. Establish that it means ‘from the past’ or ‘very old’, and comes from the word ‘history’, which children learn at school. Ask children: What historic buildings do you know in our country? Children write a list in small groups then share answers as a class. Repeat the activity for historic buildings in different countries. Scaffolding: Picture prompt → teacher example → partner rehearsal. ICQs: “Do we think first?” “Will both partners speak?” CCQ: “How does this connect to A historic building?”</p><p><strong>I DO source: </strong>Teacher models: Show children pictures of interesting historic buildings from around the world. Ask: Which buildings do you know? Where in the world are they? Discuss as a class. Hand out the reading text provided. Ask children: What type of text is this? (an email) How do you know? As this is a handout, you may like to show children an authentic email or zoom in on the photo in Oxford Discover SB 2 p.48 ex.A. Tell children to look at the picture(s) and read the subject line. In pairs, they note down three things that they expect to read about (e.g. how old the building is, where the building is, who lived in the building). Read the email aloud and children follow on their handouts. Alternatively, invite volunteers to read one paragraph each. Encourage children to use reading strategies to work out the meaning of unknown words (using context or co-text, looking at the type of word [e.g. a noun or verb], and if there are any capital letters [e.g. Füssen = a proper noun]). Check as a class. Elicit the main points and write them on the board. Were children’s predictions correct? Ask a few comprehension questions: e.g. Where is the castle? Why is the castle popular? What will Liza do in the spring? Can you find another word that means ‘enormous’? To make this activity more fun, create a quiz and divide the class into teams. Additional task Write an Think aloud, display the target words, demonstrate an accurate answer, and invite students to identify the evidence or language used. CCQs: “What was the first step?” “Which detail makes the answer correct?”</p><p><strong>WE DO source: </strong>Original guided task: Show children pictures of interesting historic buildings from around the world. Ask: Which buildings do you know? Where in the world are they? Discuss as a class. Hand out the reading text provided. Ask children: What type of text is this? (an email) How do you know? As this is a handout, you may like to show children an authentic email or zoom in on the photo in Oxford Discover SB 2 p.48 ex.A. Tell children to look at the picture(s) and read the subject line. In pairs, they note down three things that they expect to read about (e.g. how old the building is, where the building is, who lived in the building). Read the email aloud and children follow on their handouts. Alternatively, invite volunteers to read one paragraph each. Encourage children to use reading strategies to work out the meaning of unknown words (using context or co-text, looking at the type of word [e.g. a noun or verb], and if there are any capital letters [e.g. Füssen = a proper noun]). Check as a class. Elicit the main points and write them on the board. Were children’s predictions correct? Ask a few comprehension questions: e.g. Where is the castle? Why is the castle popular? What will Liza do in the spring? Can you find another word that means ‘enormous’? To make this activity more fun, create a quiz and divide the class into teams. Additional task Write an Students rehearse a shared example using sentence frames, gestures and mini-whiteboards. Fade prompts as understanding grows. ICQ: “Do we work together first?” CCQ: “What evidence supports the answer?”</p><p><strong>YOU DO source: </strong>Show children pictures of interesting historic buildings from around the world. Ask: Which buildings do you know? Where in the world are they? Discuss as a class. Hand out the reading text provided. Ask children: What type of text is this? (an email) How do you know? As this is a handout, you may like to show children an authentic email or zoom in on the photo in Oxford Discover SB 2 p.48 ex.A. Tell children to look at the picture(s) and read the subject line. In pairs, they note down three things that they expect to read about (e.g. how old the building is, where the building is, who lived in the building). Read the email aloud and children follow on their handouts. Alternatively, invite volunteers to read one paragraph each. Encourage children to use reading strategies to work out the meaning of unknown words (using context or co-text, Each student produces an individual spoken or written response. Check for vocabulary, meaning and completion of the original OIC outcomes.</p><p><strong>Review: </strong>Children have read and understood an email about a historic building. Exit ticket: Demonstrate one new example of A historic building. Record I (independent), P (prompted) or N (not yet).</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 14 \1 Lesson 2</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 14, LESSON 2</div><section class="game"><h3>IEC supplemental game — Historic building clue hunt</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Architectural feature bingo</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Place topic vocabulary and picture cards around the room. Teams take turns choosing one, using it accurately in a sentence, and checking with the teacher before scoring.</p><p><b>ICQ: </b>Does a team earn a point for speed alone? Must the answer be correct?</p><p><b>CCQ: </b>Why does your sentence match this picture or example?</p><p><b>Assessment: </b>Correct target-language use, not speed</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Building then-and-now sketch</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Give small groups mixed word cards selected from the lesson. They build a meaningful target sentence, read it aloud, then replace one word and explain the change.</p><p><b>ICQ: </b>Do you arrange the words first? Will you read the complete sentence aloud?</p><p><b>CCQ: </b>Does the sentence make sense for this lesson example? Which word changes the meaning?</p><p><b>Assessment: </b>Accurate sentence order and meaning</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Heritage tour guide</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Historical landmark evidence board</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Save the building debate</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A historic building.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Display two or three topic-related choices. Students vote individually, discuss evidence with a partner, and give a complete sentence explaining their choice.</p><p><b>ICQ: </b>Do you vote before discussing? Must you give a reason?</p><p><b>CCQ: </b>Which detail from the lesson supports your choice?</p><p><b>Assessment: </b>A clear choice and a relevant explanation</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect an individual response linked to A historic building. <b>Next step:</b> Reteach misunderstandings or extend with the original Year 3 lesson sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Exploring the past
+Week 14, Lesson 2: A historic building
+Learning outcomes: 3.3c, 3.3f, 3.3g
+
+Context
+This is the seventh lesson of the unit ‘Exploring the past’.
+In this lesson, children will develop their reading skills by predicting the content of an email and identifying the main points.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Year 3 Week 14, lesson 2.</pre></details></main></body></html>

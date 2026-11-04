@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 17 Lesson 5 · Writing about an instrument</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 17 \1 Lesson 5</strong><nav><a href="index.html">All lessons</a><a href="week-17-lesson-04.html">← Previous</a><a href="week-18-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Writing about an instrument</h1><p class="sub">OIC ESL Year 3 · Week 17 \1 Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> What is fun about music?</div><div><b>Week:</b> 17</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.4a, 3.4b, 3.4c</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Topic:</b> Writing about an instrument. <b>OIC outcomes:</b> 3.4a, 3.4b, 3.4c. <b>Unit:</b> What is fun about music?.</p><p><b>Success criteria:</b> Students use lesson vocabulary and skills to complete a meaningful supported task and produce independent evidence of learning.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Ask children to find the three questions they wrote down in Week 16, Lesson 1. 
+In pairs, they discuss whether they found the answers to their questions in the unit, what they have learned that they found interesting, what they haven’t learned yet, and what activities 
+they have enjoyed. Remind children to listen actively to their partner’s ideas and opinions, then respond with their own thoughts.</p><p><strong>Oxford opening: </strong>Bring the class back together and invite a few volunteers to share their ideas.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Remind children of their task in today’s lesson – they are going to write a descriptive paragraph about a musical instrument of their choice.</p><p><strong>Oxford task — teacher demonstration: </strong>Allocate enough time in the lesson for children to complete activity B on p.113 of Oxford Discover WB 3. Ask them to research their chosen musical instrument, using the research plan from the previous lesson. Encourage children to make a mind map of describing words, verbs, and facts they have found about the instrument to use in their written work next lesson. 
+Monitor children and offer help if needed.</p><p><strong>Oxford task — teacher demonstration: </strong>Make available the reading texts from Week 17, Lesson 4 to remind children of how a descriptive paragraph is organized. Write the headings on the board.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Topic sentence</p><p><strong>Oxford task — guided: </strong>Researched facts</p><p><strong>Oxford task — guided: </strong>Conclusion</p><p><strong>Oxford task — guided: </strong>Ask children to write the first draft of their descriptive paragraph. Producing an extended piece of writing using children’s newly acquired knowledge of vocabulary and grammar is challenging. Remind children that they are in the stretch zone – they might feel a little worried or uncomfortable, but it will help to stimulate their brain and extend their understanding of 
+difficult language.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Help children to understand that making mistakes is a positive thing – it encourages us to understand what went wrong and why. This helps us to improve and do better next time.</p><p><strong>Oxford pair/group task: </strong>Invite volunteers to read their paragraphs to the rest of the class. Applaud and give praise.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>When they are finished, ask children to check their work carefully for correct spelling, grammar, and punctuation. They can now complete the checklist on p.113 of Oxford Discover WB 3.</p><p><strong>Oxford source task: </strong>When everyone has finished, tell children to swap their paragraph with a partner. They read their partner’s work and give helpful feedback, including one thing they really liked, and one area to improve on (such as spelling, use of punctuation, use of tenses, and interesting language choices). If there is time, children revise their work following their partner’s feedback.</p><p><strong>Oxford source task: </strong>Help children to understand that making mistakes is a positive thing – it encourages us to understand what went wrong and why. This helps us to improve and do better next time.</p><p><strong>Oxford source task: </strong>Invite volunteers to read their paragraphs to the rest of the class. Applaud and give praise.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>To support less confident children, provide a bank of common adjectives and gapped sentences for them to complete with their research.</p><p><strong>Oxford differentiation: </strong>Challenge more confident children to use new grammar learned in the unit, notably regular and irregular past simple verbs, adverbs of frequency, comparative and superlative adjectives, and possessive pronouns. They can also write about their personal experiences of using the instrument.</p><p><strong>Oxford additional tasks: </strong>Display the final paragraphs around the classroom. Encourage children to read each other’s work.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have written a descriptive paragraph about a musical instrument of their choice.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Ask children to find the three questions they wrote down in Week 17 \1 Lesson 5. In pairs, they discuss whether they found the answers to their questions in the unit, what they have learned that they found interesting, what they haven’t learned yet, and what activities they have enjoyed. Remind children to listen actively to their partner’s ideas and opinions, then respond with their own thoughts. Bring the class back together and invite a few volunteers to share their ideas. Scaffolding: Picture prompt → teacher example → partner rehearsal. ICQs: “Do we think first?” “Will both partners speak?” CCQ: “How does this connect to Writing about an instrument?”</p><p><strong>I DO source: </strong>Teacher models: Remind children of their task in today’s lesson – they are going to write a descriptive paragraph about a musical instrument of their choice. Allocate enough time in the lesson for children to complete activity B on p.113 of Oxford Discover WB 3. Ask them to research their chosen musical instrument, using the research plan from the previous lesson. Encourage children to make a mind map of describing words, verbs, and facts they have found about the instrument to use in their written work next lesson. Monitor children and offer help if needed. Make available the reading texts from Week 17 \1 Lesson 5 to remind children of how a descriptive paragraph is organized. Write the headings on the board. Title Topic sentence Researched facts Conclusion Ask children to write the first draft of their descriptive paragraph. Producing an extended piece of writing using children’s newly acquired knowledge of vocabulary and grammar is challenging. Remind children that they are in the stretch zone – they might feel a little worried or uncomfortable, but it will help to stimulate their brain and extend their understanding of difficult language. When they are finished, ask children to check their work carefully for correct spelling, grammar, and punctuation. They can now complete the checklist on p.113 of Oxford Discover WB 3. When everyone has fini Think aloud, display the target words, demonstrate an accurate answer, and invite students to identify the evidence or language used. CCQs: “What was the first step?” “Which detail makes the answer correct?”</p><p><strong>WE DO source: </strong>Original guided task: Remind children of their task in today’s lesson – they are going to write a descriptive paragraph about a musical instrument of their choice. Allocate enough time in the lesson for children to complete activity B on p.113 of Oxford Discover WB 3. Ask them to research their chosen musical instrument, using the research plan from the previous lesson. Encourage children to make a mind map of describing words, verbs, and facts they have found about the instrument to use in their written work next lesson. Monitor children and offer help if needed. Make available the reading texts from Week 17 \1 Lesson 5 to remind children of how a descriptive paragraph is organized. Write the headings on the board. Title Topic sentence Researched facts Conclusion Ask children to write the first draft of their descriptive paragraph. Producing an extended piece of writing using children’s newly acquired knowledge of vocabulary and grammar is challenging. Remind children that they are in the stretch zone – they might feel a little worried or uncomfortable, but it will help to stimulate their brain and extend their understanding of difficult language. When they are finished, ask children to check their work carefully for correct spelling, grammar, and punctuation. They can now complete the checklist on p.113 of Oxford Discover WB 3. When everyone has fini Students rehearse a shared example using sentence frames, gestures and mini-whiteboards. Fade prompts as understanding grows. ICQ: “Do we work together first?” CCQ: “What evidence supports the answer?”</p><p><strong>YOU DO source: </strong>Remind children of their task in today’s lesson – they are going to write a descriptive paragraph about a musical instrument of their choice. Allocate enough time in the lesson for children to complete activity B on p.113 of Oxford Discover WB 3. Ask them to research their chosen musical instrument, using the research plan from the previous lesson. Encourage children to make a mind map of describing words, verbs, and facts they have found about the instrument to use in their written work next lesson. Monitor children and offer help if needed. Make available the reading texts from Week 17 \1 Lesson 5 to remind children of how a descriptive paragraph is organized. Write the headings on the board. Title Topic sentence Researched facts Conclusion Ask children to write the first draft of their descriptive paragraph. Producing an extended piece o Each student produces an individual spoken or written response. Check for vocabulary, meaning and completion of the original OIC outcomes.</p><p><strong>Review: </strong>Children have written a descriptive paragraph about a musical instrument of their choice. Exit ticket: Demonstrate one new example of Writing about an instrument. Record I (independent), P (prompted) or N (not yet).</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 17 \1 Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 17, LESSON 5</div><section class="game"><h3>IEC supplemental game — Instrument writing organizer</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Instrument paragraph jigsaw</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Sensory adjective word bank</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Give small groups mixed word cards selected from the lesson. They build a meaningful target sentence, read it aloud, then replace one word and explain the change.</p><p><b>ICQ: </b>Do you arrange the words first? Will you read the complete sentence aloud?</p><p><b>CCQ: </b>Does the sentence make sense for this lesson example? Which word changes the meaning?</p><p><b>Assessment: </b>Accurate sentence order and meaning</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Instrument description peer edit</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Instrument magazine feature</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Author reading circle</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Writing about an instrument.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect an individual response linked to Writing about an instrument. <b>Next step:</b> Reteach misunderstandings or extend with the original Year 3 lesson sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 What is fun about music?
+Week 17, Lesson 5: Writing about an instrument
+Learning outcomes: 3.4a, 3.4b, 3.4c
+
+Context
+This is the tenth lesson of the unit ‘What is fun about music?’.
+In this lesson, children will develop their writing skills by writing a descriptive paragraph, similar to the example they read in Week 17, Lesson 4. They will check their work for accurate spelling, punctuation, and language use.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Year 3 Week 17, lesson 5.</pre></details></main></body></html>

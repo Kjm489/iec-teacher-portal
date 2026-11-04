@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 14 Lesson 3 · An old diary</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 14 \1 Lesson 3</strong><nav><a href="index.html">All lessons</a><a href="week-14-lesson-02.html">← Previous</a><a href="week-14-lesson-04.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — An old diary</h1><p class="sub">OIC ESL Year 3 · Week 14 \1 Lesson 3 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Exploring the past</div><div><b>Week:</b> 14</div><div><b>Lesson:</b> 3</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.3d, 3.3e</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Topic:</b> An old diary. <b>OIC outcomes:</b> 3.3d, 3.3e. <b>Unit:</b> Exploring the past.</p><p><b>Success criteria:</b> Students use lesson vocabulary and skills to complete a meaningful supported task and produce independent evidence of learning.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Show children the photo of a diary in Oxford Discover SB 2 p.116 ex.A and ask: What is it?</p><p><strong>Oxford opening: </strong>Ask: Who in the class has a diary? What do you write about? Can you think of any famous diaries? Take answers, then divide the class into pairs for children to discuss. 
+If a child doesn’t write in a diary, encourage them to think about what they could include.</p><p><strong>Oxford opening: </strong>Invite volunteers to share their ideas.</p><p><strong>Oxford opening: </strong>Then ask: How can diaries teach us about the past?</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Divide the class into groups of four. Hand out sets of cut-up paragraphs to each group. Children work together to match the sentences in each paragraph. 
+Check answers as a class.</p><p><strong>Oxford task — teacher demonstration: </strong>Praise children for their teamwork in the first activity. They worked together effectively to make logical paragraphs.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Hand out the full text to pairs of children.</p><p><strong>Oxford task — guided: </strong>Read the text as a whole class. Then ask children to read it a second time independently.</p><p><strong>Oxford task — guided: </strong>Focus attention on the full stops and commas in the text. Invite a few children to model saying some example sentences aloud, demonstrating the difference in pause between 
+the two. Elicit from children that we can use commas to break up a long sentence, so we can take a breath. These normally appear before linking words like so, but, and when.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Divide the class into groups of four. Hand out sets of cut-up paragraphs to each group. Children work together to match the sentences in each paragraph. 
+Check answers as a class.</p><p><strong>Oxford pair/group task: </strong>Praise children for their teamwork in the first activity. They worked together effectively to make logical paragraphs.</p><p><strong>Oxford pair/group task: </strong>Hand out the full text to pairs of children.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Then challenge children to find and write down examples of nouns, verbs, and adjectives (‘describing words’) in the text. They can work individually or in pairs. Check answers as a whole class. Encourage children to explain how they know – for example, subject 
+pronouns (I, you, he/she/it, we, they) often appear before a verb; a, an, and the appear before a noun. They might also recognize familiar words and already know how to 
+categorize them.</p><p><strong>Oxford source task: </strong>In pairs, ask children to replace some of the examples of nouns, verbs, and adjectives with a different word but using the same part of speech. This will change the meaning of a sentence. Give an example: e.g. ‘They ran around and caught butterflies in small nets.’ = They jumped around and caught lollipops in huge bathtubs.</p><p><strong>Oxford source task: </strong>Invite some children to read their silly sentences to the class. Give praise for their creative thinking.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>Challenge more confident children to infer what the person is like from the diary entries. You can also ask them to look for prepositions, possessive determiners, and adverbs.</p><p><strong>Oxford differentiation: </strong>Additional information: Week 14, Lesson 3</p><p><strong>Oxford differentiation: </strong>[The / indicates where the paragraphs should be divided in the first activity.]</p><p><strong>Oxford differentiation: </strong>Grandma’s diary</p><p><strong>Oxford additional tasks: </strong>Write a diary entry of a child from the past. Encourage children to decide on the year and think about what their character was like, what they did at school, and what activities they liked doing.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have read about an old diary. They have worked together to reconstruct paragraphs in a logical way and explored different parts of speech and punctuation.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Show children the photo of a diary in Oxford Discover SB 2 p.116 ex.A and ask: What is it? Ask: Who in the class has a diary? What do you write about? Can you think of any famous diaries? Take answers, then divide the class into pairs for children to discuss. If a child doesn’t write in a diary, encourage them to think about what they could include. Invite volunteers to share their ideas. Then ask: How can diaries teach us about the past? Scaffolding: Picture prompt → teacher example → partner rehearsal. ICQs: “Do we think first?” “Will both partners speak?” CCQ: “How does this connect to An old diary?”</p><p><strong>I DO source: </strong>Teacher models: Divide the class into groups of four. Hand out sets of cut-up paragraphs to each group. Children work together to match the sentences in each paragraph. Check answers as a class. Praise children for their teamwork in the first activity. They worked together effectively to make logical paragraphs. Hand out the full text to pairs of children. Read the text as a whole class. Then ask children to read it a second time independently. Focus attention on the full stops and commas in the text. Invite a few children to model saying some example sentences aloud, demonstrating the difference in pause between the two. Elicit from children that we can use commas to break up a long sentence, so we can take a breath. These normally appear before linking words like so, but, and when. Then challenge children to find and write down examples of nouns, verbs, and adjectives (‘describing words’) in the text. They can work individually or in pairs. Check answers as a whole class. Encourage children to explain how they know – for example, subject pronouns (I, you, he/she/it, we, they) often appear before a verb; a, an, and the appear before a noun. They might also recognize familiar words and already know how to categorize them. In pairs, ask children to replace some of the examples of nouns, verbs, and adjectives with a different word but using the s Think aloud, display the target words, demonstrate an accurate answer, and invite students to identify the evidence or language used. CCQs: “What was the first step?” “Which detail makes the answer correct?”</p><p><strong>WE DO source: </strong>Original guided task: Divide the class into groups of four. Hand out sets of cut-up paragraphs to each group. Children work together to match the sentences in each paragraph. Check answers as a class. Praise children for their teamwork in the first activity. They worked together effectively to make logical paragraphs. Hand out the full text to pairs of children. Read the text as a whole class. Then ask children to read it a second time independently. Focus attention on the full stops and commas in the text. Invite a few children to model saying some example sentences aloud, demonstrating the difference in pause between the two. Elicit from children that we can use commas to break up a long sentence, so we can take a breath. These normally appear before linking words like so, but, and when. Then challenge children to find and write down examples of nouns, verbs, and adjectives (‘describing words’) in the text. They can work individually or in pairs. Check answers as a whole class. Encourage children to explain how they know – for example, subject pronouns (I, you, he/she/it, we, they) often appear before a verb; a, an, and the appear before a noun. They might also recognize familiar words and already know how to categorize them. In pairs, ask children to replace some of the examples of nouns, verbs, and adjectives with a different word but using the s Students rehearse a shared example using sentence frames, gestures and mini-whiteboards. Fade prompts as understanding grows. ICQ: “Do we work together first?” CCQ: “What evidence supports the answer?”</p><p><strong>YOU DO source: </strong>Divide the class into groups of four. Hand out sets of cut-up paragraphs to each group. Children work together to match the sentences in each paragraph. Check answers as a class. Praise children for their teamwork in the first activity. They worked together effectively to make logical paragraphs. Hand out the full text to pairs of children. Read the text as a whole class. Then ask children to read it a second time independently. Focus attention on the full stops and commas in the text. Invite a few children to model saying some example sentences aloud, demonstrating the difference in pause between the two. Elicit from children that we can use commas to break up a long sentence, so we can take a breath. These normally appear before linking words like so, but, and when. Then challenge children to find and write down examples of nouns, verbs Each student produces an individual spoken or written response. Check for vocabulary, meaning and completion of the original OIC outcomes.</p><p><strong>Review: </strong>Children have read about an old diary. They have worked together to reconstruct paragraphs in a logical way and explored different parts of speech and punctuation. Exit ticket: Demonstrate one new example of An old diary. Record I (independent), P (prompted) or N (not yet).</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 14 \1 Lesson 3</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 14, LESSON 3</div><section class="game"><h3>IEC supplemental game — Old diary detective</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Diary chronology scramble</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Diary voice roleplay</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Past tense highlight hunt</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Historical diary entry</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Diary evidence interview</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: An old diary.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Model one question-and-answer exchange using the lesson language. Partners ask and answer, record one key response, then change partners and report what they learned.</p><p><b>ICQ: </b>Do both partners ask and answer? Do you change partners after recording a response?</p><p><b>CCQ: </b>Does your reply answer the question asked? Which detail supports it?</p><p><b>Assessment: </b>An understandable question, relevant answer and report</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect an individual response linked to An old diary. <b>Next step:</b> Reteach misunderstandings or extend with the original Year 3 lesson sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Exploring the past
+Week 14, Lesson 3: An old diary
+Learning outcomes: 3.3d, 3.3e
+
+Context
+This is the eighth lesson of the unit ‘Exploring the past’.
+In this lesson, children will develop their reading skills by reconstructing paragraphs in an input text. They will focus on different parts of speech and punctuation.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Year 3 Week 14, lesson 3.</pre></details></main></body></html>
