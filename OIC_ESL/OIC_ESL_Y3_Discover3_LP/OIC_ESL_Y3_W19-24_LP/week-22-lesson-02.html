@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 22 Lesson 2 · Six simple machines</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 22 \1 Lesson 2</strong><nav><a href="index.html">All lessons</a><a href="week-22-lesson-01.html">← Previous</a><a href="week-22-lesson-03.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Six simple machines</h1><p class="sub">OIC ESL Year 3 · Week 22 \1 Lesson 2 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Inventions</div><div><b>Week:</b> 22</div><div><b>Lesson:</b> 2</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.1b, 3.1i, 3.2c, 3.2d</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Original Year 3 outcome(s):</b> 3.1b, 3.1i, 3.2c, 3.2d. <b>Lesson:</b> Six simple machines. <b>Unit:</b> Inventions.</p><p><b>Success criteria:</b> Explain, demonstrate or apply the original lesson focus; communicate a complete response; and produce independent evidence.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Show children your toy. Ask: How does this work?</p><p><strong>Oxford opening: </strong>If it’s a seesaw, elicit that it moves up and down, and that things can travel from the lower end to the higher end, or vice versa. Elicit that not much effort is needed. (Adapt for the toy you have.) Say: Many playgrounds have simple machines like this. Do all playground rides work in the same way? Today, we’re going to find out about how things move!</p><p><strong>Oxford opening: </strong>Tell children that today is quite a difficult lesson, so they will be working in the 
+stretch zone. This will help to extend their understanding of how everyday machines work.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Using flashcards or realia, talk with children about six different ways that machines 
+can work. See the fact sheet provided to support your teaching, or use Oxford Discover SB 3 pp.130–131. Go through each kind of machine one by one, showing the moving parts and eliciting as much knowledge as possible from children. Encourage them to think critically and logically about how these mechanisms might work before giving them 
+the answers. Give them plenty of time to make suggestions and ask questions.</p><p><strong>Oxford task — teacher demonstration: </strong>Remind the class that they can ask you questions if they don’t quite understand, such as Can you say that again, please? or I don’t quite understand. Can you help, please?</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Praise children for their efforts in explaining the moving parts, even if they don’t get it quite right.</p><p><strong>Oxford task — guided: </strong>See if children can give you more examples of these kinds of machine.</p><p><strong>Oxford task — guided: </strong>Turn to Oxford Discover SB 3 p.128 exs.A–C, or play some flashcard games (e.g. listen and repeat, then ‘Which is missing?’).</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Ask children to think about which machines they use every day, sometimes, and never. 
+For instance, if they live in a flat and use the lift (elevator), they use a pulley – which needs a wheel and axle to function – every day. They note down their ideas in pairs.</p><p><strong>Oxford pair/group task: </strong>To end the lesson, play a definition game. Describe how a machine works using 
+simple terminology, or give an example, and children tell you what the machine is. 
+Alternatively, say the machine and children work together to make a definition in 
+small groups.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Ask children to think about which machines they use every day, sometimes, and never. 
+For instance, if they live in a flat and use the lift (elevator), they use a pulley – which needs a wheel and axle to function – every day. They note down their ideas in pairs.</p><p><strong>Oxford source task: </strong>Discuss as a class.</p><p><strong>Oxford source task: </strong>To end the lesson, play a definition game. Describe how a machine works using 
+simple terminology, or give an example, and children tell you what the machine is. 
+Alternatively, say the machine and children work together to make a definition in 
+small groups.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>To support less able children, focus on just three or four machines. Use realia and simple terminology to help them to understand the different mechanisms.</p><p><strong>Oxford differentiation: </strong>As an extension task for more able children, ask them to write some True/False sentences to challenge a partner: e.g. A stapler is an example of a wedge. (False – It’s a lever).</p><p><strong>Oxford differentiation: </strong>Additional information: Week 22, Lesson 2</p><p><strong>Oxford differentiation: </strong>How machines work</p><p><strong>Oxford additional tasks: </strong>Complete exs.A–C in Oxford Discover WB 3 pp.116–117.</p><p><strong>Oxford additional tasks: </strong>Draw a picture or diagram of one of the machines.</p><p><strong>Oxford additional tasks: </strong>Count the number of machines in the classroom. You could make this a team game, with each team looking for a different kind of machine.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have learned about six kinds of everyday machine and how they work, using their problem-solving skills.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Source-based warm-up: Show children your toy. Ask: How does this work? If it’s a seesaw, elicit that it moves up and down, and that things can travel from the lower end to the higher end, or vice versa. Elicit that not much effort is needed. (Adapt for the toy you have.) Say: Many playgrounds have simple machines like this. Do all playground rides work in the same way? Today, we’re going to find out about how things move! Tell children that today is quite a difficult lesson, so they will be working in the 
+stretch zone. This will help to extend their understanding of how everyday machines work. Scaffolding: Use a visual prompt, teacher example and paired oral rehearsal before whole-class response. ICQs: “Do you work alone or with a partner?” “What must you show?” CCQs: “What is the key idea about six simple machines?”</p><p><strong>I DO source: </strong>I DO — teacher think-aloud: Using flashcards or realia, talk with children about six different ways that machines 
+can work. See the fact sheet provided to support your teaching, or use Oxford Discover SB 3 pp.130–131. Go through each kind of machine one by one, showing the moving parts and eliciting as much knowledge as possible from children. Encourage them to think critically and logically about how these mechanisms might work before giving them 
+the answers. Give them plenty of time to make suggestions and ask questions. Remind the class that they can ask you questions if they don’t quite understand, such as Can you say that again, please? or I don’t quite understand. Can you help, please? Praise children for their efforts in explaining the moving parts, even if they don’t get it quite right. See if children can give you more examples of these kinds of machine. Turn to Oxford Discover SB 3 p.128 exs.A–C, or play some flashcard games (e.g. listen and repeat, then ‘Which is missing?’). Ask children to think about which machines they use every day, sometimes, and never. 
+For instance, if they live in a flat and use the lift (elevator), they use a pulley – which needs a wheel and axle to function – every day. They note down their ideas in pairs. Discuss as a Demonstrate one correct example and verbalize the reasoning; explicitly teach the necessary vocabulary and sentence pattern. CCQs: “What did I do first?” “Why does that example fit?”</p><p><strong>WE DO source: </strong>WE DO — guided source task: class. To end the lesson, play a definition game. Describe how a machine works using 
+simple terminology, or give an example, and children tell you what the machine is. 
+Alternatively, say the machine and children work together to make a definition in 
+small groups. Complete a parallel example together. Students first respond with picture cards or mini-whiteboards, then justify answers orally. ICQ: “Are we completing this first example together?” CCQ: “What evidence supports your answer?”</p><p><strong>YOU DO source: </strong>YOU DO: Complete exs.A–C in Oxford Discover WB 3 pp.116–117. Draw a picture or diagram of one of the machines. Count the number of machines in the classroom. You could make this a team game, with each team looking for a different kind of machine. Each student completes an individual oral, written, diagram or project-based response aligned to the original learning outcomes. Collect one observable example.</p><p><strong>Review: </strong>Children have learned about six kinds of everyday machine and how they work, using their problem-solving skills. Exit ticket: Students demonstrate one accurate example related to six simple machines without copying. Record independent / prompted / reteach.</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 22 \1 Lesson 2</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 22, LESSON 2</div><section class="game"><h3>IEC supplemental game — Six-machine picture hunt</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Machine movement mime</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Demonstrate an action connected to the lesson without saying the answer. Teams take turns acting, guessing with the target phrase, and giving one reason for their guess.</p><p><b>ICQ: </b>Do actors say the answer? Does the team guess before the reveal?</p><p><b>CCQ: </b>What action or clue helped you identify the meaning?</p><p><b>Assessment: </b>Accurate spoken guess supported by a clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Machine sorting stations</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Give pairs 6–8 labelled picture/word cards drawn from the lesson. Learners sort or match them, explain one choice, then exchange sets to check.</p><p><b>ICQ: </b>Are you sorting or writing a story? Do you explain one choice?</p><p><b>CCQ: </b>Which feature tells you this card belongs in that group?</p><p><b>Assessment: </b>Correct grouping plus a spoken reason</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Build-a-machine diagram</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Give small groups mixed word cards selected from the lesson. They build a meaningful target sentence, read it aloud, then replace one word and explain the change.</p><p><b>ICQ: </b>Do you arrange the words first? Will you read the complete sentence aloud?</p><p><b>CCQ: </b>Does the sentence make sense for this lesson example? Which word changes the meaning?</p><p><b>Assessment: </b>Accurate sentence order and meaning</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Simple machine explanation relay</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Place topic vocabulary and picture cards around the room. Teams take turns choosing one, using it accurately in a sentence, and checking with the teacher before scoring.</p><p><b>ICQ: </b>Does a team earn a point for speed alone? Must the answer be correct?</p><p><b>CCQ: </b>Why does your sentence match this picture or example?</p><p><b>Assessment: </b>Correct target-language use, not speed</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Machine clue quiz</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: Six simple machines.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Reveal three visual or verbal clues from the lesson one at a time. Students make a prediction, revise it after each clue, and explain the final answer.</p><p><b>ICQ: </b>Do you guess after each clue or wait until the end?</p><p><b>CCQ: </b>Which clue makes your final answer fit?</p><p><b>Assessment: </b>A plausible answer with one specific supporting clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Save one completed response, explanation or artifact. <b>Next steps:</b> Reteach any misconception and plan the next lesson using the Year 3 source sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Inventions
+Week 22, Lesson 2: Six simple machines
+Learning outcomes: 3.1b, 3.1i, 3.2c, 3.2d
+
+Context
+This is the second lesson of the unit ‘Inventions’.
+In this lesson, children will develop their listening and speaking skills by listening to a teacher-led presentation, and asking and answering questions about machines.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>

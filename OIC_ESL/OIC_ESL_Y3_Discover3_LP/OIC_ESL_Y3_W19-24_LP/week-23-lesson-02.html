@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 23 Lesson 2 · How inventions happen (1)</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 23 \1 Lesson 2</strong><nav><a href="index.html">All lessons</a><a href="week-23-lesson-01.html">← Previous</a><a href="week-23-lesson-03.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — How inventions happen (1)</h1><p class="sub">OIC ESL Year 3 · Week 23 \1 Lesson 2 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Inventions</div><div><b>Week:</b> 23</div><div><b>Lesson:</b> 2</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.1b, 3.2a, 3.3a, 3.3b</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Original Year 3 outcome(s):</b> 3.1b, 3.2a, 3.3a, 3.3b. <b>Lesson:</b> How inventions happen (1). <b>Unit:</b> Inventions.</p><p><b>Success criteria:</b> Explain, demonstrate or apply the original lesson focus; communicate a complete response; and produce independent evidence.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Ask children what a ‘warm-up’ is. Elicit that it is a physical activity to get our muscles warmed up, but it is also a good way to release some energy and focus our attention before sitting down for a long time.</p><p><strong>Oxford opening: </strong>Do a quick warm-up exercise – a series of jumps, runs on the spot, and hops on each leg, or adapt to suit the needs of your class. Encourage children to recommend actions.</p><p><strong>Oxford opening: </strong>Start quite quickly, but gradually slow the activity down so that children are quiet, calm, and ready to sit down by the end.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Show children the vocabulary flashcards (see above for key words) one by one. Elicit or explain the meaning of each. Reassure children that these are difficult words, so they aren’t expected to remember them all straightaway. However, they will be useful to know for the reading task in the next lesson.</p><p><strong>Oxford task — teacher demonstration: </strong>Children sit in a circle. Pass one of the flashcards to the right and say the word clearly, modelling the correct pronunciation. The child to your right continues. When you feel everyone is confident, increase the challenge level by passing a card to the left and another card to the right, and so on.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Turn to ex.A in Oxford Discover SB 3 p.136. Show children the pictures and play the audio.</p><p><strong>Oxford task — guided: </strong>Hand out an A4 piece of paper to each child. Show them how to fold it into the number of key words. Now ask them to draw a picture of each vocabulary item in each space. 
+Instruct children to cut them out carefully so that they have mini playing cards.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Put children into groups of four to play ‘Happy families’ with their cards. Shuffle all their cards together. The aim of the game is to try to get four of the same card (e.g. four pairs of glasses or four vases). Each player starts with four cards (dealt at random) and the rest are in a pile face down. The first player asks another player Have you got [a pitcher]? If that player has the card, they must hand it over. If not, they pick up another card from the pile. At the end, the player with the most ‘families’ (sets of four) wins!</p><p><strong>Oxford pair/group task: </strong>Allow groups time to complete or make good progress in their game. Monitor actively.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Put children into groups of four to play ‘Happy families’ with their cards. Shuffle all their cards together. The aim of the game is to try to get four of the same card (e.g. four pairs of glasses or four vases). Each player starts with four cards (dealt at random) and the rest are in a pile face down. The first player asks another player Have you got [a pitcher]? If that player has the card, they must hand it over. If not, they pick up another card from the pile. At the end, the player with the most ‘families’ (sets of four) wins!</p><p><strong>Oxford source task: </strong>Allow groups time to complete or make good progress in their game. Monitor actively.</p><p><strong>Oxford source task: </strong>Ask children to complete ex.B in Oxford Discover SB 3 p.136.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>To support less able children, give them fewer words to focus on to begin with. 
+They can play ‘Happy families’ in a small group supported by an adult.</p><p><strong>Oxford differentiation: </strong>Encourage more confident children to demonstrate leadership skills in the game by clearly explaining the instructions to unsure classmates, helping them with difficult pronunciations, and ensuring that each child takes their turn at the right time.</p><p><strong>Oxford additional tasks: </strong>Complete exs.A–D in Oxford Discover WB 3 pp.124–125.</p><p><strong>Oxford additional tasks: </strong>Encourage children to write their own definitions of the words to accompany their 
+picture cards. They can then play a definitions game in a small group – one child says their definition and the others guess the word.</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have consolidated their understanding of new topic vocabulary in a game of ‘Happy families’, practising their pronunciation of each word.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Source-based warm-up: Ask children what a ‘warm-up’ is. Elicit that it is a physical activity to get our muscles warmed up, but it is also a good way to release some energy and focus our attention before sitting down for a long time. Do a quick warm-up exercise – a series of jumps, runs on the spot, and hops on each leg, or adapt to suit the needs of your class. Encourage children to recommend actions. Start quite quickly, but gradually slow the activity down so that children are quiet, calm, and ready to sit down by the end. Scaffolding: Use a visual prompt, teacher example and paired oral rehearsal before whole-class response. ICQs: “Do you work alone or with a partner?” “What must you show?” CCQs: “What is the key idea about how inventions happen (1)?”</p><p><strong>I DO source: </strong>I DO — teacher think-aloud: Show children the vocabulary flashcards (see above for key words) one by one. Elicit or explain the meaning of each. Reassure children that these are difficult words, so they aren’t expected to remember them all straightaway. However, they will be useful to know for the reading task in the next lesson. Children sit in a circle. Pass one of the flashcards to the right and say the word clearly, modelling the correct pronunciation. The child to your right continues. When you feel everyone is confident, increase the challenge level by passing a card to the left and another card to the right, and so on. Turn to ex.A in Oxford Discover SB 3 p.136. Show children the pictures and play the audio. Hand out an A4 piece of paper to each child. Show them how to fold it into the number of key words. Now ask them to draw a picture of each vocabulary item in each space. 
+Instruct children to cut them out carefully so that they have mini playing cards. Put children into groups of four to play ‘Happy families’ with their cards. Shuffle all their cards together. The aim of the game is to try to get four of the same card (e.g. four pairs of glasses or four vases). Each player starts with four cards (dealt at random) and the rest are in a pile face do Demonstrate one correct example and verbalize the reasoning; explicitly teach the necessary vocabulary and sentence pattern. CCQs: “What did I do first?” “Why does that example fit?”</p><p><strong>WE DO source: </strong>WE DO — guided source task: wn. The first player asks another player Have you got [a pitcher]? If that player has the card, they must hand it over. If not, they pick up another card from the pile. At the end, the player with the most ‘families’ (sets of four) wins! Allow groups time to complete or make good progress in their game. Monitor actively. Ask children to complete ex.B in Oxford Discover SB 3 p.136. Complete a parallel example together. Students first respond with picture cards or mini-whiteboards, then justify answers orally. ICQ: “Are we completing this first example together?” CCQ: “What evidence supports your answer?”</p><p><strong>YOU DO source: </strong>YOU DO: Complete exs.A–D in Oxford Discover WB 3 pp.124–125. Encourage children to write their own definitions of the words to accompany their 
+picture cards. They can then play a definitions game in a small group – one child says their definition and the others guess the word. Each student completes an individual oral, written, diagram or project-based response aligned to the original learning outcomes. Collect one observable example.</p><p><strong>Review: </strong>Children have consolidated their understanding of new topic vocabulary in a game of ‘Happy families’, practising their pronunciation of each word. Exit ticket: Students demonstrate one accurate example related to how inventions happen (1) without copying. Record independent / prompted / reteach.</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 23 \1 Lesson 2</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 23, LESSON 2</div><section class="game"><h3>IEC supplemental game — Invention origin puzzle</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Problem-solution cards</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Inventor interview</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Model one question-and-answer exchange using the lesson language. Partners ask and answer, record one key response, then change partners and report what they learned.</p><p><b>ICQ: </b>Do both partners ask and answer? Do you change partners after recording a response?</p><p><b>CCQ: </b>Does your reply answer the question asked? Which detail supports it?</p><p><b>Assessment: </b>An understandable question, relevant answer and report</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Invention process flowchart</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Prototype critique</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Discovery story retell</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: How inventions happen (1).</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Provide three to five event or process cards from the lesson. Pairs place them in order and narrate the sequence using first, next and finally.</p><p><b>ICQ: </b>Do you arrange the cards before telling the sequence?</p><p><b>CCQ: </b>What happens first? What clue shows the next step?</p><p><b>Assessment: </b>Logical sequence and use of sequencing language</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Save one completed response, explanation or artifact. <b>Next steps:</b> Reteach any misconception and plan the next lesson using the Year 3 source sequence.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Inventions
+Week 23, Lesson 2: How inventions happen (1)
+Learning outcomes: 3.1b, 3.2a, 3.3a, 3.3b
+
+Context
+This is the seventh lesson of the unit ‘Inventions’.
+In this lesson, children will develop their listening, speaking, and reading skills by practising using new topic words in a game, in preparation for children’s learning in Week 23, Lesson 3.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>
