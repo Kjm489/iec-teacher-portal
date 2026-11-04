@@ -107,10 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function validPath(path) {
-    return typeof path === "string" &&
-      /^(iec-prebuilt-lesson-library\.html|resources\/(lesson-plans|presentations)\/[a-zA-Z0-9_\/-]+\.(pdf|docx|pptx))$/
-        .test(path) &&
-      !path.includes("..");
+    if (typeof path !== "string" || path.includes("..")) return false;
+    if (/^OIC_ESL\/OIC_ESL_Y[1-9]_Discover(?:[1-6]|_Future)_LP\/OIC_ESL_Y[1-9]_W\d+[-_]\d+_LP\/week-\d{2}-lesson-\d{2}\.html$/.test(path)) return true;
+    return /^(iec-prebuilt-lesson-library\.html|resources\/(lesson-plans|presentations)\/[a-zA-Z0-9_\/-]+\.(pdf|docx|pptx))$/.test(path);
   }
 
   function resource(label, path, kind) {
@@ -229,7 +228,9 @@ document.addEventListener("DOMContentLoaded", () => {
       card.append(el("h3", "", label));
       card.append(el("p", "lesson-focus", item.focus || ""));
 
-      const note = item.status === "ready"
+      const note = item.kind === "oic-lesson"
+        ? "OIC ESL HTML lesson · 2 × 45 minutes"
+        : item.status === "ready"
         ? "IEC plan: 2 × 45 minutes · Interactive games included"
         : item.status === "sample"
           ? "Example catalog entry only — not an uploaded lesson"
@@ -286,14 +287,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateFilters();
 
-        if (curriculum.value === "Oxford") {
-          level.value = "Kindergarten";
-          updateFilters();
-
-          book.value = "Toy Team Plus 3";
-          updateFilters();
-        }
-
         render();
 
         $("lessons-heading").scrollIntoView({
@@ -304,12 +297,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   curriculum.value = "Oxford";
-  updateFilters();
-
-  level.value = "Kindergarten";
-  updateFilters();
-
-  book.value = "Toy Team Plus 3";
   updateFilters();
 
   render();
