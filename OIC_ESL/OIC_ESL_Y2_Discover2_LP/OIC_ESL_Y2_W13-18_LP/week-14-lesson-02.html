@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 14 Lesson 2 · Subtraction</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 14 · LESSON 2</strong><nav><a href="index.html">All lessons</a><a href="week-14-lesson-01.html">← Previous</a><a href="week-14-lesson-03.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Subtraction</h1><p class="subtitle">OIC ESL Year 2 · Week 14 · Lesson 2 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> School subjects</div><div><b>Week:</b> 14</div><div><b>Lesson:</b> 2</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.3f, 2.3g</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 2</p><p><b>Materials:</b> number cards, counters and worked examples and original Year 2 lesson resources. <b>Primary reference:</b> original Year 2 source instructions.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Play a quick number game with children from Week 13, for example, ‘Smash, Beep!’. Children count, but when they get to a 3, a multiple of 3, or a number with 3 in it (e.g. 13, 23, etc.) they say: Beep! For example: 1, 2, Beep!, 4, 5, Beep!, 7, 8, Beep!, etc. You can also add 5, multiples of 5, or a number with 5 in it to be replaced with Smash!, so you get: 1, 2, Beep!, 4, Smash!, Beep!, 7, 8, Beep!, Smash!, 11, Beep!, Beep!, etc. Tell children that today’s lesson will require them to be ‘detectives’ in reading. Elicit that detectives look for clues and they work very carefully. Hand out the cut-out magnifying glasses to remind children to read carefully. Today’s lesson will stretch children and extend their understanding.</p><p><b>Students:</b> Think silently, discuss in pairs, share one idea. <b>ICQs:</b> “Do you discuss first or write the final answer?” “Do both partners share?” <b>CCQs:</b> “Which picture or example is connected to Subtraction?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher think-aloud:</b> Say the operation and explain what each number means. Show a complete example, pronounce target words, and explain why it is correct. <b>Original main activity:</b> Ask children when they use maths in everyday life. See if they can give examples from their own lives, and to think about when they are with their parents or carers. You might have to guide the discussion, eliciting that maths can be ‘subtracting’ (or ‘taking away’). Ask: When does someone take something away? Give an example: e.g. Taking a slice of pizza is maths, as you have to work out if there are enough slices for everyone! Ask children to tell you what they think ‘re-reading’ is and when they might have to ‘re-read’. Establish that re-reading is a good thing because you are gaining a better understanding of the text. Turn to Oxford Discover SB 2 p.69 ex.C. Children read the text to themselves first. Ask them to close their books, and try to remember a sentence or word from the text. Take answers. Children can then read the text aloud, going around the class. Ask children to read the questions and answer the first two in pairs. Do questions 1 and 2, then check answers. Ask children to read question 3. Remind children of the conce</p><p><b>CCQs:</b> Which operation changes the amount? How do you know? “Can you point to the evidence?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>Step 1:</b> Complete the first original task example together. <b>Step 2:</b> Provide a visual and partial language frame. <b>Step 3:</b> Invite learners to complete another example with fewer prompts. <b>Original task anchor:</b> Ask children when they use maths in everyday life. See if they can give examples from their own lives, and to think about when they are with their parents or carers. You might have to guide the discussion, eliciting that maths can be ‘subtracting’ (or ‘taking away’). Ask: When does someone take something away? Give an example: e.g. Taking a slice of pizza is maths, as you have to work out if there are enough slices for everyone! Ask children to tell you what they think ‘re-reading’ is and when they might have to ‘re-read’. Establish that re-reading is a good thing because you are gaining a better understanding of the text. Turn to Oxford Discover SB 2 p.69 ex.C. Children read the text to the</p><p><b>ICQs:</b> “Are we doing this one together?” “Where do we check our answers?” <b>CCQs:</b> Which operation changes the amount? How do you know?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p>Partners use number cards, counters and worked examples to explain, question or solve a new example related to <b>Subtraction</b>. Partner A gives an answer; Partner B asks for evidence; switch roles and compare. <b>ICQs:</b> “Do both partners have a turn?” “Do you show your reason?” <b>CCQs:</b> Which operation changes the amount? How do you know?</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent task:</b> Solve or write a new number or word problem, then check it. Complete the exercises in Oxford Discover WB 2 pp.58–59. Ask children to look through their coursebooks and find a text to re-read. Re-read a story. What other details did children notice while re-reading? Decorate the magnifying glasses or stick them onto card and use them regularly.</p><p>Collect an individual oral, written or illustrated response that directly demonstrates the source learning outcomes; do not let pupils copy the teacher’s example.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> use picture choices, labeled vocabulary, gesture and an oral sentence frame. <b>Developing:</b> give a full answer with one accurate detail. <b>Extending:</b> justify, compare or design an original example. <b>Original source differentiation:</b> To support less able children, pair them with more able children. As an extension task for more able children, ask them to write another question. They could also re-write the paragraph about how they use maths every day, beginning with: ‘I use maths every day …’</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Review:</b> Children have read a short text about how maths is used in everyday life. They have been introduced to the skill of re-reading.</p><p><b>Exit ticket:</b> Complete one new response related to <b>Subtraction</b> without copying. Record independent / prompted / not yet. <b>CCQ:</b> Which operation changes the amount? How do you know?</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 14 · Lesson 2</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 14, LESSON 2</div><section class="game"><h3>1. Picture Evidence Hunt — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Teacher: Play a quick number game with children from Week 13, for example, ‘Smash, Beep!’. Children count, but when they get to a 3, a multiple of 3, or a number with 3 in it (e.g. 13, 23, etc.) they say: Beep! For example: 1, 2, Beep!, 4, 5, Beep!, 7, 8, Beep!, etc. You can also add 5, multiples of 5, or a number with 5 in it to be replaced with Smash!, so you get: 1, 2, Beep!, 4, Smash</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Evidence Hunt”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Show four source pictures; learners locate a requested detail and explain what in the picture supports it.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><section class="game"><h3>2. Question Ball — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Students: Think silently, discuss in pairs, share one idea. ICQs: “Do you discuss first or write the final answer?” “Do both partners share?” CCQs: “Which picture or example is connected to Subtraction?”</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Question Ball”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Pass a soft ball. When it stops, the holder asks or answers a lesson-specific question using a displayed prompt.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><section class="game"><h3>3. Freeze Frame — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Teacher think-aloud: Say the operation and explain what each number means. Show a complete example, pronounce target words, and explain why it is correct. Original main activity: Ask children when they use maths in everyday life. See if they can give examples from their own lives, and to think about when they are with their parents or carers. You might have to guide the discussion, elici</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Freeze Frame”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Groups create a silent pose showing a source situation. Classmates interpret the scene and justify their guess.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><section class="game"><h3>4. Complete the Dialogue — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Step 1: Complete the first original task example together. Step 2: Provide a visual and partial language frame. Step 3: Invite learners to complete another example with fewer prompts. Original task anchor: Ask children when they use maths in everyday life. See if they can give examples from their own lives, and to think about when they are with their parents or carers. You might have to </p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><section class="game"><h3>5. Gallery Walk — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Partners use number cards, counters and worked examples to explain, question or solve a new example related to Subtraction . Partner A gives an answer; Partner B asks for evidence; switch roles and compare. ICQs: “Do both partners have a turn?” “Do you show your reason?” CCQs: Which operation changes the amount? How do you know?</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Gallery Walk”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Groups create a small source-based diagram; peers circulate, add one accurate observation and ask one question.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><section class="game"><h3>6. Venn Diagram Detectives — Subtraction</h3><p><b>Lesson-specific language focus: </b>subtraction</p><p><b>Original teaching source: </b>Independent task: Solve or write a new number or word problem, then check it. Complete the exercises in Oxford Discover WB 2 pp.58–59. Ask children to look through their coursebooks and find a text to re-read. Re-read a story. What other details did children notice while re-reading? Decorate the magnifying glasses or stick them onto card and use them regularly.</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Venn Diagram Detectives”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about subtraction.</p><p><b>YOU DO — game procedure: </b>Partners place source examples into two overlapping categories and explain one similarity and one difference.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of subtraction?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about subtraction.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of subtraction.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Which learners independently met the Year 2 outcomes for “Subtraction”? Which vocabulary or concepts require re-teaching? What should be adjusted before the next lesson?</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 School subjects
+Week 14, Lesson 2: Subtraction
+Learning outcomes: 2.3f, 2.3g 
+
+Context
+This is the seventh lesson of the unit ‘School subjects’.
+In this lesson, children will develop their reading skills by learning the skill of re-reading to better understand a text.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>

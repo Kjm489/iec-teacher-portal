@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 23 Lesson 5 · Writing about recycling</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 23 · LESSON 5</strong><nav><a href="index.html">All lessons</a><a href="week-23-lesson-04.html">← Previous</a><a href="week-24-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Writing about recycling</h1><p class="subtitle">OIC ESL Year 2 · Week 23 · Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Looking after our places</div><div><b>Week:</b> 23</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.2f, 2.4a, 2.4b, 2.4c</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 5</p><p><b>Measurable targets:</b> Identify key ideas about writing about recycling; practise <b>first / next / finally; recycle</b>; independently plan, draft and revise recycling writing. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Write three sentences on the board: one in the present simple, one in the present continuous, and one in the past simple. Ask children to identify which is which. If necessary, explain the function of and difference between each tense. Tell children that they are going to pay special attention to these tenses today.</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to writing about recycling?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Elicit from children different coloured recycling bins you have in your local area, such as green for glass, yellow for paper. Write some items on the board and invite children to tell you which colour bin they go in. Now show children your recycled object and ask them to think about its journey from what it was before to what it is now. Do this orally, writing key phrases on the board. Focus on the tenses, referring back to the story in Week 23, Lesson 4 to remind them. Ask children to retell their imagined journey to their partner. Remind them to think carefully about verb tenses as they are doing this. At the end of each retelling, their partner should say what they enjoyed about the story, as well as kindly noting any mistakes made (if applicable). They should not give their partner the correction straight away. Encourage children to try to correct any mistakes themselves before disc</p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>first / next / finally; recycle</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of writing about recycling?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Elicit from children different coloured recycling bins you have in your local area, such as green for glass, yellow for paper. Write some items on the board and invite children to tell you which colour bin they go in. Now show children your recycled object and ask them to think about its journey from what it was before to what it is now. Do this orally, writing key phrases on the board. Focus on the tenses, referring back to the story in Week 23, Lesson 4 to remind them. Ask children to retell their imagined journey to their partner. Remind them to think carefully about verb tenses as they are doing this. At the end of each retelling, their p</p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>first / next / finally; recycle</b> through writing about recycling prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Complete ex.A in Oxford Discover WB 2 p.107. Write about another recycled object.</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently plan, draft and revise recycling writing without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>first / next / finally; recycle</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> To support less able children, write a short story together in an adult-led small group. As an extension task for more able children, encourage them to use the internet to find out more about the journey of their object.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have imagined and written about the journey of a recycled object.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>writing about recycling</b> using <b>first / next / finally; recycle</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 23 · Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 23, LESSON 5</div><section class="game"><h3>1. Picture Evidence Hunt — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>Teacher: Write three sentences on the board: one in the present simple, one in the present continuous, and one in the past simple. Ask children to identify which is which. If necessary, explain the function of and difference between each tense. Tell children that they are going to pay special attention to these tenses today.</p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Evidence Hunt”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Show four source pictures; learners locate a requested detail and explain what in the picture supports it.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><section class="game"><h3>2. Question Ball — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to writing about recycling?”</p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Question Ball”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Pass a soft ball. When it stops, the holder asks or answers a lesson-specific question using a displayed prompt.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><section class="game"><h3>3. Freeze Frame — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Elicit from children different coloured recycling bins you have in your local area, such as green for glass, yellow for paper. Write some items on the board and invite children to tell you which colour bin they go in. Now show children your recycled object and ask them to think about its journey from what it was</p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Freeze Frame”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Groups create a silent pose showing a source situation. Classmates interpret the scene and justify their guess.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><section class="game"><h3>4. Complete the Dialogue — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write first / next / finally; recycle accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of writing about recycling?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><section class="game"><h3>5. Gallery Walk — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Elicit from children different coloured recycling bins you have in your local area, such as green for glass, yellow for paper. Write some items on the board and invite children to </p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Gallery Walk”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Groups create a small source-based diagram; peers circulate, add one accurate observation and ask one question.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><section class="game"><h3>6. Find the Evidence — Writing about recycling</h3><p><b>Lesson-specific language focus: </b>past and present</p><p><b>Original teaching source: </b>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently plan, draft and revise recycling writing without copying the group model.</p><p><b>Materials: </b>past-and-present picture pairs and a timeline</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Find the Evidence”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “In the past, people ___. Now, they ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about past and present.</p><p><b>YOU DO — game procedure: </b>Give a claim and two possible supporting source details. Students select and explain the stronger evidence.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is yesterday in the past or the future?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about past and present.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “In the past, people ___. Now, they ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of past and present.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (2.2f, 2.4a, 2.4b, 2.4c). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Looking after our places
+Week 23, Lesson 5: Writing about recycling
+Learning outcomes: 2.2f, 2.4a, 2.4b, 2.4c 
+
+Context
+This is the tenth lesson of the unit ‘Looking after our places’.
+In this lesson, children will develop their speaking and writing skills by thinking creatively and writing a short story about a recycled object.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+Write three sentences on the board: one in the present simple, one in the present continuous, and one in the past simple. Ask children to identify which is which. If necessary, explain the function of and difference between each tense. Tell children that they are going to pay special attention to these tenses today.
+
+Main activity
+Elicit from children different coloured recycling bins you have in your local area, such as green for glass, yellow for paper. Write some items on the board and invite children to tell you which colour bin they go in. Now show children your recycled object and ask them to think about its journey from what it was before to what it is now. Do this orally, writing key phrases on the board. Focus on the tenses, referring back to the story in Week 23, Lesson 4 to remind them. Ask children to retell their imagined journey to their partner. Remind them to think carefully about verb tenses as they are doing this. At the end of each retelling, their partner should say what they enjoyed about the story, as well as kindly noting any mistakes made (if applicable). They should not give their partner the correction straight away. Encourage children to try to correct any mistakes themselves before discussing together. Children look at their own recycled objects (or allocated objects). Tell them to imagine the story of their object and to note down their ideas. Use question prompts, for example: What was the object? Which recycling bin did it go into? Who put it there? Where did it go next? What did it become? Give children time to write their story in draft form. Ask children for ideas on how to present their work. Encourage creativity. Can they make a comic strip? Can they write on a piece of paper in the shape of the recycled object? Give children time to produce their final piece of work. Display children’s work around the classroom.
+
+Additional tasks
+Complete ex.A in Oxford Discover WB 2 p.107. Write about another recycled object.
+
+Learning review
+Children have imagined and written about the journey of a recycled object.
+
+Differentiation
+To support less able children, write a short story together in an adult-led small group. As an extension task for more able children, encourage them to use the internet to find out more about the journey of their object.</pre></details></main></body></html>

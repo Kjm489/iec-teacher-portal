@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 19 Lesson 3 · Being nice to people</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 19 · LESSON 3</strong><nav><a href="index.html">All lessons</a><a href="week-19-lesson-02.html">← Previous</a><a href="week-19-lesson-04.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Being nice to people</h1><p class="subtitle">OIC ESL Year 2 · Week 19 · Lesson 3 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Thinking of others</div><div><b>Week:</b> 19</div><div><b>Lesson:</b> 3</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.3e, 2.3f</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 3</p><p><b>Measurable targets:</b> Identify key ideas about kindness and thoughtful behaviour; practise <b>kind, thoughtful, helpful, rude</b>; independently read for the main message and supporting evidence. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Ask children: Are you a good friend? How can you be nice to people? Use the Think-Pair-Share technique, allowing children enough time to think about their answers.</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to kindness and thoughtful behaviour?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Ask children to tell you about any books they are reading at the moment or any stories they have read recently. Then ask: What was the theme? What was the story about? Give your own example to prompt their thinking. Turn to Oxford Discover SB 2 p.97. Read the text together and help children to understand the theme: ‘It’s good to share things.’ Divide the class into four groups. Each group is going to read a poem about an animal. Assign one poem to each group from pp.98–99. First, tell children to look at the picture and to describe it in their group. Then ask them to read the poem together and to decide what the theme is. They write the theme in one or two words (suggested answers: Raccoon – being helpful, Gorilla – grabbing things, Ox – being polite/thoughtful, Bears – sharing). Share ideas as a whole class. Play the audio (track 2.18) for all the poems. Children listen and follow in th</p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>kind, thoughtful, helpful, rude</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of kindness and thoughtful behaviour?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Ask children to tell you about any books they are reading at the moment or any stories they have read recently. Then ask: What was the theme? What was the story about? Give your own example to prompt their thinking. Turn to Oxford Discover SB 2 p.97. Read the text together and help children to understand the theme: ‘It’s good to share things.’ Divide the class into four groups. Each group is going to read a poem about an animal. Assign one poem to each group from pp.98–99. First, tell children to look at the picture and to describe it in their group. Then ask them to read the poem together and to decide what the theme is. They write the theme</p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>kind, thoughtful, helpful, rude</b> through kindness and thoughtful behaviour prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Complete exs.A–D in Oxford Discover WB 2 pp.84–85. Write a poem about an animal with a thoughtful characteristic (e.g. polite, helpful, kind). Ask children to draw a picture of somebody who is sad and one of somebody who is happy. Is their mouth the only thing that’s different?</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently read for the main message and supporting evidence without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>kind, thoughtful, helpful, rude</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> To support less able children, provide multiple-choice options for the theme. As an extension task for more able children, ask them to write their own poem or story illustrating one of the behaviours discussed.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have understood what the ‘theme’ of a text is. They have worked together to identify the theme of a poem or short story.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>kindness and thoughtful behaviour</b> using <b>kind, thoughtful, helpful, rude</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 19 · Lesson 3</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 19, LESSON 3</div><section class="game"><h3>1. Sort and Explain — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Teacher: Ask children: Are you a good friend? How can you be nice to people? Use the Think-Pair-Share technique, allowing children enough time to think about their answers.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Sort and Explain”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Teams sort six lesson cards into two meaningful groups and orally explain the rule.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>2. Story Sequencing — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to kindness and thoughtful behaviour?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Story Sequencing”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Teams order four source events or steps and retell the sequence with first, next, then and finally.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>3. Listen and Point — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Ask children to tell you about any books they are reading at the moment or any stories they have read recently. Then ask: What was the theme? What was the story about? Give your own example to prompt their thinking. Turn to Oxford Discover SB 2 p.97. Read the text together and help children to understand the the</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Listen and Point”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Read short source descriptions aloud; students point to the correct picture and repeat the key phrase.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>4. Complete the Dialogue — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write kind, thoughtful, helpful, rude accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of kindness and thoughtful behaviour?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>5. Ranking Ladder — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Ask children to tell you about any books they are reading at the moment or any stories they have read recently. Then ask: What was the theme? What was the story about? Give your ow</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Ranking Ladder”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Groups rank four source choices and justify the top and bottom positions.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>6. Peer Teacher — Being nice to people</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Independent application: Complete exs.A–D in Oxford Discover WB 2 pp.84–85. Write a poem about an animal with a thoughtful characteristic (e.g. polite, helpful, kind). Ask children to draw a picture of somebody who is sad and one of somebody who is happy. Is their mouth the only thing that’s different?</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Peer Teacher”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>One student teaches a source concept to a partner using a visual, and the partner asks one check question.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (2.3e, 2.3f). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Thinking of others
+Week 19, Lesson 3: Being nice to people
+Learning outcomes: 2.3e, 2.3f 
+
+Context
+This is the third lesson of the unit ‘Thinking of others’.
+In this lesson, children will develop their reading skills by identifying the theme of a text.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+Ask children: Are you a good friend? How can you be nice to people? Use the Think-Pair-Share technique, allowing children enough time to think about their answers.
+
+Main activity
+Ask children to tell you about any books they are reading at the moment or any stories they have read recently. Then ask: What was the theme? What was the story about? Give your own example to prompt their thinking. Turn to Oxford Discover SB 2 p.97. Read the text together and help children to understand the theme: ‘It’s good to share things.’ Divide the class into four groups. Each group is going to read a poem about an animal. Assign one poem to each group from pp.98–99. First, tell children to look at the picture and to describe it in their group. Then ask them to read the poem together and to decide what the theme is. They write the theme in one or two words (suggested answers: Raccoon – being helpful, Gorilla – grabbing things, Ox – being polite/thoughtful, Bears – sharing). Share ideas as a whole class. Play the audio (track 2.18) for all the poems. Children listen and follow in their books. Encourage children to act out their poem. One child could read the poem while the others mime it, or children could read the poem together. Alternatively, they could produce their own dialogue in a role-play.
+
+Additional tasks
+Complete exs.A–D in Oxford Discover WB 2 pp.84–85. Write a poem about an animal with a thoughtful characteristic (e.g. polite, helpful, kind). Ask children to draw a picture of somebody who is sad and one of somebody who is happy. Is their mouth the only thing that’s different?
+
+Learning review
+Children have understood what the ‘theme’ of a text is. They have worked together to identify the theme of a poem or short story.
+
+Differentiation
+To support less able children, provide multiple-choice options for the theme. As an extension task for more able children, ask them to write their own poem or story illustrating one of the behaviours discussed.</pre></details></main></body></html>

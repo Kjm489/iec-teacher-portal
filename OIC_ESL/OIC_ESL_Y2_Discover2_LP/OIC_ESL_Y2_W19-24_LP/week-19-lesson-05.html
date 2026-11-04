@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 19 Lesson 5 · Table manners</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 19 · LESSON 5</strong><nav><a href="index.html">All lessons</a><a href="week-19-lesson-04.html">← Previous</a><a href="week-20-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Table manners</h1><p class="subtitle">OIC ESL Year 2 · Week 19 · Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Thinking of others</div><div><b>Week:</b> 19</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.4b, 2.4c, 2.4d, 2.4e</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 5</p><p><b>Measurable targets:</b> Identify key ideas about table manners; practise <b>please, thank you, before / after</b>; independently create a zigzag table-manners book. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> To revise the vocabulary from this week, play ‘Snowman’ with children. Choose a word (e.g. ‘worried’). Write a dash for each letter on the board. Invite children to take turns suggesting letters. If a suggested letter is in the word, you write it in the correct space. If not, you begin to draw a snowman (adapt as you wish: two circles for the body, one circle for the head, two sticks for arms, two eyes, a nose, a mouth, and a hat). Each incorrectly guessed letter results in part of a snowman being drawn. If children guess the word before you have finished drawing the snowman, they win!</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to table manners?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Turn to Oxford Discover SB 2 p.90. By thinking again about the vocabulary for rules, they are helping to build their long-term memory of this learning. Now elicit from children the vocabulary connected to eating a meal together, bearing in mind that rules in different homes might be slightly different and that’s OK. Encourage children to consider why we have these rules. Think about what it means to be polite, considerate, and respectful towards other people (often elders, such as parents and grandparents) at the dinner table. Take suggestions and write some rules on the board using have to, may, and must e.g. You must not eat unhealthy food. You must not talk with your mouth full. You have to use [a knife / a fork / a spoon / chopsticks] when eating food. You must say ‘please’ and ‘thank you’. You must pass food to other family members. You may ask for a glass of [water]. Tell children </p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>please, thank you, before / after</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of table manners?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Turn to Oxford Discover SB 2 p.90. By thinking again about the vocabulary for rules, they are helping to build their long-term memory of this learning. Now elicit from children the vocabulary connected to eating a meal together, bearing in mind that rules in different homes might be slightly different and that’s OK. Encourage children to consider why we have these rules. Think about what it means to be polite, considerate, and respectful towards other people (often elders, such as parents and grandparents) at the dinner table. Take suggestions and write some rules on the board using have to, may, and must e.g. You must not eat unhealthy food.</p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>please, thank you, before / after</b> through table manners prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Find out how table manners are different in other countries (e.g. eating with your hands, leaving food on your plate at the end of the meal, eating with a knife and fork, etc.). Make up a role-play about a friend who comes to dinner, but who doesn’t know any of the rules. Make tablemats with the table manners written on. Laminate them and encourage children to use them at school meal times. Consider if table manners are different at home to in a restaurant.</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently create a zigzag table-manners book without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>please, thank you, before / after</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> To support less confident children, provide gapped sentences for them to complete. Challenge more confident children to suggest a reason for each of the table manners.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have written a zigzag book about table manners using the modal verbs have to, may, and must.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>table manners</b> using <b>please, thank you, before / after</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 19 · Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 19, LESSON 5</div><section class="game"><h3>1. Find Your Pair — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>Teacher: To revise the vocabulary from this week, play ‘Snowman’ with children. Choose a word (e.g. ‘worried’). Write a dash for each letter on the board. Invite children to take turns suggesting letters. If a suggested letter is in the word, you write it in the correct space. If not, you begin to draw a snowman (adapt as you wish: two circles for the body, one circle for the head, two s</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Find Your Pair”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Give each learner a picture or word card. Learners circulate to find their match, then use both in a sentence.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><section class="game"><h3>2. Four-Corner Choice — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to table manners?”</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Four-Corner Choice”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Display four lesson-linked choices. Learners choose a corner and explain their choice with one reason.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><section class="game"><h3>3. Sound-to-Meaning Match — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Turn to Oxford Discover SB 2 p.90. By thinking again about the vocabulary for rules, they are helping to build their long-term memory of this learning. Now elicit from children the vocabulary connected to eating a meal together, bearing in mind that rules in different homes might be slightly different and that’s</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Sound-to-Meaning Match”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Read target words or sentences. Learners choose matching visuals and explain a key word’s meaning.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><section class="game"><h3>4. Complete the Dialogue — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write please, thank you, before / after accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of table manners?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><section class="game"><h3>5. Compare Two Examples — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Turn to Oxford Discover SB 2 p.90. By thinking again about the vocabulary for rules, they are helping to build their long-term memory of this learning. Now elicit from children the</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Compare Two Examples”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Show two source pictures or situations. Pairs say one similarity and two differences.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><section class="game"><h3>6. Odd One Out — Table manners</h3><p><b>Lesson-specific language focus: </b>table manners</p><p><b>Original teaching source: </b>Independent application: Find out how table manners are different in other countries (e.g. eating with your hands, leaving food on your plate at the end of the meal, eating with a knife and fork, etc.). Make up a role-play about a friend who comes to dinner, but who doesn’t know any of the rules. Make tablemats with the table manners written on. Laminate them and encourage children to us</p><p><b>Materials: </b>original textbook pictures, vocabulary cards and the teacher’s source examples</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I think ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about table manners.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>What is one correct example of table manners?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about table manners.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I think ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of table manners.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (2.4b, 2.4c, 2.4d, 2.4e). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Thinking of others
+Week 19, Lesson 5: Table manners
+Learning outcomes: 2.4b, 2.4c, 2.4d, 2.4e
+
+Context
+This is the fifth lesson of the unit ‘Thinking of others’.
+In this lesson, children will develop their writing skills by creating a zigzag book about table manners.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+To revise the vocabulary from this week, play ‘Snowman’ with children. Choose a word (e.g. ‘worried’). Write a dash for each letter on the board. Invite children to take turns suggesting letters. If a suggested letter is in the word, you write it in the correct space. If not, you begin to draw a snowman (adapt as you wish: two circles for the body, one circle for the head, two sticks for arms, two eyes, a nose, a mouth, and a hat). Each incorrectly guessed letter results in part of a snowman being drawn. If children guess the word before you have finished drawing the snowman, they win!
+
+Main activity
+Turn to Oxford Discover SB 2 p.90. By thinking again about the vocabulary for rules, they are helping to build their long-term memory of this learning. Now elicit from children the vocabulary connected to eating a meal together, bearing in mind that rules in different homes might be slightly different and that’s OK. Encourage children to consider why we have these rules. Think about what it means to be polite, considerate, and respectful towards other people (often elders, such as parents and grandparents) at the dinner table. Take suggestions and write some rules on the board using have to, may, and must e.g. You must not eat unhealthy food. You must not talk with your mouth full. You have to use [a knife / a fork / a spoon / chopsticks] when eating food. You must say ‘please’ and ‘thank you’. You must pass food to other family members. You may ask for a glass of [water]. Tell children they are going to create a zigzag book including these table manners. They can decide to work in pairs or small groups. Give them time to plan their work and to write the text out in draft form. Remind them to refer to the examples on the board to guide them. Allow children to check each other’s work for correct spelling, punctuation, and use of the modal verbs. Explain the importance of using kind words to give helpful feedback. Monitor actively and prompt children to think about where they might have made a mistake in their sentences. Children can copy out their final sentences into their zigzag books.
+
+Additional tasks
+Find out how table manners are different in other countries (e.g. eating with your hands, leaving food on your plate at the end of the meal, eating with a knife and fork, etc.). Make up a role-play about a friend who comes to dinner, but who doesn’t know any of 
+the rules. Make tablemats with the table manners written on. Laminate them and encourage children to use them at school meal times. Consider if table manners are different at home to in a restaurant.
+
+Learning review
+Children have written a zigzag book about table manners using the modal verbs have to, may, and must.
+
+Differentiation
+To support less confident children, provide gapped sentences for them to complete. Challenge more confident children to suggest a reason for each of the table manners.</pre></details></main></body></html>

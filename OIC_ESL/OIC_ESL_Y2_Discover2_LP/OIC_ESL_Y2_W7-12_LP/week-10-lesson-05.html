@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 10 Lesson 5 · Traffic light plates</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 10 · LESSON 5</strong><nav><a href="index.html">All lessons</a><a href="week-10-lesson-04.html">← Previous</a><a href="week-11-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Traffic light plates</h1><p class="subtitle">OIC ESL Year 2 · Week 10 · Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Keeping healthy</div><div><b>Week:</b> 10</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45)</div><div><b>OIC outcomes:</b> 2.4a, 2.4c, 2.4e</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 5</p><p><b>Measurable success:</b> Learners complete the original traffic light plates task and communicate one accurate response with appropriate evidence.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Activate:</b> Tell children what you ate the day before. Ask them if they think it was a healthy food intake. Encourage them to think about why or why not, and elicit what it means to have a ‘balanced diet’. Invite a confident child to tell the class what they ate. Be sensitive about being judgemental and explain this to children.</p><p><b>ICQs:</b> “Are we sharing ideas first or writing a final answer?” “Who speaks first?” <b>CCQs:</b> “What is the lesson about?” “Which example belongs to Keeping healthy?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher models the original task:</b> Show children the pictures of healthy and unhealthy foods. Check that they know what they are in English. Try to include some local food items. Hand out three paper plates or three paper plate handouts to each group of three. Ask children to colour each plate (or draw a coloured line around each plate) in red, yellow, and green. On the board, write: ‘I can eat lots of these foods.’ (green), ‘I can eat these foods sometimes.’ (yellow), ‘I can only eat these foods occasionally.’ (red). Tell children that they are going to draw or write the names of the foods on the correct plate, based on their understanding of how healthy each food item is. If you brought in magazines, children can cut out more foods and stick them on to the correct plate. Ask children to think about the best way to complete the group task. This could be that each child completes one plate, or that they plan their ideas first, etc. Children complete their plates and write a simple description using topic vocabulary learned this week.</p><p>Think aloud to show how to identify evidence, pronounce key words and produce a complete answer. Contrast one correct and one incorrect example. <b>CCQs:</b> “What tells us this answer is correct?” “Which detail in the source supports it?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>Whole-class scaffold:</b> Work through the first part of the original activity together. Show children the pictures of healthy and unhealthy foods. Check that they know what they are in English. Try to include some local food items. Hand out three paper plates or three paper plate handouts to each group of three. Ask children to colour each plate (or draw a coloured line around each plate) in red, yellow, and green. On the board, write: ‘I can eat lots of these foods.’ (green), ‘I can eat these foods sometimes.’ (yellow), ‘I can only eat these foods occasionally.’ (red). Tell children that they are going to draw or write the names of the foods on the correct plate, based on their understanding of how healthy each food item is. If you brought in magazines, children can cut out more foods and stick them on to the correct plate. Ask children to think about the best way to complete the group task. This could be that each child completes one plate, or that they plan their ideas f</p><p>Use visuals, chunk instructions, give response options, then fade the model. <b>ICQs:</b> “Do we work together first?” “Where do we find the answer?” <b>CCQs:</b> “How can we check our response?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner practice:</b> Pupils take turns explaining or questioning each other about <b>traffic light plates</b> using the original lesson materials. Partners identify a detail from the task, explain it, then switch roles.</p><p><b>ICQs:</b> “Do both partners speak?” “Do you change roles?” <b>CCQs:</b> “Does your answer agree with the picture, text or example?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent task:</b> Learners independently complete an age-appropriate product from the original task: Design a weekly meal plan. Think about what children have eaten so far today. Which ‘plate’ does most of their food belong to? Hopefully, this should be green or yellow! Think about food choices children have. For example, for most children, they will have to eat what their parents or carers give them. Their choices can be about drinks at school, sweets, etc.</p><p>Collect an oral answer, short written response, labeled picture, comparison, sequence, or review project as appropriate to the original learning outcome.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> visual choices, word bank, teacher sentence model and rehearsal. <b>Developing:</b> complete response with a supporting detail. <b>Extending:</b> add a reason, comparison or follow-up question.</p><p><b>Original differentiation:</b> To support less able children, provide them with a gapped text for the writing task. Put a word bank of food items on the board for them to copy. As an extension task for more able children, ask them to create a plate of food they ate one day last week.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Review original goal:</b> Children have considered how healthy different food items are and sorted them into groups in a team activity. They have written about the contents of each plate.</p><p><b>Exit ticket:</b> Respond independently to a new question or visual directly related to “Traffic light plates”. Mark independent / prompted / not yet. <b>CCQ:</b> “What have we learned about this topic?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 10 · Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 10, LESSON 5</div><section class="game"><h3>1. Odd One Out — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Teacher models the original task: Show children the pictures of healthy and unhealthy foods. Check that they know what they are in English. Try to include some local food items. Hand out three paper plates or three paper plate handouts to each group of three. Ask children to colour each plate (or draw a coloured line around each plate) in red, yellow, and green. On the board, write: ‘I c</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>2. Partner Interview — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Think aloud to show how to identify evidence, pronounce key words and produce a complete answer. Contrast one correct and one incorrect example. CCQs: “What tells us this answer is correct?” “Which detail in the source supports it?”</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Partner Interview”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Learners ask and answer two targeted lesson questions, then accurately report their partner’s response.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>3. Picture Dictation — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Whole-class scaffold: Work through the first part of the original activity together. Show children the pictures of healthy and unhealthy foods. Check that they know what they are in English. Try to include some local food items. Hand out three paper plates or three paper plate handouts to each group of three. Ask children to colour each plate (or draw a coloured line around each plate) i</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Dictation”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>One learner describes a source picture while the other draws or arranges cards without looking; compare results.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>4. Complete the Dialogue — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Partner practice: Pupils take turns explaining or questioning each other about traffic light plates using the original lesson materials. Partners identify a detail from the task, explain it, then switch roles.</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>5. Class Survey — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>ICQs: “Do both partners speak?” “Do you change roles?” CCQs: “Does your answer agree with the picture, text or example?”</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Class Survey”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Learners ask three classmates a lesson-related question, tally answers and describe the result.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>6. Odd One Out — Traffic light plates</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Independent task: Learners independently complete an age-appropriate product from the original task: Design a weekly meal plan. Think about what children have eaten so far today. Which ‘plate’ does most of their food belong to? Hopefully, this should be green or yellow! Think about food choices children have. For example, for most children, they will have to eat what their parents or car</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><div class="inside"><p>Which students met the lesson objective independently? Which CCQ revealed a misconception? Which scaffold should be adjusted?</p></div></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Keeping healthy
+Week 10, Lesson 5: Traffic light plates
+Learning outcomes: 2.4a, 2.4c, 2.4e
+
+Context
+This is the fifth lesson of the unit ‘Keeping healthy’.
+In this lesson, children will develop their writing skills by producing plates of food and writing short descriptions about them.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+Tell children what you ate the day before. Ask them if they think it was a healthy food intake. Encourage them to think about why or why not, and elicit what it means to have a ‘balanced diet’. Invite a confident child to tell the class what they ate. Be sensitive about being judgemental and explain this to children.
+
+Main activity
+Show children the pictures of healthy and unhealthy foods. Check that they know what they are in English. Try to include some local food items. Hand out three paper plates or three paper plate handouts to each group of three. Ask children to colour each plate (or draw a coloured line around each plate) in red, yellow, and green. On the board, write: ‘I can eat lots of these foods.’ (green), ‘I can eat these foods sometimes.’ (yellow), ‘I can only eat these foods occasionally.’ (red). Tell children that they are going to draw or write the names of the foods on the correct plate, based on their understanding of how healthy each food item is. If you brought in magazines, children can cut out more foods and stick them on to the correct plate. Ask children to think about the best way to complete the group task. This could be that each child completes one plate, or that they plan their ideas first, etc. Children complete their plates and write a simple description using topic vocabulary learned this week.
+
+Additional tasks
+Design a weekly meal plan. Think about what children have eaten so far today. Which ‘plate’ does most of their food belong to? Hopefully, this should be green or yellow! Think about food choices children have. For example, for most children, they will have to eat what their parents or carers give them. Their choices can be about drinks at school, sweets, etc.
+
+Learning review
+Children have considered how healthy different food items are and sorted them into groups in a team activity. They have written about the contents of each plate.
+
+Differentiation
+To support less able children, provide them with a gapped text for the writing task. Put a word bank of food items on the board for them to copy. As an extension task for more able children, ask them to create a plate of food they ate one day last week.</pre></details></main></body></html>

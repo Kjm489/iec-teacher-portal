@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 22 Lesson 5 · How can we take care of places?</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 22 · LESSON 5</strong><nav><a href="index.html">All lessons</a><a href="week-22-lesson-04.html">← Previous</a><a href="week-23-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — How can we take care of places?</h1><p class="subtitle">OIC ESL Year 2 · Week 22 · Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Looking after our places</div><div><b>Week:</b> 22</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.3c, 2.3f, 2.4b</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 5</p><p><b>Measurable targets:</b> Identify key ideas about caring for shared places; practise <b>We can / We should …</b>; independently read, discuss and write about protecting places. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Revise vocabulary from the week so far. Play a guessing game in which you give a definition, or draw a picture, and children have to tell you what the word is.</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to caring for shared places?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Using the Think-Pair-Share technique, ask children to make a list of the things that they need in order to live. They can use words and pictures in their lists. Hopefully, green spaces and water are on their lists. If not, elicit. Focus on green spaces. Ask children: How can we look after green spaces? Introduce children to the concept of a ‘main idea’ (what the text is about) and ‘details’ (more information about the main idea) in a reading text. Turn to Oxford Discover SB 2 p.109. Read the text together as a class. If possible, invite confident volunteers to read a sentence each. Give children some time to think about and identify the main idea and the details, and note down their answers. Check answers as a class and confirm what the main idea and details are. When a volunteer gives an answer, ask: Why do you think that? This will encourage children to think logically about why they m</p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>We can / We should …</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of caring for shared places?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Using the Think-Pair-Share technique, ask children to make a list of the things that they need in order to live. They can use words and pictures in their lists. Hopefully, green spaces and water are on their lists. If not, elicit. Focus on green spaces. Ask children: How can we look after green spaces? Introduce children to the concept of a ‘main idea’ (what the text is about) and ‘details’ (more information about the main idea) in a reading text. Turn to Oxford Discover SB 2 p.109. Read the text together as a class. If possible, invite confident volunteers to read a sentence each. Give children some time to think about and identify the main </p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>We can / We should …</b> through caring for shared places prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Complete the reading comprehension in Oxford Discover WB 2 pp.94–95. Invite children to write out their work neatly and illustrate it with their ideas. Choose a new natural resource to write about. Think actively about how we can make a difference and protect these natural resources.</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently read, discuss and write about protecting places without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>We can / We should …</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> To support less able children, provide them with a gapped text or a template for the writing activity. As an extension task for more able children, encourage them to add some examples to their ideas, such as how many litres of water they can save if they have a three-minute shower instead of a ten-minute shower. They can search online for the answers.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have identified the main idea and details in a short text. They have worked together to write a short text about looking after a natural resource.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>caring for shared places</b> using <b>We can / We should …</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 22 · Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 22, LESSON 5</div><section class="game"><h3>1. Odd One Out — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Teacher: Revise vocabulary from the week so far. Play a guessing game in which you give a definition, or draw a picture, and children have to tell you what the word is.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>2. Mini Debate — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to caring for shared places?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Mini Debate”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Pairs choose between two lesson-related options and give one supporting reason before listening to a counterpoint.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>3. Picture Dictation — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Using the Think-Pair-Share technique, ask children to make a list of the things that they need in order to live. They can use words and pictures in their lists. Hopefully, green spaces and water are on their lists. If not, elicit. Focus on green spaces. Ask children: How can we look after green spaces? Introduce</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Dictation”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>One learner describes a source picture while the other draws or arranges cards without looking; compare results.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>4. Complete the Dialogue — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write We can / We should … accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of caring for shared places?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>5. Class Survey — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Using the Think-Pair-Share technique, ask children to make a list of the things that they need in order to live. They can use words and pictures in their lists. Hopefully, green sp</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Class Survey”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Learners ask three classmates a lesson-related question, tally answers and describe the result.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>6. Exit Ticket Quest — How can we take care of places?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Independent application: Complete the reading comprehension in Oxford Discover WB 2 pp.94–95. Invite children to write out their work neatly and illustrate it with their ideas. Choose a new natural resource to write about. Think actively about how we can make a difference and protect these natural resources.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Exit Ticket Quest”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Learners independently answer a lesson-specific question, give one example and self-check against the objective.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (2.3c, 2.3f, 2.4b). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Looking after our places
+Week 22, Lesson 5: How can we take care of places?
+Learning outcomes: 2.3c, 2.3f, 2.4b
+
+Context
+This is the fifth lesson of the unit ‘Looking after our places’.
+In this lesson, children will develop their reading and writing skills by learning to distinguish between the main idea and details in a text.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+Revise vocabulary from the week so far. Play a guessing game in which you give a definition, or draw a picture, and children have to tell you what the word is.
+
+Main activity
+Using the Think-Pair-Share technique, ask children to make a list of the things that they need in order to live. They can use words and pictures in their lists. Hopefully, green spaces and water are on their lists. If not, elicit. Focus on green spaces. Ask children: How can we look after green spaces? Introduce children to the concept of a ‘main idea’ (what the text is about) and ‘details’ (more information about the main idea) in a reading text. Turn to Oxford Discover SB 2 p.109. Read the text together as a class. If possible, invite confident volunteers to read a sentence each. Give children some time to think about and identify the main idea and the details, and note down their answers. Check answers as a class and confirm what the main idea and details are. When a volunteer gives an answer, ask: Why do you think that? This will encourage children to think logically about why they made a particular decision. On the board, write the following and number them 1–6: 1. air, 2. plants, 3. wild animals, 4. waterways, 5. forests, 6. you choose! In small groups, children are going to write a short text about looking after one of these natural resources. Instruct them to throw a dice or to spin a spinner to discover what they are going to write about. Encourage children to mind map their ideas first and then to put them in order. Remind them that every group member should try to contribute and listen to ideas. Monitor actively and praise children for actively listening to each other’s thoughts and for supporting their less confident classmates with new vocabulary. Children work together to write their short text, including their main idea and details. If there is time at the end of the lesson, invite groups to read their work out loud and discuss each other’s ideas.
+
+Additional tasks
+Complete the reading comprehension in Oxford Discover WB 2 pp.94–95. Invite children to write out their work neatly and illustrate it with their ideas. Choose a new natural resource to write about. Think actively about how we can make a difference and protect these natural resources.
+
+Learning review
+Children have identified the main idea and details in a short text. They have worked together to write a short text about looking after a natural resource.
+
+Differentiation
+To support less able children, provide them with a gapped text or a template for the writing activity. As an extension task for more able children, encourage them to add some examples to their ideas, such as how many litres of water they can save if they have a three-minute shower instead of a ten-minute shower. They can search online for the answers.</pre></details></main></body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 20 Lesson 5 · Dos and Don’ts in my country</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 20 · LESSON 5</strong><nav><a href="index.html">All lessons</a><a href="week-20-lesson-04.html">← Previous</a><a href="week-21-lesson-01.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Dos and Don’ts in my country</h1><p class="subtitle">OIC ESL Year 2 · Week 20 · Lesson 5 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Thinking of others</div><div><b>Week:</b> 20</div><div><b>Lesson:</b> 5</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> 2.2d, 2.3g, 2.4a, 2.4c</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 5</p><p><b>Measurable targets:</b> Identify key ideas about cultural manners and expectations; practise <b>Do / Don’t; In my country …</b>; independently compare local manners with respectful explanations. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Ask children to stand up. Create a movement routine with them, in line with the ability level of your class. Practise the routine and come up with a fun name for this sequence of actions. Tell children that whenever you say [‘choose a word!’], they must quietly stand up, do the actions, and then continue with their work. Make this fun!</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to cultural manners and expectations?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Tell children you have received a letter. Show them the envelope and open it, encouraging them to guess what is inside. Read the letter clearly and elicit from children what your friend, Yusuf, wants. Discuss together which would be a good festival to attend in your country, or a festival that takes place in your school. Ask children to think about some dos and don’ts (i.e. rules to ensure that everybody is safe and has a nice time) for the festival or context they have chosen. Mind map some ideas as a class, looking back over the past two weeks, and encourage children to think about good manners and how they should treat others in their country. Children expand on their ideas in small groups and write some sentences together. On the board, show the class how to address and sign off in a letter (‘Dear …’ / ‘From …’). Now that children have their ideas, encourage them to write their lette</p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>Do / Don’t; In my country …</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of cultural manners and expectations?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Tell children you have received a letter. Show them the envelope and open it, encouraging them to guess what is inside. Read the letter clearly and elicit from children what your friend, Yusuf, wants. Discuss together which would be a good festival to attend in your country, or a festival that takes place in your school. Ask children to think about some dos and don’ts (i.e. rules to ensure that everybody is safe and has a nice time) for the festival or context they have chosen. Mind map some ideas as a class, looking back over the past two weeks, and encourage children to think about good manners and how they should treat others in their coun</p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>Do / Don’t; In my country …</b> through cultural manners and expectations prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Draw a picture of the festival. Think of another situation when dos and don’ts are important, and write about it (e.g. when meeting an older person, or when visiting a hospital or a library).</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently compare local manners with respectful explanations without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>Do / Don’t; In my country …</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> To support less able children, provide a gapped text. As an extension task for more able children, they can write about other aspects of the festival, including what to wear, etc. Remind them to use a variety of modal verbs. Additional information: Week 20, Lesson 5 Model letter Dear [teacher’s name], How are you? I’m coming to your country for [xxx] festival. What can I do at your school? What can’t I do? What about at the dinner table? Can you tell me? I don’t want to be rude. I want to be thoughtful. Write to me soon! From Yusuf</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have written a short letter to an imaginary friend about dos and don’ts in their country.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>cultural manners and expectations</b> using <b>Do / Don’t; In my country …</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 20 · Lesson 5</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 20, LESSON 5</div><section class="game"><h3>1. Venn Diagram Detectives — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Teacher: Ask children to stand up. Create a movement routine with them, in line with the ability level of your class. Practise the routine and come up with a fun name for this sequence of actions. Tell children that whenever you say [‘choose a word!’], they must quietly stand up, do the actions, and then continue with their work. Make this fun!</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Venn Diagram Detectives”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Partners place source examples into two overlapping categories and explain one similarity and one difference.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>2. Comic Strip Builder — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to cultural manners and expectations?”</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Comic Strip Builder”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Pairs draw three panels illustrating the lesson idea and narrate each panel with one sentence.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>3. Listen and Sequence — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Tell children you have received a letter. Show them the envelope and open it, encouraging them to guess what is inside. Read the letter clearly and elicit from children what your friend, Yusuf, wants. Discuss together which would be a good festival to attend in your country, or a festival that takes place in you</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Listen and Sequence”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Read three short source statements; learners arrange picture cards in the order heard and explain the sequence.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>4. Complete the Dialogue — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write Do / Don’t; In my country … accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of cultural manners and expectations?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>5. Cause and Effect Chain — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Tell children you have received a letter. Show them the envelope and open it, encouraging them to guess what is inside. Read the letter clearly and elicit from children what your f</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Cause and Effect Chain”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Learners match source actions to consequences and explain each connection using because.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><section class="game"><h3>6. Picture Evidence Hunt — Dos and Don’ts in my country</h3><p><b>Lesson-specific language focus: </b>food and healthy choices</p><p><b>Original teaching source: </b>Independent application: Draw a picture of the festival. Think of another situation when dos and don’ts are important, and write about it (e.g. when meeting an older person, or when visiting a hospital or a library).</p><p><b>Materials: </b>food picture cards and two labelled sorting mats</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Evidence Hunt”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “I like ___. It is ___ because ___.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about food and healthy choices.</p><p><b>YOU DO — game procedure: </b>Show four source pictures; learners locate a requested detail and explain what in the picture supports it.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Is an apple a fruit?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about food and healthy choices.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “I like ___. It is ___ because ___.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of food and healthy choices.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (2.2d, 2.3g, 2.4a, 2.4c). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Thinking of others
+Week 20, Lesson 5: Dos and Don’ts in my country
+Learning outcomes: 2.2d, 2.3g, 2.4a, 2.4c
+
+Context
+This is the tenth lesson of the unit ‘Thinking of others’.
+In this lesson, children will develop their reading and writing skills by reading a letter and then writing a reply with information about manners in their country.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+
+
+Introductory activity
+Ask children to stand up. Create a movement routine with them, in line with the ability level of your class. Practise the routine and come up with a fun name for this sequence of actions. Tell children that whenever you say [‘choose a word!’], they must quietly stand up, do the actions, and then continue with their work. Make this fun!
+
+Main activity
+Tell children you have received a letter. Show them the envelope and open it, encouraging them to guess what is inside. Read the letter clearly and elicit from children what your friend, Yusuf, wants. Discuss together which would be a good festival to attend in your country, or a festival that takes place in your school. Ask children to think about some dos and don’ts (i.e. rules to ensure that everybody is safe and has a nice time) for the festival or context they have chosen. Mind map some ideas as a class, looking back over the past two weeks, and encourage children to think about good manners and how they should treat others in their country. Children expand on their ideas in small groups and write some sentences together. On the board, show the class how to address and sign off in a letter (‘Dear …’ / ‘From …’). Now that children have their ideas, encourage them to write their letter individually, using your model as a guide. Invite volunteers to read out their letters at the end of the lesson. Praise them for their effort in including language learned in the unit.
+
+Additional tasks
+Draw a picture of the festival. Think of another situation when dos and don’ts are important, and write about it (e.g. when meeting an older person, or when visiting a hospital or a library).
+
+Learning review
+Children have written a short letter to an imaginary friend about dos and don’ts in their country.
+
+Differentiation
+To support less able children, provide a gapped text. As an extension task for more able children, they can write about other aspects of the festival, including what to wear, etc. Remind them to use a variety of modal verbs. Additional information: Week 20, Lesson 5 Model letter Dear [teacher’s name], How are you? I’m coming to your country for [xxx] festival. What can I do at your school? What can’t I do? What about at the dinner table? Can you tell me? I don’t want to be rude. I want to be thoughtful. Write to me soon! From Yusuf</pre></details></main></body></html>

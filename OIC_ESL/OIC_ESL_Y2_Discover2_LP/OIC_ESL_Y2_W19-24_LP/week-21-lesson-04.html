@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 21 Lesson 4 · Reflection on ‘Thinking of others’</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 21 · LESSON 4</strong><nav><a href="index.html">All lessons</a><a href="week-21-lesson-03.html">← Previous</a><a href="week-21-lesson-05.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — Reflection on ‘Thinking of others’ (Lesson 4)</h1><p class="subtitle">OIC ESL Year 2 · Week 21 · Lesson 4 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Reflection and review</div><div><b>Week:</b> 21</div><div><b>Lesson:</b> 4</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original learning outcomes:</b> Unit summary</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> 4</p><p><b>Measurable targets:</b> Identify key ideas about Make a feelings-and-helpfulness quiz; practise <b>unit vocabulary and complete sentences</b>; independently Make a feelings-and-helpfulness quiz. Check understanding through a relevant oral or written response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Teacher:</b> Recall unit learning from Weeks 19–20. Learners identify what they can do independently and what they still need to practise.</p><p><b>Student action:</b> Think, pair, share a lesson-related example before viewing the model. <b>ICQs:</b> “Are we sharing what we know or writing our final answer?” “Who speaks first?” <b>CCQs:</b> “Which action, picture or word connects to Make a feelings-and-helpfulness quiz?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Teacher demonstration:</b> Explicitly model the first step of the original task: Original review choices include: Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way. Teachers may choose one of the following activity ideas: Create a list of classroom chores or jobs for a one- or two-week period, which children will challenge themselves to complete together. Create a role-play in pairs, or a whole-class assembly, about good manners. Design a game in small groups that involves practising polite requests and offers. For example, it could be a racetrack-style game where children lan Selected session project: Make a feelings-and-helpfulness quiz.</p><p>Think aloud, point to source evidence and demonstrate how to say or write <b>unit vocabulary and complete sentences</b> accurately. Show one non-example and explain why it is incorrect. <b>CCQs:</b> “What makes this an example of Make a feelings-and-helpfulness quiz?” “Which word or detail changes the meaning?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>We do:</b> Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. <b>Original task:</b> Original review choices include: Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way. Teachers may choose one of the following activity ideas: Create a list of classroom chores or jobs for a one- or two-week period, which children will challenge themselves to complete together. Create a role-play in pairs, or a whole-class assembly, about good manners. Design a game in small groups that involves practising polite requests and offers. For example, it could be a racetrack-style game where children lan Selected session</p><p><b>ICQs:</b> “Do we answer this one together?” “Where do we look for clues?” <b>CCQs:</b> “Does our answer fit the example?” “How can we prove it?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Partner exchange:</b> In pairs, learners practise <b>unit vocabulary and complete sentences</b> through Make a feelings-and-helpfulness quiz prompts. Partner A gives a description, question or example; Partner B responds and points to evidence. Swap roles and repeat with a different prompt.</p><p><b>ICQs:</b> “Do both partners have a turn?” “When do you switch?” <b>CCQs:</b> “Was the response appropriate for this situation?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Use the source review activity choices to complete: Make a feelings-and-helpfulness quiz.</p><p>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently Make a feelings-and-helpfulness quiz without copying the group model.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> picture/word cards, gesture, two-choice questions and a sentence starter using <b>unit vocabulary and complete sentences</b>. <b>Developing:</b> complete a full response with one relevant detail. <b>Extending:</b> explain why, compare two examples, or create a new scenario.</p><p><b>Original differentiation:</b> For children who need more support provide sentences, questions, and words, either on the board or in gapped texts. Pair them with more able children. They may look back at their work to help them, or produce less. Give them choices: e.g. ask: Would you prefer to speak or write for this activity? Challenge more able children to write and say more sentences, providing additional details and using new language and grammatical forms learned.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Original review aim:</b> Children have consolidated their knowledge and learning on the topic of ‘Thinking of others’.</p><p><b>Exit ticket:</b> Respond to a fresh prompt about <b>Make a feelings-and-helpfulness quiz</b> using <b>unit vocabulary and complete sentences</b>. Mark Independent / Prompted / Not yet and identify who needs follow-up practice. <b>CCQ:</b> “What did we learn and how do we show it?”</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 21 · Lesson 4</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 21, LESSON 4</div><section class="game"><h3>1. Mystery Bag — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Student action: Think, pair, share a lesson-related example before viewing the model. ICQs: “Are we sharing what we know or writing our final answer?” “Who speaks first?” CCQs: “Which action, picture or word connects to Make a feelings-and-helpfulness quiz?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Mystery Bag”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Learners feel or inspect a concealed source object or picture clue and ask two questions before guessing.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>2. Puppet Problem Solver — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Teacher demonstration: Explicitly model the first step of the original task: Original review choices include: Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way. Teachers may choose one of the following activity ideas: Create a list of classroom chores or jobs</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Puppet Problem Solver”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>A puppet makes a mistake or needs help in a lesson situation; children explain and demonstrate a better choice.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>3. Picture Dictation — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Think aloud, point to source evidence and demonstrate how to say or write unit vocabulary and complete sentences accurately. Show one non-example and explain why it is incorrect. CCQs: “What makes this an example of Make a feelings-and-helpfulness quiz?” “Which word or detail changes the meaning?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Picture Dictation”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>One learner describes a source picture while the other draws or arranges cards without looking; compare results.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>4. Complete the Dialogue — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>We do: Complete the next example from the original activity as a class. Display the relevant picture, text, role card or materials. Prompt learners to select vocabulary and justify their answer. Original task: Original review choices include: Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skill</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>5. Class Survey — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Independent application: Use the source review activity choices to complete: Make a feelings-and-helpfulness quiz.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Class Survey”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Learners ask three classmates a lesson-related question, tally answers and describe the result.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>6. Odd One Out — Independent extended activity</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Students complete their own response, drawing, map, chart, writing, dialogue or project artifact as the original lesson requires. Teacher checks whether each learner can independently Make a feelings-and-helpfulness quiz without copying the group model.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Teacher reflection:</b> Record evidence of learners achieving the source outcomes (Unit summary). Note one successful scaffold, one misconception and a specific next-lesson adjustment.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Reflection and review
+Week 21, Lessons 1–5: Reflection on ‘Thinking of others’
+Learning outcomes: Unit summary
+
+Context
+This week, children will reflect on their individual learning from Weeks 19–20.
+Children will also participate in an extended activity, practising the skills they have learned and focusing their work on areas of particular interest.
+Lessons this week will vary, depending on the scope of the chosen activity. Break up the activity into manageable stages to fit into the ESL lessons this week.
+
+
+Independent reflection
+Ask children to reflect on the English language skills they have used over the last couple of weeks, while working through the unit ‘Thinking of others’. Encourage them to think about the core communicative skills: Listening, Speaking, Reading, Writing. Children discuss in pairs when they used the skills. They can assess areas that need further work, what they are comfortable with, and where they feel they were stretched and challenged. Teachers should support lower-attaining children. Children may wish to keep a log of their goals – no matter how big or small – which they can refer back to during future ‘Reflection and review’ weeks to track their progress and achievements.
+
+Main activity
+Explain that this week, children will participate in an extended activity in pairs or small groups. They will practise their English language skills in a practical and relevant way. Teachers may choose one of the following activity ideas: Create a list of classroom chores or jobs for a one- or two-week period, which children will challenge themselves to complete together. Create a role-play in pairs, or a whole-class assembly, about good manners. Design a game in small groups that involves practising polite requests and offers. For example, it could be a racetrack-style game where children land on an item and, depending on the colour they land on, they either have to say ‘Would you like …?’ or ‘May I …?’. If their question is correct, they can then ‘collect’ that item. The objective would be to collect a specified number of items (provided at the start of the game). Children can create a ‘What do you do when you feel …?’ quiz to ask each other. They could work in pairs or in small groups of four, with each pair in the group working to create a set of questions for the other pair. The aim is to discuss useful strategies for dealing with different emotions. Write about a favourite superhero and describe the good things they do. Children can work in pairs or small groups to produce a poster with the text and an illustration. Encourage them to present it to the class at the end of the week.
+
+Learning review
+Children have consolidated their knowledge and learning on the topic of ‘Thinking of others’.
+
+Differentiation
+For children who need more support provide sentences, questions, and words, either on the board or in gapped texts. Pair them with more able children. They may look back at their work to help them, or produce less. Give them choices: e.g. ask: Would you prefer to speak or write for this activity? Challenge more able children to write and say more sentences, providing additional details and using new language and grammatical forms learned.
+
+Teacher implementation: Year 2 Week 21, reflection session 4 of 5; session focus: Make a feelings-and-helpfulness quiz.</pre></details></main></body></html>
