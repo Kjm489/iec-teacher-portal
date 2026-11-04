@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 2 · Week 5 Lesson 3 · What happened to the ice cream?</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}</style></head><body><header><strong>IEC · YEAR 2 · WEEK 5 · LESSON 3</strong><nav><a href="index.html">All lessons</a><a href="week-05-lesson-02.html">← Previous</a><a href="week-05-lesson-04.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — What happened to the ice cream?</h1><p class="subtitle">OIC ESL Year 2 · Week 5 · Lesson 3 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 2</div><div><b>Theme:</b> Things that change</div><div><b>Week:</b> 5</div><div><b>Lesson:</b> 3</div><div><b>Duration:</b> 90 minutes (2 × 45)</div><div><b>OIC outcomes:</b> 2.2a, 2.2b</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Source outcomes:</b> 2.2a, 2.2b</p><p><b>Learning goal:</b> Students will sequence and describe a change. <b>Language scaffold:</b> First ___, then ___, finally ___.. <b>Materials:</b> ice-cream process picture cards, original Oxford Discover 2 Student Book exercises, mini-whiteboards.</p><p><b>Success:</b> Students identify evidence, participate in an exchange and independently produce an accurate response.</p></section><div class="band">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><b>Activate prior knowledge:</b> Remind children of the ‘stretch zone’. Hold a conversation about what is difficult, why something can be difficult, and what to do when something is difficult (ask for help, breathe, and don’t get flustered). Difficult activities can help to extend children’s understanding of a concept or topic.</p><p>Show ice-cream process picture cards. Invite predictions before revealing answers. <b>ICQs:</b> “Do we predict before checking?” “Do both partners share?” <b>CCQs:</b> “Which image connects to sequence and describe a change?”</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><b>Explicit teacher model:</b> Use the original lesson sequence: Turn to Oxford Discover SB 2 p.41 and play the song in ex.D. Elicit was and were. Ask a few ‘yes/no’ questions. Ask: Was the freezer door open? Was the classroom door open? Were the books on the table? Were children inside the classroom? Write the questions, and postive and negative answers (e.g. ‘Yes, they were’; ‘No, it wasn’t’) on the board.</p><p>Think aloud while demonstrating a full example: <b>First ___, then ___, finally ___.</b>. Contrast a correct and incorrect example. <b>CCQs:</b> “What evidence supports the answer?” “Which part of the example expresses sequence and describe a change?”</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><b>Scaffolded practice:</b> Quickly draw a tub of ice cream on a table on an individual whiteboard, but keep it secret from children. Ask: Was it on, under, or behind the table? Draw again using a different preposition (e.g. ice cream under the table) and repeat with a confident child. Put children into pairs. One draws and the other guesses. Then they swap. Tell children that if they are finding this hard, it is OK because they are in the stretch zone, so it is supposed to be harder. Check if there are any particular difficulties, such as remembering the word order, remembering prepositions, or using was or were.</p><p>Model once, answer the second example together with a word bank, then hide part of the frame for a third example. <b>ICQs:</b> “Are we doing the first example together?” <b>CCQs:</b> “What proves this choice is correct?”</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><b>Communicative pair task:</b> Encourage children to ask for help if they need to do so. Put children into groups of three. They repeat the exercise. Tell them to draw things in, on, under, or behind a box. They can have fun with this by thinking of funny or unusual things! Hold a whole-class feedback session.</p><p>Pairs use ice-cream process picture cards; one asks or explains and the other responds with First ___, then ___, finally ___.. Swap roles and fade sentence prompts. <b>ICQs:</b> “Who starts?” “When do you swap?” <b>CCQ:</b> “Does your response match the textbook evidence?”</p></section><div class="band">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><b>Independent application:</b> Learners independently demonstrate how to sequence and describe a change using a new example, not the teacher’s model. For writing lessons, produce a short connected text; for speaking, deliver two meaningful sentences; for review sessions, complete the appropriate project stage.</p><p><b>Original lesson anchor:</b> Encourage children to ask for help if they need to do so. Put children into groups of three. They repeat the exercise. Tell them to draw things in, on, under, or behind a box. They can have fun with this by thinking of funny or unusual things! Hold a whole-class feedback session.</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><b>Emerging:</b> Give picture choices, word bank, gestures and partial frame “First ___, then ___, finally ___.”. <b>Developing:</b> Produce a full sentence with one accurate detail. <b>Extending:</b> Justify the answer, compare examples or ask a follow-up question. <b>Original extension:</b> Complete Oxford Discover WB 2 p.32 (if not done previously). Find a picture online and write some sentences about it, underlining that the picture is from yesterday (not today).</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><b>Exit ticket:</b> Show an unseen sequence and describe a change example. Ask students to explain their choice using First ___, then ___, finally ___. without copying the board. Record independent / prompted / not yet. <b>Original learning review:</b> Children have practised asking and answering questions using was and were and prepositions. Differentiation To support less confident children, provide some pictures. Write questions on the board. As an extension task for more confident children, recount what happened when they made ice cream.</p></section><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 1 · Lesson 1</span></div><details><summary>Original OIC lesson-plan reference</summary><p>The original Year 2 teaching sequence is reproduced in the source section below.</p></details></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 5, LESSON 3</div><section class="game"><h3>1. Find Your Pair — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Show ice-cream process picture cards. Invite predictions before revealing answers. ICQs: “Do we predict before checking?” “Do both partners share?” CCQs: “Which image connects to sequence and describe a change?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Find Your Pair”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Give each learner a picture or word card. Learners circulate to find their match, then use both in a sentence.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>2. Four-Corner Choice — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Explicit teacher model: Use the original lesson sequence: Turn to Oxford Discover SB 2 p.41 and play the song in ex.D. Elicit was and were. Ask a few ‘yes/no’ questions. Ask: Was the freezer door open? Was the classroom door open? Were the books on the table? Were children inside the classroom? Write the questions, and postive and negative answers (e.g. ‘Yes, they were’; ‘No, it wasn’t’)</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Four-Corner Choice”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Display four lesson-linked choices. Learners choose a corner and explain their choice with one reason.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>3. Sound-to-Meaning Match — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Pairs use ice-cream process picture cards; one asks or explains and the other responds with First ___, then ___, finally ___.. Swap roles and fade sentence prompts. ICQs: “Who starts?” “When do you swap?” CCQ: “Does your response match the textbook evidence?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Sound-to-Meaning Match”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Read target words or sentences. Learners choose matching visuals and explain a key word’s meaning.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>4. Complete the Dialogue — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Original lesson anchor: Encourage children to ask for help if they need to do so. Put children into groups of three. They repeat the exercise. Tell them to draw things in, on, under, or behind a box. They can have fun with this by thinking of funny or unusual things! Hold a whole-class feedback session.</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Complete the Dialogue”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Give a short source-related dialogue with missing phrases; partners supply them and perform the exchange.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>5. Compare Two Examples — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Show ice-cream process picture cards. Invite predictions before revealing answers. ICQs: “Do we predict before checking?” “Do both partners share?” CCQs: “Which image connects to sequence and describe a change?”</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Compare Two Examples”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Show two source pictures or situations. Pairs say one similarity and two differences.</p><p><b>ICQ: </b>Will you work with a partner or group? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><section class="game"><h3>6. Odd One Out — What happened to the ice cream?</h3><p><b>Lesson-specific language focus: </b>asking permission and sharing</p><p><b>Original teaching source: </b>Explicit teacher model: Use the original lesson sequence: Turn to Oxford Discover SB 2 p.41 and play the song in ex.D. Elicit was and were. Ask a few ‘yes/no’ questions. Ask: Was the freezer door open? Was the classroom door open? Were the books on the table? Were children inside the classroom? Write the questions, and postive and negative answers (e.g. ‘Yes, they were’; ‘No, it wasn’t’)</p><p><b>Materials: </b>classroom object cards, please/thank-you dialogue strips and a puppet</p><p><b>Teacher preparation: </b>Use the exact vocabulary, pictures and examples from the original teaching source above. Prepare the cards or prompts required for “Odd One Out”.</p><p><b>I DO — teacher models: </b>Model one complete turn using a real example from the source. Say the target language aloud: “May I borrow your ___? Yes, you may. / Sorry, I need it.” Point to the supporting picture or text.</p><p><b>WE DO — guided example: </b>Complete a second example together. Ask students to identify the correct source clue, then elicit a full sentence about asking permission and sharing.</p><p><b>YOU DO — game procedure: </b>Present four source items. Teams identify the odd one out, name the grouping rule and defend a second possible answer.</p><p><b>ICQ: </b>Will you show your own answer? Do you need to use the lesson pictures or words?</p><p><b>CCQ: </b>Do we ask before taking someone else’s things?</p><p><b>Success evidence: </b>Learner uses the lesson vocabulary accurately and completes the activity with one correct example about asking permission and sharing.</p><p><b>Support: </b>Show two visual choices; rehearse the frame “May I borrow your ___? Yes, you may. / Sorry, I need it.” before learners respond.</p><p><b>Challenge: </b>Ask for a second example or an explanation using because, while remaining on the topic of asking permission and sharing.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><div class="inside"><p>Which students met the lesson objective independently? Which CCQ revealed a misconception? Which scaffold should be adjusted?</p></div></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 2 Things that change
+Week 5, Lesson 3: What happened to the ice cream?
+Learning outcomes: 2.2a, 2.2b 
+
+Context
+This is the eighth lesson of the unit ‘Things that change’.
+In this lesson, children will develop their speaking skills by asking and answering questions.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>
