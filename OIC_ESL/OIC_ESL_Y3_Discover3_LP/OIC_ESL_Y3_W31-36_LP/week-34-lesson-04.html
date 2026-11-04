@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>IEC OIC ESL Year 3 · Week 34 Lesson 4 · A superhero story!</title><style>
+:root {
+  --navy:#142747;
+  --maroon:#812d45;
+  --pale:#eaf0f6;
+  --ink:#233247;
+  --line:#d7dce4;
+  --white:#ffffff;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  margin:0;
+  background:#f3f5f9;
+  color:var(--ink);
+  font:13px/1.42 Arial,Helvetica,sans-serif;
+}
+
+header {
+  background:var(--navy);
+  color:white;
+  padding:15px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+header strong { font-size:15px; }
+header a { color:white; text-decoration:none; margin-left:14px; }
+
+main {
+  max-width:950px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+h1 { font-size:23px; color:var(--navy); margin:0 0 5px; }
+.subtitle { color:#536174; margin:0 0 14px; }
+
+.toolbar {
+  display:flex;
+  gap:9px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  background:var(--maroon);
+  color:white;
+  border:0;
+  border-radius:5px;
+  padding:10px 15px;
+  cursor:pointer;
+  font:600 13px Arial,sans-serif;
+  text-decoration:none;
+}
+
+.btn.secondary { background:var(--navy); }
+
+.sheet {
+  background:white;
+  border:1px solid var(--line);
+  padding:20px 24px;
+  margin-bottom:18px;
+  box-shadow:0 3px 12px #14274712;
+}
+
+.heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  background:var(--navy);
+  color:white;
+  padding:10px 13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.band {
+  background:var(--maroon);
+  color:white;
+  padding:7px 11px;
+  font-weight:bold;
+  margin:12px 0 8px;
+}
+
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin-bottom:9px;
+}
+
+.meta div {
+  border:1px solid var(--line);
+  padding:6px 8px;
+}
+
+.stage {
+  border:1px solid var(--line);
+  margin:7px 0;
+  break-inside:avoid;
+}
+
+.stage h3 {
+  background:var(--pale);
+  color:var(--navy);
+  padding:6px 10px;
+  font-size:13px;
+  margin:0;
+}
+
+.inside { padding:7px 10px; }
+p { margin:4px 0; }
+ul,ol { margin:4px 0; padding-left:20px; }
+li { margin:3px 0; }
+
+.label {
+  color:var(--maroon);
+  font-weight:bold;
+}
+
+.note {
+  border-left:3px solid var(--maroon);
+  padding:5px 9px;
+  background:#f8f9fc;
+  margin:6px 0;
+}
+
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.pagefoot {
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:7px;
+  margin-top:10px;
+  color:#64748b;
+  font-size:10px;
+}
+
+@media(max-width:650px) {
+  header { flex-direction:column; align-items:flex-start; }
+  .meta { grid-template-columns:1fr 1fr; }
+  .two-col { grid-template-columns:1fr; }
+  .sheet { padding:12px; }
+}
+
+@page {
+  size:A4;
+  margin:9mm;
+}
+
+@media print {
+  html,body {
+    background:white;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font-size:9.1px;
+    line-height:1.22;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  header,h1,.subtitle,.toolbar {
+    display:none!important;
+  }
+
+  main {
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
+  .sheet {
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .sheet:last-child {
+    break-after:auto;
+    page-break-after:auto;
+  }
+
+  .heading { padding:6px 9px; font-size:10px; }
+  .band { padding:4px 8px; margin:7px 0 4px; }
+  .meta { gap:3px; margin-bottom:5px; }
+  .meta div { padding:3px 5px; }
+  .stage { margin:4px 0; break-inside:avoid; }
+  .stage h3 { padding:4px 7px; font-size:9.6px; }
+  .inside { padding:4px 7px; }
+  p { margin:2px 0; }
+  li { margin:2px 0; }
+  ul,ol { margin:2px 0; padding-left:16px; }
+  .note { padding:3px 6px; margin:3px 0; }
+  .two-col { gap:5px; }
+  .pagefoot { margin-top:5px; padding-top:4px; }
+}
+
+/* Year 2 content-specific components */
+.sub{color:#667185;margin:4px 0 15px}.source{background:#f0f4f8;border-left:3px solid #812d45;padding:8px 10px}.game{border:1px solid #d7dce4;border-radius:8px;padding:10px;margin:8px 0}
+.sub{color:#52647c;margin-top:5px}.period-banner{background:#eaf0f6;border-left:4px solid #812d45;color:#142747;padding:10px 14px;border-radius:5px;margin:12px 0}.source-reference{color:#52647c}
+</style></head><body><header><strong>IEC · Week 34 \1 Lesson 4</strong><nav><a href="index.html">All lessons</a><a href="week-34-lesson-03.html">← Previous</a><a href="week-34-lesson-05.html">Next →</a></nav></header><main><h1>IEC TESOL / OIC Lesson Plan — A superhero story!</h1><p class="sub">OIC ESL Year 3 · Week 34 \1 Lesson 4 · 90 minutes</p><div class="toolbar"><button class="btn" onclick="window.print()">Print / Save PDF</button> <a class="btn" href="index.html">Lesson Library</a></div><article class="sheet"><div class="heading"><span>IEC INTERNATIONAL EDUCATION CITY<br/>TESOL / OIC LESSON PLAN</span><span>PAGE 1 / 2</span></div><div class="band">LESSON INFORMATION &amp; OBJECTIVES</div><div class="meta"><div><b>Curriculum:</b> OIC ESL Year 3</div><div><b>Theme:</b> Heroes</div><div><b>Week:</b> 34</div><div><b>Lesson:</b> 4</div><div><b>Duration:</b> 90 minutes (2 × 45 minutes)</div><div><b>Original Learning Outcomes:</b> 3.4a, 3.4c, 3.4d, 3.4e</div></div><section class="stage"><h3>Measurable Learning Objectives</h3><p><b>Lesson:</b> A superhero story!. <b>Original outcomes:</b> 3.4a, 3.4c, 3.4d, 3.4e. <b>Unit:</b> Heroes.</p><p><b>Measurable goals: </b>Students demonstrate the original OIC learning outcomes through the source activity: Show the class a picture of a familiar superhero. Elicit their name, appearance, clothes (costume), superpowers, the name of the planet where they live, and any other information 
+they know.</p></section><div class="band period-banner">PERIOD 1 — 45 MINUTES</div><section class="stage"><h3>1. Warm-up &amp; Activate Prior Knowledge · 8 min</h3><p><strong>Oxford opening: </strong>Play a vocabulary revision game using the new words and phrases taught so far this week.</p><p><strong>Oxford opening: </strong>Give a simple definition and tell children to write the correct word on their whiteboard.</p><p><strong>Oxford opening: </strong>On the count of three, ask everyone to hold up their whiteboard.</p><p><strong>Oxford opening: </strong>Play this a few times, then ask a confident child to give their own definition.</p><p><strong>ICQ: </strong>Are we working independently or with our partner/group?</p></section><section class="stage"><h3>2. Teacher Modeling — I DO · 12 min</h3><p><strong>Oxford task — teacher demonstration: </strong>Show the class a picture of a familiar superhero. Elicit their name, appearance, clothes (costume), superpowers, the name of the planet where they live, and any other information 
+they know.</p><p><strong>Oxford task — teacher demonstration: </strong>Tell children that today they are going to create their own superhero!</p><p><strong>Oxford task — teacher demonstration: </strong>Give them time to mind map some ideas on their whiteboard and discuss them in pairs.</p><p><strong>Teacher modeling: </strong>Demonstrate the first source task aloud and visibly before inviting learner responses.</p><p><strong>CCQ: </strong>What does the model communicate? Which words or clues help you understand it?</p></section><section class="stage"><h3>3. Guided Practice — WE DO · 15 min</h3><p><strong>Oxford task — guided: </strong>Quickly talk about the features of a comic strip story as a class:</p><p><strong>Oxford task — guided: </strong>It has a mix of text and illustrations.</p><p><strong>Oxford task — guided: </strong>The story is told across panels – there is a new panel for each new event/scene.</p><p><strong>Oxford task — guided: </strong>Dialogue is presented in speech bubbles.</p><p><strong>ICQ: </strong>Will we complete the first example together before working alone?</p><p><strong>CCQ: </strong>Which detail in the source activity supports your answer?</p></section><section class="stage"><h3>4. Supported Pair/Group Practice · 10 min</h3><p><strong>Oxford pair/group task: </strong>Give them time to mind map some ideas on their whiteboard and discuss them in pairs.</p><p><strong>Oxford pair/group task: </strong>Using the Think-Pair-Share technique, put children into pairs to tell each other what they have to do before beginning the writing task.</p><p><strong>Scaffold: </strong>Use vocabulary from the Oxford task and provide a spoken sentence frame before removing support.</p><p><strong>ICQ: </strong>Does each learner take a turn and listen to their partner?</p></section><div class="band period-banner">PERIOD 2 — 45 MINUTES</div><section class="stage"><h3>5. Independent Practice — YOU DO · 25 min</h3><p><strong>Oxford source task: </strong>Use Oxford Discover SB 3 pp.98–99 as a reminder.</p><p><strong>Oxford source task: </strong>Challenge children to use one gerund phrase with ‘good at …’ (Week 34, Lesson 2) and at least one superlative sentence (Week 34, Lesson 3).</p><p><strong>Oxford source task: </strong>Using the Think-Pair-Share technique, put children into pairs to tell each other what they have to do before beginning the writing task.</p><p><strong>Oxford source task: </strong>Children should spend most of the lesson creating their comic strip story. Encourage them to plan their caption and dialogue text on their whiteboard first. They can also ask a partner to check their spelling and punctuation. The last panel can end ‘To be continued …’ if appropriate.</p><p><strong>Oxford source task: </strong>Monitor actively and praise children for their imagination in coming up with original and unique superpowers, and for their effort in producing their comic strip story. As you circulate the classroom, ask individual children what their favourite part of the process is, as well as the most challenging part.</p><p><strong>Independent evidence: </strong>Each learner completes or reports an individual response based on the Oxford activity, without copying the teacher model.</p><p><strong>ICQ: </strong>Should you attempt your own response before asking for help?</p></section><section class="stage"><h3>6. Extension &amp; Differentiation · 10 min</h3><p><strong>Oxford differentiation: </strong>To support less able children, provide them with some story ideas. Encourage them to focus on just one or two panels. They may just write dialogue if they prefer.</p><p><strong>Oxford differentiation: </strong>Remind more able children that a great story should have a beginning, a middle with a problem, and then an ending with a resolution (when the problem is solved).</p><p><strong>Oxford additional tasks: </strong>Produce another version of the comic strip story from a different character’s point of view.</p><p><strong>Oxford additional tasks: </strong>Encourage children to think more deeply about their chosen superpower(s) and to try to define it more precisely – for instance, in what situations does it not work? Why?</p><p><strong>IEC extension: </strong>Use the original Oxford task at a greater level of independence, or add a reason/example when learners are ready.</p></section><section class="stage"><h3>7. Review, Formative Assessment &amp; Exit Ticket · 10 min</h3><p><strong>Oxford learning review: </strong>Children have invented a superhero. They have written a comic strip story about them.</p><p><strong>Formative assessment: </strong>Check the original OIC outcome through one independent spoken, written, or practical demonstration. Record independent / prompted / not yet.</p><p><strong>CCQ: </strong>What evidence shows the learner understood the task?</p></section><details class="source-reference"><summary>Original source directions — expand only if needed</summary><p><strong>Warm-up: </strong>Play a vocabulary revision game using the new words and phrases taught so far this week. Give a simple definition and tell children to write the correct word on their whiteboard. On the count of three, ask everyone to hold up their whiteboard. Play this a few times, then ask a confident child to give their own definition. Scaffold: Show a relevant picture or object; invite think–pair–share before asking for full sentences. ICQs: “Are you thinking first or answering immediately?” “Will both partners speak?” CCQs: “What is happening in this example?” “How does it connect to a superhero story!?”</p><p><strong>I DO source: </strong>Model the original task with a worked example: Show the class a picture of a familiar superhero. Elicit their name, appearance, clothes (costume), superpowers, the name of the planet where they live, and any other information they know. Tell children that today they are going to create their own superhero! Give them time to mind map some ideas on their whiteboard and discuss them in pairs. Explain the writing task. Children are going to imagine, write, and illustrate an excerpt from a superhero story, or a short story in full, in three or four comic strip panels. They don’t need to go into detail about what happened before or after, but they should have some idea so that they can choose the most interesting part to produce. Encourage them to be as creative as possible with their ideas – can they think of a brand new or interesting superpower that their superhero can use to save the day? What is their superhero called? Quickly talk about the features of a comic strip story as a class: It has a mix of text and illustrations. The story is told across panels – there is a new panel for each new event/scene. Dialogue is presented in speech bubbles. Narration is presented in captions. Use Oxford Discover SB 3 pp.98–99 as a reminder. Challenge children to use one gerund phrase with ‘good at …’ (Week 34 \1 Lesson 4) and at least one sup Think aloud, highlight key language and demonstrate an accurate answer before students try. Use gestures, visual evidence or a short example as appropriate. CCQs: “What did I do first?” “What makes the example accurate?”</p><p><strong>WE DO source: </strong>Show the class a picture of a familiar superhero. Elicit their name, appearance, clothes (costume), superpowers, the name of the planet where they live, and any other information they know. Tell children that today they are going to create their own superhero! Give them time to mind map some ideas on their whiteboard and discuss them in pairs. Explain the writing task. Children are going to imagine, write, and illustrate an excerpt from a superhero story, or a short story in full, in three or four comic strip panels. They don’t need to go into detail about what happened before or after, but they should have some idea so that they can choose the most interesting part to produce. Encourage them to be as creative as possible with their ideas – can they think of a brand new or interesting superpower that their superhero can use to save the day? What is their superhero called? Quickly talk about the features of a comic strip story as a class: It has a mix of text and illustrations. The story is told across panels – there is a new panel for each new event/scene. Dialogue is presented in speech bubbles. Narration is presented in captions. Use Oxford Discover SB 3 pp.98–99 as a reminder. Challenge children to use one gerund phrase with ‘good at …’ (Week 34 \1 Lesson 4) and at least one superlative sentence (Week 34 \1 Lesson 4). Using the T Work through one example together; students answer on mini-whiteboards or orally. Gradually remove the sentence starter. ICQs: “Are we working together for this first example?” CCQs: “Where is the evidence for your answer?”</p><p><strong>YOU DO source: </strong>Produce another version of the comic strip story from a different character’s point of view. Encourage children to think more deeply about their chosen superpower(s) and to try to define it more precisely – for instance, in what situations does it not work? Why? Students create an original response, illustration with labels, written explanation, or review-project artifact. Teacher checks accuracy against the original learning outcomes.</p><p><strong>Review: </strong>Children have invented a superhero. They have written a comic strip story about them. Exit ticket: Give one new example directly linked to a superhero story! ; students respond without copying. Mark I = independent, P = prompted, N = not yet. CCQ: “What did you learn and how can you show it?”</p></details><div class="pagefoot"><span>IEC · OIC / TESOL aligned lesson delivery</span><span>Week 34 \1 Lesson 4</span></div></article><article class="sheet"><div class="heading"><span>IEC · TEACHER ACTIVITY &amp; GAME GUIDE</span><span>PAGE 2 / 2</span></div><div class="band">SIX ACTIVITIES &amp; GAMES — WEEK 34, LESSON 4</div><section class="game"><h3>IEC supplemental game — Superhero story event cards</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Provide three to five event or process cards from the lesson. Pairs place them in order and narrate the sequence using first, next and finally.</p><p><b>ICQ: </b>Do you arrange the cards before telling the sequence?</p><p><b>CCQ: </b>What happens first? What clue shows the next step?</p><p><b>Assessment: </b>Logical sequence and use of sequencing language</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Hero problem and solution map</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Learners create a small labelled drawing, map or idea web representing one accurate example from the lesson, then explain it to a partner using a sentence frame.</p><p><b>ICQ: </b>Do you draw and label before presenting? Will your partner ask a question?</p><p><b>CCQ: </b>How does your drawing show the concept from today's lesson?</p><p><b>Assessment: </b>Accurate labelled example and explanation</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Comic dialogue studio</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Hero story role-play</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Demonstrate an action connected to the lesson without saying the answer. Teams take turns acting, guessing with the target phrase, and giving one reason for their guess.</p><p><b>ICQ: </b>Do actors say the answer? Does the team guess before the reveal?</p><p><b>CCQ: </b>What action or clue helped you identify the meaning?</p><p><b>Assessment: </b>Accurate spoken guess supported by a clue</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Alternate heroic ending</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Show a concrete example from the lesson. Learners observe, describe it using the target words, compare answers with a partner and justify one detail to the class.</p><p><b>ICQ: </b>Do you describe the example before comparing answers?</p><p><b>CCQ: </b>What in this example supports your description?</p><p><b>Assessment: </b>Correct description and supporting detail</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><section class="game"><h3>IEC supplemental game — Superhero story retelling</h3><p><b>Purpose: </b>Practise the Year 3 lesson focus: A superhero story!.</p><p><b>Materials: </b>Lesson textbook visuals, vocabulary cards, board and student notebooks.</p><p><b>How to play: </b>Provide three to five event or process cards from the lesson. Pairs place them in order and narrate the sequence using first, next and finally.</p><p><b>ICQ: </b>Do you arrange the cards before telling the sequence?</p><p><b>CCQ: </b>What happens first? What clue shows the next step?</p><p><b>Assessment: </b>Logical sequence and use of sequencing language</p><p><b>Support: </b>Pre-teach 3–4 key words; provide a model, picture cues and a sentence starter.</p><p><b>Challenge: </b>Ask learners to explain a second example or justify a different answer.</p></section><div class="band">TEACHER REFLECTION</div><section class="stage"><h3>Evidence &amp; Next Steps</h3><p><b>Evidence:</b> Collect one student response or work sample for a superhero story!. <b>Next steps:</b> Reteach any misconception, adjust language scaffolds and use the original Year 3 source sequence for the following lesson.</p></section></article><details class="source"><summary>Original OIC source sequence (reference only — expand to read)</summary><pre>YEAR 3 Heroes
+Week 34, Lesson 4: A superhero story!
+Learning outcomes: 3.4a, 3.4c, 3.4d, 3.4e
+
+Context
+This is the fourth lesson of the unit ‘Heroes’.
+In this lesson, children will develop their writing skills by understanding the features of a comic strip and creating their own.
+The core lesson should take around 45 minutes to an hour, with extension activities provided for extending to 90 minutes over two lessons. The timing is flexible to suit different timetables.
+</pre></details></main></body></html>
