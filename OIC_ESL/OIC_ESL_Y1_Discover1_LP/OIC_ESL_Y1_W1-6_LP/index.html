@@ -1,4 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weeks 1–6 | IEC Teacher Lesson Library</title><style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weeks 1–6 | IEC Teacher Lesson Library</title>
+
+<style>
 * {
   box-sizing: border-box;
 }
@@ -18,21 +26,11 @@ body {
   font: 15px/1.5 Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
-
 header {
   background: var(--navy);
   color: white;
   padding: 18px max(20px, calc((100% - 1000px)/2));
   border-bottom: 5px solid var(--maroon);
-}
-
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
 .brand {
@@ -41,51 +39,8 @@ header {
   letter-spacing: .04em;
 }
 
-/* HOME NAVIGATION */
-
-.home-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 14px;
-
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #63738b;
-  border-radius: 6px;
-
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  white-space: nowrap;
-
-  transition: background .2s ease,
-              border-color .2s ease;
-}
-
-.home-btn svg {
-  width: 16px;
-  height: 16px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.home-btn:hover {
-  background: rgba(255,255,255,.1);
-  border-color: #ffffff;
-}
-
-.home-btn:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 3px;
-}
-
 header h1 {
-  margin: 9px 0 4px;
+  margin: 12px 0 4px;
   font-size: clamp(23px, 3.5vw, 33px);
 }
 
@@ -93,8 +48,6 @@ header p {
   margin: 0;
   color: #dbe5f0;
 }
-
-/* MAIN CONTENT */
 
 main {
   max-width: 1000px;
@@ -106,10 +59,11 @@ main {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 0 0 24px;
+  margin-bottom: 24px;
 }
 
 .btn {
+  display: inline-block;
   background: var(--maroon);
   color: white;
   border-radius: 5px;
@@ -127,8 +81,6 @@ main {
   filter: brightness(1.14);
 }
 
-/* INTRODUCTION */
-
 .intro {
   background: white;
   border: 1px solid var(--line);
@@ -136,8 +88,6 @@ main {
   padding: 16px 20px;
   margin-bottom: 24px;
 }
-
-/* LESSON SECTIONS */
 
 .week {
   margin: 28px 0;
@@ -191,8 +141,6 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* FOOTER */
-
 footer {
   max-width: 1000px;
   margin: auto;
@@ -200,8 +148,6 @@ footer {
   color: #536174;
   font-size: 12px;
 }
-
-/* MOBILE */
 
 @media (max-width: 540px) {
   header {
@@ -215,38 +161,207 @@ footer {
   .grid {
     grid-template-columns: 1fr;
   }
-
-  .brand {
-    font-size: 11px;
-  }
-
-  .home-btn {
-    padding: 7px 10px;
-    font-size: 12px;
-  }
 }
-</style></head><body><header><div class="header-top"><div class="brand">IEC · INTERNATIONAL EDUCATION CITY · OIC ESL</div><a href="https://iecteach.com/" class="home-btn">Home</a></div><h1>Year 1 — Weeks 1–6</h1><p>30 teacher-ready lesson plans · Discover 1</p></header><main><div class="toolbar"><a class="btn secondary" href="/OIC_ESL/OIC_ESL_Y1_Discover1_LP/">All Sections</a><a class="btn" href="/OIC_ESL/OIC_ESL_Y1_Discover1_LP/OIC_ESL_Y1_W7_12_LP/">Next: Weeks 7–12</a></div><div class="intro"><strong>Weeks 1–6 Lesson Library</strong><div>Choose a lesson to open its complete teaching plan.</div></div><section class="week"><h2>Week 1</h2><div class="grid"><a class="lesson" href="week-01-lesson-01.html"><small>WEEK 01 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-01-lesson-02.html"><small>WEEK 01 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-01-lesson-03.html"><small>WEEK 01 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-01-lesson-04.html"><small>WEEK 01 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-01-lesson-05.html"><small>WEEK 01 · LESSON 05</small><strong>Lesson 5</strong></a></div></section><section class="week"><h2>Week 2</h2><div class="grid"><a class="lesson" href="week-02-lesson-01.html"><small>WEEK 02 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-02-lesson-02.html"><small>WEEK 02 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-02-lesson-03.html"><small>WEEK 02 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-02-lesson-04.html"><small>WEEK 02 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-02-lesson-05.html"><small>WEEK 02 · LESSON 05</small><strong>Lesson 5</strong></a></div></section><section class="week"><h2>Week 3</h2><div class="grid"><a class="lesson" href="week-03-lesson-01.html"><small>WEEK 03 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-03-lesson-02.html"><small>WEEK 03 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-03-lesson-03.html"><small>WEEK 03 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-03-lesson-04.html"><small>WEEK 03 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-03-lesson-05.html"><small>WEEK 03 · LESSON 05</small><strong>Lesson 5</strong></a></div></section><section class="week"><h2>Week 4</h2><div class="grid"><a class="lesson" href="week-04-lesson-01.html"><small>WEEK 04 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-04-lesson-02.html"><small>WEEK 04 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-04-lesson-03.html"><small>WEEK 04 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-04-lesson-04.html"><small>WEEK 04 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-04-lesson-05.html"><small>WEEK 04 · LESSON 05</small><strong>Lesson 5</strong></a></div></section><section class="week"><h2>Week 5</h2><div class="grid"><a class="lesson" href="week-05-lesson-01.html"><small>WEEK 05 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-05-lesson-02.html"><small>WEEK 05 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-05-lesson-03.html"><small>WEEK 05 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-05-lesson-04.html"><small>WEEK 05 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-05-lesson-05.html"><small>WEEK 05 · LESSON 05</small><strong>Lesson 5</strong></a></div></section><section class="week"><h2>Week 6</h2><div class="grid"><a class="lesson" href="week-06-lesson-01.html"><small>WEEK 06 · LESSON 01</small><strong>Lesson 1</strong></a>
-<a class="lesson" href="week-06-lesson-02.html"><small>WEEK 06 · LESSON 02</small><strong>Lesson 2</strong></a>
-<a class="lesson" href="week-06-lesson-03.html"><small>WEEK 06 · LESSON 03</small><strong>Lesson 3</strong></a>
-<a class="lesson" href="week-06-lesson-04.html"><small>WEEK 06 · LESSON 04</small><strong>Lesson 4</strong></a>
-<a class="lesson" href="week-06-lesson-05.html"><small>WEEK 06 · LESSON 05</small><strong>Lesson 5</strong></a></div></section></main><footer>IEC Teacher Lesson Library · TESOL-aligned OIC Year 1 · Teacher resources</footer></body></html>
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    IEC · INTERNATIONAL EDUCATION CITY · OIC ESL
+  </div>
+  <h1>Year 1 — Weeks 1–6</h1>
+  <p>6 weeks · 30 lessons · TESOL-aligned OIC</p>
+</header>
+
+<main>
+
+  <nav class="toolbar" aria-label="Section navigation">
+    <a class="btn secondary"
+       href="/OIC_ESL/OIC_ESL_Y1_Discover1_LP/">
+      All Sections
+    </a>
+
+    <a class="btn"
+       href="/OIC_ESL/OIC_ESL_Y1_Discover1_LP/OIC_ESL_Y1_W7_12_LP/">
+      Next: Weeks 7–12 →
+    </a>
+
+    <a class="btn secondary" href="/">
+      Home
+    </a>
+  </nav>
+
+  <div class="intro">
+    <strong>Weeks 1–6 Lesson Library</strong>
+    <div>
+      Select a lesson below to open the complete
+      teacher-ready IEC TESOL / OIC lesson plan.
+    </div>
+  </div>
+
+  <section class="week">
+    <h2>Week 1</h2>
+    <div class="grid">
+      <a class="lesson" href="week-01-lesson-01.html">
+        <small>WEEK 01 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-01-lesson-02.html">
+        <small>WEEK 01 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-01-lesson-03.html">
+        <small>WEEK 01 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-01-lesson-04.html">
+        <small>WEEK 01 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-01-lesson-05.html">
+        <small>WEEK 01 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="week">
+    <h2>Week 2</h2>
+    <div class="grid">
+      <a class="lesson" href="week-02-lesson-01.html">
+        <small>WEEK 02 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-02-lesson-02.html">
+        <small>WEEK 02 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-02-lesson-03.html">
+        <small>WEEK 02 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-02-lesson-04.html">
+        <small>WEEK 02 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-02-lesson-05.html">
+        <small>WEEK 02 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="week">
+    <h2>Week 3</h2>
+    <div class="grid">
+      <a class="lesson" href="week-03-lesson-01.html">
+        <small>WEEK 03 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-03-lesson-02.html">
+        <small>WEEK 03 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-03-lesson-03.html">
+        <small>WEEK 03 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-03-lesson-04.html">
+        <small>WEEK 03 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-03-lesson-05.html">
+        <small>WEEK 03 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="week">
+    <h2>Week 4</h2>
+    <div class="grid">
+      <a class="lesson" href="week-04-lesson-01.html">
+        <small>WEEK 04 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-04-lesson-02.html">
+        <small>WEEK 04 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-04-lesson-03.html">
+        <small>WEEK 04 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-04-lesson-04.html">
+        <small>WEEK 04 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-04-lesson-05.html">
+        <small>WEEK 04 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="week">
+    <h2>Week 5</h2>
+    <div class="grid">
+      <a class="lesson" href="week-05-lesson-01.html">
+        <small>WEEK 05 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-05-lesson-02.html">
+        <small>WEEK 05 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-05-lesson-03.html">
+        <small>WEEK 05 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-05-lesson-04.html">
+        <small>WEEK 05 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-05-lesson-05.html">
+        <small>WEEK 05 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+  <section class="week">
+    <h2>Week 6</h2>
+    <div class="grid">
+      <a class="lesson" href="week-06-lesson-01.html">
+        <small>WEEK 06 · LESSON 01</small>
+        <strong>Lesson 1</strong>
+      </a>
+      <a class="lesson" href="week-06-lesson-02.html">
+        <small>WEEK 06 · LESSON 02</small>
+        <strong>Lesson 2</strong>
+      </a>
+      <a class="lesson" href="week-06-lesson-03.html">
+        <small>WEEK 06 · LESSON 03</small>
+        <strong>Lesson 3</strong>
+      </a>
+      <a class="lesson" href="week-06-lesson-04.html">
+        <small>WEEK 06 · LESSON 04</small>
+        <strong>Lesson 4</strong>
+      </a>
+      <a class="lesson" href="week-06-lesson-05.html">
+        <small>WEEK 06 · LESSON 05</small>
+        <strong>Lesson 5</strong>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  IEC Teacher Lesson Library · TESOL-aligned OIC Year 1 · Teacher resources
+</footer>
+
+</body>
+</html>
