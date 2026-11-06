@@ -44,5 +44,10 @@
     const open = nav.classList.toggle('open');
     button.setAttribute('aria-expanded', String(open));
   });
+  // Hide only an existing portal-style navigation header, never the lesson content.
+  // The homepage is excluded by the deployment workflow.
+  for (const oldHeader of document.querySelectorAll('header.site-header')) {
+    oldHeader.style.setProperty('display', 'none', 'important');
+  }
   document.body.prepend(host);
 })();
