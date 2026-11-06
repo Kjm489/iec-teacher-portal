@@ -32,6 +32,36 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Add shared navigation to published lesson pages
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {
+              const file = path.join(dir, entry.name);
+              if (entry.isDirectory()) {
+                if (['.git','.github','node_modules','courses'].includes(entry.name)) continue;
+                walk(file);
+              } else if (entry.name.toLowerCase().endsWith('.html')) {
+                const relative = path.relative('.', file).replace(/\\/g,'/');
+                if (relative === 'index.html') continue; // Homepage already has its own header
+                let html = fs.readFileSync(file,'utf8');
+                if (html.includes('data-iec-shared-nav')) continue;
+                const tag = '<script data-iec-shared-nav src="/assets/js/shared-nav.js" defer></script>';
+                if (/<\/body\s*>/i.test(html)) {
+                  html = html.replace(/<\/body\s*>/i, tag + '\n</body>');
+                } else {
+                  html += '\n' + tag;
+                }
+                fs.writeFileSync(file,html);
+              }
+            }
+          }
+          walk('.');
+          NODE
+
       - name: Configure and Enable GitHub Pages
         uses: actions/configure-pages@v5
         with:
