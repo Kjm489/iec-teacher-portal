@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IEC TESOL Lesson Planning Mastery</title>
+<style>
+:root{--navy:#142747;--maroon:#812d45;--pale:#edf1f7;--ink:#233247;--line:#d7dce4}
+*{box-sizing:border-box}body{margin:0;background:#f3f5f9;color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+header{background:var(--navy);color:white;border-bottom:6px solid var(--maroon);padding:24px max(20px,calc((100% - 1100px)/2))}
+header h1{margin:0;font-size:27px}header p{margin:7px 0 0;color:#dce5f3}
+main{max-width:1100px;margin:24px auto;padding:0 18px 50px}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:20px;box-shadow:0 2px 8px #1427470a}
+h2{font-size:21px;margin:0 0 10px;color:var(--navy)}h3{margin:0 0 10px;color:var(--maroon)}p{margin:8px 0 13px}.muted{color:#596679}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+label{display:block;font-weight:700;font-size:13px;margin-bottom:5px}input,textarea,select{width:100%;padding:11px;border:1px solid #aebacb;border-radius:7px;font:inherit;color:var(--ink);background:#fff}
+textarea{min-height:135px;resize:vertical}.field{margin:0 0 14px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{cursor:pointer;border:0;background:var(--navy);color:white;border-radius:7px;padding:11px 17px;font-weight:700}
+button.secondary{background:var(--maroon)}button.outline{background:white;color:var(--navy);border:1px solid var(--navy)}
+button:disabled{opacity:.45;cursor:default}.step{display:none}.step.active{display:block}.progress{height:10px;border-radius:20px;background:#dce3ec;overflow:hidden;margin:12px 0}
+.progress>div{height:100%;background:var(--maroon);transition:width .2s}.hint{background:var(--pale);padding:12px;border-left:4px solid var(--maroon);margin-bottom:14px;border-radius:4px}
+.question{padding:14px 0;border-bottom:1px solid var(--line)}.question label{font-size:15px}
+.question select{max-width:600px}.pill{font-weight:bold;color:var(--maroon)}.print-only{display:none}
+.review-line{border-bottom:1px solid #9ba5b4;height:33px}.status{font-size:13px;color:#43536c}
+@media(max-width:750px){.grid{grid-template-columns:1fr}header h1{font-size:23px}}
+@media print{body{background:white;color:#111;font:11pt/1.35 Arial}header{padding:12px 0;background:white;color:#111;border-bottom:3px solid #812d45}header p{color:#444}main{max-width:none;margin:0;padding:0}.panel{border:0;box-shadow:none;padding:8px 0;margin:0;break-inside:auto}.no-print,.step,.hint,.toolbar{display:none!important}.print-only{display:block!important}h2{font-size:15pt;margin:15px 0 7px;break-after:avoid}h3{font-size:12pt;break-after:avoid}.report-section{break-inside:avoid;margin:12px 0}.report-text{white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #ddd;padding:8px;min-height:35px}.review-line{height:28px}a{color:#111} .grid{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<header><h1>IEC TESOL Lesson Planning Mastery</h1><p>Guided practice • Practical lesson-plan submission • Academic review</p></header>
+<main>
+<section class="panel no-print">
+<h2>Course instructions</h2>
+<p>Complete the teacher information, work through all twelve guided lesson-planning sections, then complete the scenario checks. Review your work and <strong>Print / Save as PDF</strong> or <strong>Download completed HTML</strong> for academic review.</p>
+<p class="muted">This is an internal IEC professional-development activity, not an external TESOL qualification. The scenario check is formative; academic approval is granted only after a reviewer evaluates the submitted plan.</p>
+<div class="toolbar"><button type="button" id="save">Save progress on this device</button><button type="button" id="load" class="outline">Load saved progress</button><button type="button" id="clear" class="outline">Clear form</button><span class="status" id="status"></span></div>
+</section>
+<section class="panel">
+<h2>Teacher and lesson information</h2>
+<div class="grid">
+<div class="field"><label for="teacher">Teacher full name *</label><input id="teacher" data-field required></div>
+<div class="field"><label for="email">Teacher email</label><input id="email" type="email" data-field></div>
+<div class="field"><label for="date">Submission date *</label><input id="date" type="date" data-field required></div>
+<div class="field"><label for="year">Year / Grade *</label><input id="year" data-field required></div>
+<div class="field"><label for="level">CEFR / Language level</label><input id="level" data-field></div>
+<div class="field"><label for="duration">Lesson duration (minutes) *</label><input id="duration" type="number" min="1" value="90" data-field required></div>
+<div class="field"><label for="topic">Unit / lesson topic *</label><input id="topic" data-field required></div>
+<div class="field"><label for="class">Class / group</label><input id="class" data-field></div>
+<div class="field"><label for="source">OIC curriculum strand / unit (if verified)</label><input id="source" data-field></div>
+</div>
+</section>
+<section class="panel no-print" id="work">
+<div class="toolbar" style="justify-content:space-between"><span class="pill" id="counter"></span><span class="status" id="filled"></span></div>
+<div class="progress"><div id="bar"></div></div>
+<div id="steps"></div>
+<div class="toolbar"><button type="button" class="outline" id="prev">Previous</button><button type="button" id="next">Next section</button><button type="button" class="secondary" id="reviewBtn">Review submission</button></div>
+</section>
+<section class="panel no-print" id="scenarios">
+<h2>Scenario application checks</h2><p>Choose the strongest instructional response. Feedback appears immediately. These checks support learning; they do not replace academic review.</p>
+<div id="questions"></div>
+<p class="status" id="score"></p>
+</section>
+<section class="panel no-print" id="review">
+<h2>Review and submit for academic review</h2>
+<p>Ensure your plan has measurable objectives, timed teaching stages, clear modeling, scaffolding, independent practice, ICQs/CCQs, assessment, and differentiation.</p>
+<p id="missing" class="pill"></p>
+<div class="toolbar"><button type="button" id="print" class="secondary">Print / Save as PDF</button><button type="button" id="download">Download completed HTML</button><button type="button" id="exportJson" class="outline">Download backup data</button></div>
+<p class="muted">To save a PDF, choose “Save as PDF” in your browser print dialog. Submit the PDF or completed HTML through your school's established academic review process. This page does not automatically send files or approve submissions.</p>
+</section>
+<section class="panel print-only" id="printReport"><h2>IEC TESOL Lesson Plan — Academic Review Submission</h2><div id="reportBody"></div>
+<h2>Academic reviewer use only</h2>
+<p>Objectives & OIC alignment ____ /15 &nbsp; Warm-up ____ /10 &nbsp; Modeling ____ /15 &nbsp; Guided practice ____ /15</p>
+<p>Independent practice ____ /15 &nbsp; ICQs/CCQs ____ /10 &nbsp; Assessment ____ /10 &nbsp; Differentiation, pacing & coherence ____ /10</p>
+<p><strong>Total: ______ /100</strong> &nbsp; Outcome: □ Approved □ Revision required □ Not approved</p>
+<p>Reviewer name: ____________________________________ Date: __________________</p>
+<p>Comments:</p><div class="review-line"></div><div class="review-line"></div><div class="review-line"></div>
+</section>
+</main>
+<script>
+const SECTIONS=[["Curriculum & learning objectives", "Specify OIC unit/topic, target language, observable objectives, success criteria.", "What will students be able to DO? How will you know?"], ["Warm-up / Lead-in", "Activate prior knowledge, motivate learners, and connect to the objective.", "Describe teacher prompts, student actions, materials and timing."], ["I DO — Explicit modeling", "Show exactly how the teacher demonstrates target language and thinks aloud.", "Write a model teacher script or worked example."], ["WE DO — Guided practice", "Scaffold practice with prompts, gradual release, feedback and checks.", "Describe pairs/groups, supports, feedback and timing."], ["YOU DO — Independent practice", "Students apply the target skill independently, with measurable output.", "Describe the student product and how it demonstrates learning."], ["ICQs — Instruction checking", "Write specific questions that confirm task directions before students begin.", "Avoid 'Do you understand?' Include expected answers."], ["CCQs — Concept checking", "Write questions to check meaning, form, or use of target language.", "Include expected answers and common misconceptions."], ["Interactive activities & student talk", "Plan purposeful activities and student speaking opportunities.", "Identify interaction pattern and estimated student talk time."], ["Assessment & exit ticket", "Explain evidence collected during and at the end of the lesson.", "What is assessed, against which success criteria?"], ["Differentiation & support", "Plan adaptations for students needing support and additional challenge.", "Include language frames, visuals, extension, accessibility."], ["Materials, technology & contingency", "List textbook/resources and a backup if technology fails.", "Use verified textbook pages only when known."], ["Reflection & next steps", "Explain how evidence will inform feedback and subsequent instruction.", "Include post-lesson reflection prompts."]];
+const QUESTIONS=[
+{q:"Students can repeat a teacher's model but cannot produce an independent sentence. What should the next lesson stage prioritize?",a:["More teacher explanation without practice","Guided practice with sentence frames, feedback, and gradual release","An immediate unscaffolded test"],correct:1,why:"Guided practice bridges modeling and independent performance through supported rehearsal."},
+{q:"A teacher asks 'Do you understand?' after giving pair-work instructions. What is a stronger ICQ?",a:["'Is the topic interesting?'","'What does the vocabulary mean?'","'Are you working alone or with a partner?'"],correct:2,why:"An ICQ checks task directions; a CCQ checks meaning or language concepts."},
+{q:"The objective says 'Students will understand seasons.' Which revision is more measurable?",a:["'Students will name four seasons and describe one activity for each.'","'Students will enjoy the seasons lesson.'","'Students will listen to the teacher.'"],correct:0,why:"Observable verbs and a specified product make success assessable."},
+{q:"Several learners cannot complete the independent task. Which response best supports differentiation?",a:["Remove all learning objectives","Provide targeted visual and language frames while keeping the objective","Give the same instruction more loudly"],correct:1,why:"Targeted scaffolds preserve the learning goal while making the task accessible."},
+{q:"Which exit ticket best checks an objective requiring students to justify a preference?",a:["'Did you like today's class?'","'What color was the slide background?'","'Write one preference and explain it using because.'"],correct:2,why:"Assessment evidence must match the language performance described in the objective."}
+];
+const fields=[...document.querySelectorAll('[data-field]')];
+const steps=document.getElementById('steps');
+SECTIONS.forEach((s,i)=>{let d=document.createElement('div');d.className='step';d.innerHTML=`<h2>${i+1}. ${s[0]}</h2><p>${s[1]}</p><div class="hint"><strong>Planning prompt:</strong> ${s[2]}</div><div class="field"><label for="section${i}">Your complete plan for this section *</label><textarea id="section${i}" data-plan placeholder="Include teacher actions, student actions, timing, and evidence of learning where relevant."></textarea></div>`;steps.appendChild(d)});
+const plans=[...document.querySelectorAll('[data-plan]')];
+let index=0;
+function show(i){index=Math.max(0,Math.min(SECTIONS.length-1,i));document.querySelectorAll('.step').forEach((d,j)=>d.classList.toggle('active',j===index));document.getElementById('counter').textContent=`Section ${index+1} of ${SECTIONS.length}`;document.getElementById('bar').style.width=`${(index+1)/SECTIONS.length*100}%`;document.getElementById('prev').disabled=index===0;document.getElementById('next').disabled=index===SECTIONS.length-1;document.getElementById('filled').textContent=`${plans.filter(x=>x.value.trim()).length} of ${plans.length} sections completed`}
+document.getElementById('prev').onclick=()=>show(index-1);document.getElementById('next').onclick=()=>show(index+1);
+const qbox=document.getElementById('questions');
+QUESTIONS.forEach((q,i)=>{let d=document.createElement('div');d.className='question';let opts=q.a.map((a,j)=>`<option value="${j}">${String.fromCharCode(65+j)}. ${a}</option>`).join('');d.innerHTML=`<label for="q${i}">${i+1}. ${q.q}</label><select id="q${i}" data-answer><option value="">Choose an answer...</option>${opts}</select><p id="feedback${i}" class="status"></p>`;qbox.appendChild(d)});
+const answers=[...document.querySelectorAll('[data-answer]')];
+function score(){let correct=0;answers.forEach((el,i)=>{let feedback=document.getElementById('feedback'+i);if(el.value===""){feedback.textContent="Not answered";return}let ok=Number(el.value)===QUESTIONS[i].correct;if(ok)correct++;feedback.textContent=(ok?"✓ Strong response. ":"Review this choice. ")+QUESTIONS[i].why});document.getElementById('score').textContent=`Scenario checks: ${correct} / ${QUESTIONS.length} correct.`;return correct}
+answers.forEach(el=>el.addEventListener('change',score));
+function collect(){return {fields:Object.fromEntries(fields.map(x=>[x.id,x.value])),plans:plans.map(x=>x.value),answers:answers.map(x=>x.value)}}
+function populate(data){fields.forEach(x=>x.value=data.fields?.[x.id]??x.value);plans.forEach((x,i)=>x.value=data.plans?.[i]??'');answers.forEach((x,i)=>x.value=data.answers?.[i]??'');score();show(index)}
+const storageKey='iec-tesol-lesson-mastery-v1';
+document.getElementById('save').onclick=()=>{try{localStorage.setItem(storageKey,JSON.stringify(collect()));statusText('Saved in this browser on this device.')}catch(e){statusText('Browser storage unavailable. Download backup data instead.')}};
+document.getElementById('load').onclick=()=>{try{let d=localStorage.getItem(storageKey);if(!d)return statusText('No saved progress found.');populate(JSON.parse(d));statusText('Saved progress loaded.')}catch(e){statusText('Unable to load saved progress.')}};
+document.getElementById('clear').onclick=()=>{if(confirm('Clear all teacher information, lesson sections, and answers?')){fields.forEach(x=>x.value=x.id==='duration'?'90':'');plans.forEach(x=>x.value='');answers.forEach(x=>x.value='');show(0);score();statusText('Form cleared.')}};
+function statusText(t){document.getElementById('status').textContent=t}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderReport(){const data=collect(),labels={teacher:'Teacher',email:'Email',date:'Submission date',year:'Year / Grade',level:'CEFR level',duration:'Duration (minutes)',topic:'Topic',class:'Class',source:'OIC strand / unit'};let h='<div class="grid">'+Object.entries(labels).map(([k,l])=>`<div class="report-section"><strong>${l}</strong><div>${esc(data.fields[k]||'Not supplied')}</div></div>`).join('')+'</div>';h+=SECTIONS.map((s,i)=>`<div class="report-section"><h3>${i+1}. ${esc(s[0])}</h3><div class="report-text">${esc(data.plans[i]||'Not completed')}</div></div>`).join('');h+='<h2>Scenario check results</h2>'+QUESTIONS.map((q,i)=>`<p>${i+1}. ${esc(q.q)}<br><strong>Selected:</strong> ${esc(q.a[Number(data.answers[i])]||'Not answered')} — ${data.answers[i]===''?'Not answered':Number(data.answers[i])===q.correct?'Correct':'Needs review'}</p>`).join('');document.getElementById('reportBody').innerHTML=h}
+function review(){const required=['teacher','date','year','duration','topic'];const missing=required.filter(id=>!document.getElementById(id).value.trim()).map(id=>document.querySelector(`label[for="${id}"]`).textContent.replace('*',''));const empty=plans.map((p,i)=>p.value.trim()?null:i+1).filter(x=>x);document.getElementById('missing').textContent=missing.length||empty.length?`Incomplete: ${missing.join(', ')}${missing.length&&empty.length?'; ':''}${empty.length?'lesson sections '+empty.join(', '):''}`:'All required fields and lesson sections completed. Ready for academic review.';renderReport();score();document.getElementById('review').scrollIntoView({behavior:'smooth'})}
+document.getElementById('reviewBtn').onclick=review;
+document.getElementById('print').onclick=()=>{review();window.print()};
+function download(name,content,type){let blob=new Blob([content],{type});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500)}
+function filename(ext){let n=(document.getElementById('teacher').value||'Teacher').replace(/[^a-z0-9_-]+/gi,'_');return `IEC_TESOL_Lesson_Plan_${n}.${ext}`}
+document.getElementById('exportJson').onclick=()=>download(filename('json'),JSON.stringify(collect(),null,2),'application/json');
+document.getElementById('download').onclick=()=>{review();let cloned=document.documentElement.cloneNode(true);let report=cloned.querySelector('#printReport');report.classList.remove('print-only');cloned.querySelectorAll('.no-print').forEach(x=>x.remove());let css=cloned.querySelector('style');css.textContent+=`body{background:white}main{max-width:900px}.panel{display:block!important}.print-only{display:block!important}`;cloned.querySelectorAll('script').forEach(x=>x.remove());download(filename('html'),'<!doctype html>\n'+cloned.outerHTML,'text/html')};
+document.getElementById('date').value=new Date().toLocaleDateString('en-CA');
+show(0);score();renderReport();
+</script></body></html>
