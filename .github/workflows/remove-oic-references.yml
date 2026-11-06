@@ -1,0 +1,46 @@
+name: Remove OIC source reference blocks
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply_changes:
+        description: "Create a pull request with reference blocks removed"
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  remove-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit or remove source references
+        run: |
+          if [ "${{ inputs.apply_changes }}" = "true" ]; then
+            python3 scripts/remove_oic_references.py --root OIC_ESL --apply
+          else
+            python3 scripts/remove_oic_references.py --root OIC_ESL
+          fi
+      - name: Upload file-by-file report
+        uses: actions/upload-artifact@v4
+        with:
+          name: oic-reference-removal-report
+          path: reference-removal-report.csv
+      - name: Create reviewable pull request
+        if: ${{ inputs.apply_changes }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: maintenance/remove-oic-source-references
+          delete-branch: true
+          commit-message: "Remove expandable OIC source reference blocks"
+          title: "Remove original OIC source reference blocks from lesson pages"
+          body: |
+            Removes only `<details class="source">` blocks from lesson HTML.
+            Keeps TESOL lesson content, page design, and navigation intact.
+            Please review the diff before merging.
+          add-paths: |
+            OIC_ESL/**/*.html
