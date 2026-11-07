@@ -6,187 +6,47 @@
 
 <title>Courses | IEC Teacher Portal</title>
 
+<link rel="stylesheet" href="/assets/css/styles.css">
 <style>
-:root {
-  --navy: #142747;
-  --maroon: #812d45;
-  --line: #d7dce4;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font: 16px/1.6 Arial, Helvetica, sans-serif;
-  background: #f3f5f9;
-  color: #233247;
-}
-
-header {
-  background: white;
-  border-bottom: 4px solid var(--maroon);
-}
-
-nav {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 18px 20px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: var(--navy);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav .brand {
-  margin-right: auto;
-  font-size: 20px;
-}
-
-nav a[aria-current="page"] {
-  color: var(--maroon);
-}
-
-.hero {
-  background: var(--navy);
-  color: white;
-  padding: 65px 20px;
-}
-
-.wrap {
-  max-width: 1060px;
-  margin: auto;
-}
-
-.hero h1 {
-  font-size: clamp(30px, 5vw, 50px);
-  line-height: 1.2;
-  margin: 12px 0;
-}
-
-.hero p {
-  max-width: 700px;
-  color: #e4eaf4;
-}
-
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: .12em;
-  font-weight: 800;
-  color: #a23b58;
-}
-
-.hero .eyebrow {
-  color: #e9a5b8;
-}
-
-main {
-  max-width: 1060px;
-  margin: 35px auto;
-  padding: 0 20px;
-}
-
-.card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 30px;
-  box-shadow: 0 3px 14px #14274709;
-  max-width: 760px;
-}
-
-h2 {
-  color: var(--navy);
-  margin: 8px 0;
-}
-
-.meta {
-  color: #58667a;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 12px;
-  background: var(--maroon);
-  color: white;
-  padding: 12px 22px;
-  border-radius: 9px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.button:hover {
-  background: #682237;
-}
-
-footer {
-  margin-top: 70px;
-  padding: 28px 20px;
-  text-align: center;
-  color: #637086;
-}
-
-@media (max-width: 650px) {
-  nav {
-    gap: 14px;
-  }
-
-  .card {
-    padding: 22px;
-  }
-}
+/* Course-only styles; shared IEC header, brand and navigation use the site's stylesheet. */
+.course-hero{background:linear-gradient(125deg,#0d1b32,#142747 55%,#223e68);color:white;padding:68px 24px 72px}
+.course-wrap{max-width:1060px;margin:auto}
+.course-hero .eyebrow{color:#edb1c2;font-size:12px;font-weight:800;letter-spacing:1.8px}
+.course-hero h1{font-size:clamp(32px,4.6vw,54px);margin:14px 0 18px;color:white;letter-spacing:-1.5px}
+.course-hero p{max-width:780px;color:#e0e8f4;font-size:17px}
+.course-main{max-width:1060px;margin:40px auto;padding:0 24px}
+.course-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:30px;margin:0 0 24px;box-shadow:0 4px 16px rgba(15,30,55,.05)}
+.course-card .eyebrow{color:#812d45;font-size:12px;font-weight:800;letter-spacing:1.5px}
+.course-card h2{color:#142747;margin:10px 0 12px;font-size:26px}
+.course-card .meta{color:#65748a}
+.course-card .button{margin-top:10px}
+.course-footer{text-align:center;color:#65748a;padding:30px 20px 45px}
+@media(max-width:650px){.course-card{padding:22px}.course-hero{padding:48px 20px}}
 </style>
 </head>
 
 <body>
 
-<header>
-  <nav aria-label="Main navigation">
-
-    <a class="brand" href="/">
-      IEC PORTAL
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="brand" aria-label="IEC Portal Home">
+      <span class="brand-icon">IEC</span>
+      <span class="brand-text">IEC <strong>PORTAL</strong><small>TEACHER RESOURCES</small></span>
     </a>
-
-    <a href="/#home">
-      Home
-    </a>
-
-    <a href="/#features">
-      Resources
-    </a>
-
-    <a href="/courses/" aria-current="page">
-      Courses
-    </a>
-
-    <a href="/#how-it-works">
-      How It Works
-    </a>
-
-    <a href="/#about">
-      About
-    </a>
-
-    <a href="/portal.html">
-      Lesson Library →
-    </a>
-
-  </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="/#home" class="nav-link">Home</a>
+      <a href="/#features" class="nav-link">Resources</a>
+      <a href="/courses/" class="nav-link active" aria-current="page">Courses</a>
+      <a href="/#how-it-works" class="nav-link">How It Works</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/portal.html" class="nav-login">Lesson Library <span aria-hidden="true">→</span></a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
+<section class="course-hero">
+  <div class="course-wrap">
 
     <div class="eyebrow">
       IEC TEACHER DEVELOPMENT ACADEMY
@@ -197,21 +57,18 @@ footer {
     </h1>
 
     <p>
-      Independent, interactive training to strengthen
-      instructional practice. Learn at your own pace,
-      practice real teaching decisions, and apply
-      new strategies in the classroom.
+      Follow the four-level IEC professional development pathway: build foundational knowledge, apply expert classroom judgment, design an IEC TESOL lesson plan, and demonstrate competency through the final certification assessment.
     </p>
 
   </div>
 </section>
 
-<main>
+<main class="course-main">
 
-  <article class="card">
+  <article class="course-card">
 
     <div class="eyebrow">
-      MODULE 01 · SELF-PACED
+      LEVEL 1 · FOUNDATION
     </div>
 
     <h2>
@@ -234,7 +91,7 @@ footer {
       practical interactive activities.
     </p>
 
-    <a class="button" href="/courses/effective-scaffolding.html">
+    <a class="button button-primary" href="/courses/effective-scaffolding.html">
       Start Course →
     </a>
 
@@ -242,10 +99,19 @@ footer {
 
 
 
-  <article class="card" style="margin-top: 28px;">
+  <article class="course-card" style="margin-top: 28px;">
+    <div class="eyebrow">LEVEL 2 · ADVANCED APPLICATION</div>
+    <h2>Advanced Teaching Mastery</h2>
+    <p>Analyze It. Decide It. Defend It.</p>
+    <p class="meta">8 modules · 40 challenging classroom scenarios · Randomized responses · 80% passing score · Printable completion report</p>
+    <p>Apply TESOL/OIC principles to complex classroom evidence. Evaluate competing instructional decisions involving scaffolding, differentiation, ICQs and CCQs, student engagement, feedback, assessment, and lesson design. Choose the most defensible response when several strategies appear appropriate.</p>
+    <a class="button button-primary" href="/courses/advanced-teaching-mastery.html">Start Advanced Mastery →</a>
+  </article>
+
+  <article class="course-card" style="margin-top: 28px;">
 
     <div class="eyebrow">
-      MODULE 02 · PRACTICAL TRAINING
+      LEVEL 3 · PRACTICAL APPLICATION
     </div>
 
     <h2>
@@ -269,16 +135,16 @@ footer {
       the completed plan for academic review.
     </p>
 
-    <a class="button" href="/courses/IEC_TESOL_Lesson_Planning_Mastery.html">
+    <a class="button button-primary" href="/courses/IEC_TESOL_Lesson_Planning_Mastery.html">
       Start Lesson Planning Course →
     </a>
 
   </article>
 
-  <article class="card" style="margin-top: 28px;">
+  <article class="course-card" style="margin-top: 28px;">
 
     <div class="eyebrow">
-      ADVANCED CERTIFICATION · CHALLENGE EXAM
+      LEVEL 4 · FINAL CERTIFICATION
     </div>
 
     <h2>
@@ -301,7 +167,7 @@ footer {
       must be approved for internal IEC certification.
     </p>
 
-    <a class="button" href="/courses/itec-challenge-exam.html">
+    <a class="button button-primary" href="/courses/itec-challenge-exam.html">
       Start Challenge Exam →
     </a>
 
@@ -309,10 +175,21 @@ footer {
 
 </main>
 
-<footer>
+<footer class="course-footer">
   IEC Teacher Portal · Internal professional
   development resources
 </footer>
 
+<script>
+// Mobile navigation matches the IEC Portal header behavior.
+const menuToggle=document.getElementById('menuToggle');
+const mainNav=document.getElementById('mainNav');
+menuToggle.addEventListener('click',()=>{
+ const expanded=menuToggle.getAttribute('aria-expanded')==='true';
+ menuToggle.setAttribute('aria-expanded',String(!expanded));
+ mainNav.classList.toggle('open',!expanded);
+});
+</script>
 </body>
 </html>
+
