@@ -9,4 +9,10 @@ opts.forEach(({s,i})=>{let l=document.createElement('label');let r=document.crea
 function renderButtons(){document.getElementById('next').classList.toggle('hide',at===bank.length-1);document.getElementById('submit').classList.toggle('hide',at!==bank.length-1);document.querySelectorAll('#choices input').forEach((r,k)=>{r.checked=false});let labels=[...document.querySelectorAll('#choices label')];labels.forEach(l=>{const text=l.textContent;const idx=bank[order[at]][1].indexOf(text);l.querySelector('input').checked=answers[order[at]]===idx;l.querySelector('input').onchange=()=>{answers[order[at]]=idx;renderButtons()}})}
 function move(delta){at=Math.max(0,Math.min(bank.length-1,at+delta));render();window.scrollTo(0,0)}
 function finish(){let missing=answers.findIndex(x=>x===null);if(missing!==-1){alert('Please answer all questions before submitting.');at=order.indexOf(missing);render();return}if(!confirm('Submit your final answers?'))return;let score=bank.reduce((n,q,i)=>n+(answers[i]===q[2]?1:0),0);let pct=Math.round(score/bank.length*100),pass=pct>=80;document.getElementById('exam').classList.add('hide');document.getElementById('result').classList.remove('hide');let name=document.getElementById('teacher').value.trim();document.getElementById('summary').innerHTML=`<p><b>Teacher:</b> ${safe(name)}<br><b>Started:</b> ${safe(started)}<br><b>Completed:</b> ${safe(new Date().toLocaleString())}<br><b>Score:</b> ${score}/40 (${pct}%)<br><b>Result:</b> ${pass?'PASS — assessment only; lesson-plan review pending':'NOT YET PASSED'}</p>`;document.getElementById('review').innerHTML='<h3>Advanced decision review and instructional rationales</h3>'+order.map((i,n)=>{let q=bank[i],correct=answers[i]===q[2];return `<div class="feedback"><b>${n+1}. ${safe(q[0])}</b><p>${correct?'✓ Correct':'✕ Incorrect'}<br><b>Your answer:</b> ${safe(q[1][answers[i]])}<br><b>Best answer:</b> ${safe(q[1][q[2]])}</p><p><b>Rationale:</b> ${safe(q[3])}</p></div>`}).join('');window.scrollTo(0,0)}function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-</script></body></html>
+</script>
+
+<!-- IEC COURSE & EXAM INTEGRITY GUARD -->
+<script src="/courses/iec-exam-integrity-guard.js" defer></script>
+
+</body>
+</html>
