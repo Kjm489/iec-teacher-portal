@@ -20,6 +20,17 @@
 .course-card h2{color:#142747;margin:10px 0 12px;font-size:26px}
 .course-card .meta{color:#65748a}
 .course-card .button{margin-top:10px}
+/* Specialist pathway is separate from the four core levels. */
+.specialist-section{margin-top:54px;padding-top:28px;border-top:3px solid #812d45}
+.specialist-heading{margin:0 0 12px;color:#142747;font-size:clamp(25px,3.5vw,34px)}
+.specialist-intro{color:#52647b;max-width:850px;margin:0 0 26px}
+.specialist-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.specialist-grid .course-card{margin:0;display:flex;flex-direction:column;min-width:0}
+.specialist-grid .course-card h3{color:#142747;font-size:23px;margin:10px 0}
+.specialist-grid .course-card .button{margin-top:auto;align-self:flex-start}
+.specialist-grid .course-card p{margin:0 0 15px}
+.specialist-grid .course-card .meta{font-size:14px}
+@media(max-width:720px){.specialist-grid{grid-template-columns:1fr}}
 .course-footer{text-align:center;color:#65748a;padding:30px 20px 45px}
 @media(max-width:650px){.course-card{padding:22px}.course-hero{padding:48px 20px}}
 </style>
@@ -172,6 +183,35 @@
     </a>
 
   </article>
+
+  <section class="specialist-section" aria-labelledby="specialist-heading">
+    <div class="eyebrow" style="color:#812d45;font-size:12px;font-weight:800;letter-spacing:1.5px">SPECIALIST PROFESSIONAL DEVELOPMENT</div>
+    <h2 id="specialist-heading" class="specialist-heading">Advanced Specialist Assessments</h2>
+    <p class="specialist-intro">Focused, scenario-based professional development for IEC teachers. These specialist assessments complement the four-level core pathway; they are not additional certification levels. Each assessment requires at least 80% to pass and provides a printable performance report.</p>
+    <div class="specialist-grid">
+      <article class="course-card">
+        <div class="eyebrow">SPECIALIST · INSTRUCTIONAL QUESTIONING</div>
+        <h3>Instructional Questioning Mastery</h3>
+        <p class="meta">40 advanced scenarios · 8 modules · 80% pass (32/40) · Printable report</p>
+        <p>Diagnose misconceptions and evaluate competing ICQ, CCQ, and classroom questioning strategies. Select the most defensible response using observable evidence of learner understanding.</p>
+        <a class="button button-primary" href="/courses/instructional-questioning-mastery.html">Start Questioning Mastery →</a>
+      </article>
+      <article class="course-card">
+        <div class="eyebrow">SPECIALIST · ADVANCED TESOL</div>
+        <h3>Advanced TESOL Mastery</h3>
+        <p class="meta">100 advanced cases · 10 domains · 80% pass (80/100) · Printable report</p>
+        <p>Apply second-language acquisition, Bloom's taxonomy, the four Cs, scaffolding, differentiation, assessment, and OIC/TESOL alignment to complex classroom decisions.</p>
+        <a class="button button-primary" href="/courses/advanced-tesol-mastery.html">Start TESOL Mastery →</a>
+      </article>
+      <article class="course-card">
+        <div class="eyebrow">SPECIALIST · PRACTICAL ELT</div>
+        <h3>ELT Teaching Mastery</h3>
+        <p class="meta">50 challenging classroom cases · 10 competencies · 80% pass (40/50) · Printable report</p>
+        <p>Make expert-level instructional decisions involving lesson staging, language analysis, student talk, pronunciation, error correction, interaction, monitoring, and adaptive teaching.</p>
+        <a class="button button-primary" href="/courses/elt-teaching-mastery.html">Start ELT Mastery →</a>
+      </article>
+    </div>
+  </section>
 
 </main>
 
