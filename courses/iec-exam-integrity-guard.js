@@ -1,121 +1,213 @@
 
 /*
  * IEC TEACHER DEVELOPMENT ACADEMY
- * EXAM INTEGRITY GUARD
+ * COURSE & EXAM INTEGRITY GUARD
  *
- * Purpose:
- * Discourage copying examination questions and answers
- * into ChatGPT or other external AI tools.
+ * Protects:
+ * - Challenge Examination
+ * - Course modules
+ * - Lesson content
+ * - Quizzes and assessments
  *
- * This is a browser-side deterrent, not a secure
- * examination proctoring system.
+ * Preserves:
+ * - Navigation
+ * - Interactive activities
+ * - Answer selection
+ * - Form inputs
+ * - Scoring
+ * - Printable completion reports
  *
- * Protection applies only while the examination
- * or final review screen is active.
+ * Browser-side deterrent only.
+ * Does not prevent screenshots, external devices,
+ * developer tools, or access to delivered source code.
  */
 
 (() => {
   'use strict';
 
-  const protectedAreas = ['exam', 'review'];
+  // Protect active exam/review screens on the challenge
+  // exam. On other course pages, protect learning content.
 
-  // Check whether a protected examination screen is visible.
-  const isActive = () => protectedAreas.some(id => {
-    const el = document.getElementById(id);
+  const examScreens = ['exam', 'review'];
 
-    return el && !el.classList.contains('hidden');
-  });
+  const isVisible = el =>
+    !!el &&
+    !el.classList.contains('hidden') &&
+    getComputedStyle(el).display !== 'none';
 
-  // Check whether the action occurs inside the examination.
-  const insideProtectedArea = target => {
-    if (!(target instanceof Element)) return false;
+  const examPage =
+    !!document.getElementById('exam') &&
+    !!document.getElementById('intro');
 
-    return protectedAreas.some(id =>
-      target.closest('#' + id)
-    );
-  };
+  const selectors = examPage
+    ? [
+        '#exam',
+        '#review'
+      ]
+    : [
+        'main',
+        'article',
+        '.course-content',
+        '.lesson-content',
+        '.quiz-container',
+        '.assessment',
+        '.module-content'
+      ];
 
-  // Preserve normal typing in editable fields.
-  const editable = target =>
-    target instanceof Element &&
-    !!target.closest(
-      'input:not([type="radio"]), textarea, [contenteditable="true"]'
-    );
+  // Identify protected learning content.
 
-  const stop = event => {
-    event.preventDefault();
-  };
+  function protectedRoot(target) {
+    if (!(target instanceof Element)) return null;
 
-  // Block copying examination content.
-  document.addEventListener('copy', event => {
-    if (
-      isActive() &&
-      (
-        insideProtectedArea(event.target) ||
-        window.getSelection()?.toString()
-      )
-    ) {
-      stop(event);
-    }
-  }, true);
+    for (const selector of selectors) {
+      const root = target.closest(selector);
 
-  // Block cutting protected examination content.
-  document.addEventListener('cut', event => {
-    if (
-      isActive() &&
-      insideProtectedArea(event.target) &&
-      !editable(event.target)
-    ) {
-      stop(event);
-    }
-  }, true);
-
-  // Disable right-click menus within the examination.
-  document.addEventListener('contextmenu', event => {
-    if (
-      isActive() &&
-      insideProtectedArea(event.target)
-    ) {
-      stop(event);
-    }
-  }, true);
-
-  // Prevent dragging examination text.
-  document.addEventListener('dragstart', event => {
-    if (
-      isActive() &&
-      insideProtectedArea(event.target)
-    ) {
-      stop(event);
-    }
-  }, true);
-
-  // Prevent ordinary text selection.
-  document.addEventListener('selectstart', event => {
-    if (
-      isActive() &&
-      insideProtectedArea(event.target) &&
-      !editable(event.target)
-    ) {
-      stop(event);
-    }
-  }, true);
-
-  // Block common keyboard copying shortcuts.
-  document.addEventListener('keydown', event => {
-    if (!isActive() || editable(event.target)) return;
-
-    if (
-      (event.ctrlKey || event.metaKey) &&
-      ['c', 'x', 'a'].includes(event.key.toLowerCase())
-    ) {
-      if (
-        insideProtectedArea(event.target) ||
-        document.activeElement === document.body
-      ) {
-        stop(event);
+      if (root && isVisible(root)) {
+        return root;
       }
     }
-  }, true);
+
+    return null;
+  }
+
+  // Check whether exam protection should be active.
+
+  function active() {
+    if (!examPage) return true;
+
+    return examScreens.some(id =>
+      isVisible(document.getElementById(id))
+    );
+  }
+
+  // Preserve normal typing in course input fields.
+
+  function editable(target) {
+    return (
+      target instanceof Element &&
+      !!target.closest(
+        'input, textarea, select, ' +
+        '[contenteditable=""], ' +
+        '[contenteditable="true"], ' +
+        '[role="textbox"]'
+      )
+    );
+  }
+
+  // Preserve interaction with course controls.
+
+  function allowed(target) {
+    return (
+      editable(target) ||
+      (
+        target instanceof Element &&
+        !!target.closest(
+          'button, a, label, summary, ' +
+          '[role="button"], ' +
+          '[data-integrity-allow]'
+        )
+      )
+    );
+  }
+
+  // Detect selected protected text.
+
+  function protectedSelection() {
+    const selection = window.getSelection();
+
+    if (!selection || selection.isCollapsed) {
+      return false;
+    }
+
+    const node = selection.anchorNode;
+
+    const element =
+      node?.nodeType === Node.ELEMENT_NODE
+        ? node
+        : node?.parentElement;
+
+    return !!protectedRoot(element);
+  }
+
+  // Determine whether copying should be blocked.
+
+  function shouldBlock(event) {
+    return (
+      active() &&
+      !editable(event.target) &&
+      (
+        !!protectedRoot(event.target) ||
+        protectedSelection()
+      )
+    );
+  }
+
+  // Block copying and cutting protected content.
+
+  ['copy', 'cut'].forEach(type => {
+    document.addEventListener(
+      type,
+      event => {
+        if (shouldBlock(event)) {
+          event.preventDefault();
+        }
+      },
+      true
+    );
+  });
+
+  // Block right-click, dragging and text selection
+  // within protected learning content.
+
+  [
+    'contextmenu',
+    'dragstart',
+    'selectstart'
+  ].forEach(type => {
+    document.addEventListener(
+      type,
+      event => {
+        if (
+          active() &&
+          protectedRoot(event.target) &&
+          !allowed(event.target)
+        ) {
+          event.preventDefault();
+        }
+      },
+      true
+    );
+  });
+
+  // Block common keyboard shortcuts:
+  // Ctrl+C / Cmd+C
+  // Ctrl+X / Cmd+X
+  // Ctrl+A / Cmd+A
+  //
+  // Normal typing and form interactions remain enabled.
+
+  document.addEventListener(
+    'keydown',
+    event => {
+      if (!active() || editable(event.target)) {
+        return;
+      }
+
+      const key = event.key.toLowerCase();
+
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        ['c', 'x', 'a'].includes(key) &&
+        (
+          protectedRoot(event.target) ||
+          protectedSelection() ||
+          document.activeElement === document.body
+        )
+      ) {
+        event.preventDefault();
+      }
+    },
+    true
+  );
 
 })();
